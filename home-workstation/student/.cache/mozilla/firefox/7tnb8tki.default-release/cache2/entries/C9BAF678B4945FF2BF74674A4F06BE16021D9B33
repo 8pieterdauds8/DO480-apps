@@ -1,0 +1,350 @@
+{
+  "apiVersion": "operator.open-cluster-management.io/v1",
+  "items": [
+    {
+      "apiVersion": "operator.open-cluster-management.io/v1",
+      "kind": "MultiClusterHub",
+      "metadata": {
+        "creationTimestamp": "2024-11-25T07:58:33Z",
+        "finalizers": [
+          "finalizer.operator.open-cluster-management.io"
+        ],
+        "generation": 3,
+        "managedFields": [
+          {
+            "apiVersion": "operator.open-cluster-management.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                ".": {},
+                "f:imagePullSecret": {}
+              }
+            },
+            "manager": "OpenAPI-Generator",
+            "operation": "Update",
+            "time": "2024-11-25T07:58:33Z"
+          },
+          {
+            "apiVersion": "operator.open-cluster-management.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:finalizers": {
+                  ".": {},
+                  "v:\"finalizer.operator.open-cluster-management.io\"": {}
+                }
+              },
+              "f:spec": {
+                "f:availabilityConfig": {},
+                "f:enableClusterBackup": {},
+                "f:ingress": {
+                  ".": {},
+                  "f:sslCiphers": {}
+                },
+                "f:separateCertificateManagement": {}
+              }
+            },
+            "manager": "multiclusterhub-operator",
+            "operation": "Update",
+            "time": "2024-11-25T07:58:33Z"
+          },
+          {
+            "apiVersion": "operator.open-cluster-management.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:components": {
+                  ".": {},
+                  "f:application-chart-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:assisted-service-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:cluster-lifecycle-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:cluster-manager-cr": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:console-chart-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:discovery-operator-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:grc-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:local-cluster": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:management-ingress-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:multiclusterhub-repo": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:ocm-controller": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:ocm-proxyserver": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:ocm-webhook": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:policyreport-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "f:search-prod-sub": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:conditions": {},
+                "f:currentVersion": {},
+                "f:desiredVersion": {},
+                "f:phase": {}
+              }
+            },
+            "manager": "multiclusterhub-operator",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2024-11-25T08:02:46Z"
+          }
+        ],
+        "name": "multiclusterhub",
+        "namespace": "open-cluster-management",
+        "resourceVersion": "433870",
+        "uid": "3b936405-78a1-4fd0-9b9d-d893f90051d9"
+      },
+      "spec": {
+        "availabilityConfig": "High",
+        "enableClusterBackup": false,
+        "imagePullSecret": "pull-secret",
+        "ingress": {
+          "sslCiphers": [
+            "ECDHE-ECDSA-AES256-GCM-SHA384",
+            "ECDHE-RSA-AES256-GCM-SHA384",
+            "ECDHE-ECDSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+          ]
+        },
+        "separateCertificateManagement": false
+      },
+      "status": {
+        "components": {
+          "application-chart-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:23Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "assisted-service-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:28Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "cluster-lifecycle-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:31Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "cluster-manager-cr": {
+            "lastTransitionTime": "2024-11-25T08:02:46Z",
+            "message": "Components of cluster manager is applied",
+            "reason": "ClusterManagerApplied",
+            "status": "True",
+            "type": "Applied"
+          },
+          "console-chart-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:23Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "discovery-operator-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:29Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "grc-sub": {
+            "lastTransitionTime": "2024-11-25T08:01:39Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "local-cluster": {
+            "lastTransitionTime": "2024-11-25T08:02:46Z",
+            "message": "ManagedCluster is accepted, joined, and available",
+            "reason": "ManagedClusterImported",
+            "status": "True",
+            "type": "ManagedClusterImportSuccess"
+          },
+          "management-ingress-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:24Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "multiclusterhub-repo": {
+            "lastTransitionTime": "2024-11-25T07:58:42Z",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          "ocm-controller": {
+            "lastTransitionTime": "2024-11-25T07:59:24Z",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          "ocm-proxyserver": {
+            "lastTransitionTime": "2024-11-25T07:59:33Z",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          "ocm-webhook": {
+            "lastTransitionTime": "2024-11-25T07:59:09Z",
+            "reason": "MinimumReplicasAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          "policyreport-sub": {
+            "lastTransitionTime": "2024-11-25T07:59:23Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          },
+          "search-prod-sub": {
+            "lastTransitionTime": "2024-11-25T08:00:36Z",
+            "reason": "InstallSuccessful",
+            "status": "True",
+            "type": "Deployed"
+          }
+        },
+        "conditions": [
+          {
+            "lastTransitionTime": "2024-11-25T07:58:33Z",
+            "lastUpdateTime": "2024-11-25T07:59:18Z",
+            "message": "Created new resource",
+            "reason": "NewResourceCreated",
+            "status": "True",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2024-11-25T08:02:46Z",
+            "lastUpdateTime": "2024-11-25T08:02:46Z",
+            "message": "All hub components ready.",
+            "reason": "ComponentsAvailable",
+            "status": "True",
+            "type": "Complete"
+          }
+        ],
+        "currentVersion": "2.4.2",
+        "desiredVersion": "2.4.2",
+        "phase": "Running"
+      }
+    }
+  ],
+  "kind": "MultiClusterHubList",
+  "metadata": {
+    "continue": "",
+    "resourceVersion": "445467"
+  }
+}÷Ú±*           gD0YG”+v       ð    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/operator.open-cluster-management.io/v1/namespaces/open-cluster-management/multiclusterhubs?limit=250&cluster=local-cluster strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 17e493ce-53bd-4644-84a5-f987bcee96aa
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Mon, 25 Nov 2024 08:07:53 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 17e493ce-53bd-4644-84a5-f987bcee96aa
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Mon, 25 Nov 2024 08:07:53 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 24 net-response-time-onstop 26   *N

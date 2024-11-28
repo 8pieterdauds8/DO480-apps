@@ -1,0 +1,1300 @@
+{
+  "kind": "EventList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "3206874"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b78692950e831",
+        "namespace": "mysql",
+        "uid": "2e7fc9f2-6ea4-4da3-b065-689e88420c45",
+        "resourceVersion": "3202682",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "events.k8s.io/v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:action": {},
+              "f:eventTime": {},
+              "f:note": {},
+              "f:reason": {},
+              "f:regarding": {},
+              "f:reportingController": {},
+              "f:reportingInstance": {},
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202665"
+      },
+      "reason": "Scheduled",
+      "message": "Successfully assigned mysql/frontend-85d58fb74c-nw89v to master101",
+      "source": {},
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "type": "Normal",
+      "eventTime": "2024-11-26T08:47:54.714144Z",
+      "action": "Binding",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-master101"
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b7869a5837f1b",
+        "namespace": "mysql",
+        "uid": "ddd64590-d0ce-45cf-bad1-9c5f16ce0b57",
+        "resourceVersion": "3202784",
+        "creationTimestamp": "2024-11-26T08:47:56Z",
+        "managedFields": [
+          {
+            "manager": "multus",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:56Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202687"
+      },
+      "reason": "AddedInterface",
+      "message": "Add eth0 [10.8.0.169/23] from openshift-sdn",
+      "source": {
+        "component": "multus"
+      },
+      "firstTimestamp": "2024-11-26T08:47:56Z",
+      "lastTimestamp": "2024-11-26T08:47:56Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b7869ad7d93b8",
+        "namespace": "mysql",
+        "uid": "b50c39a7-5fc4-4c12-97ce-74a23038360a",
+        "resourceVersion": "3202804",
+        "creationTimestamp": "2024-11-26T08:47:56Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:56Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202671",
+        "fieldPath": "spec.containers{todonodejs}"
+      },
+      "reason": "Pulling",
+      "message": "Pulling image \"quay.io/redhattraining/todo-single:v1.0\"",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:47:56Z",
+      "lastTimestamp": "2024-11-26T08:47:56Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b786ddbae8a20",
+        "namespace": "mysql",
+        "uid": "6cb70eb3-a4a5-45ec-9632-d830e92d01fe",
+        "resourceVersion": "3203378",
+        "creationTimestamp": "2024-11-26T08:48:14Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:48:14Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202671",
+        "fieldPath": "spec.containers{todonodejs}"
+      },
+      "reason": "Pulled",
+      "message": "Successfully pulled image \"quay.io/redhattraining/todo-single:v1.0\" in 17.954800512s",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:48:14Z",
+      "lastTimestamp": "2024-11-26T08:48:14Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b786dee850b15",
+        "namespace": "mysql",
+        "uid": "6594a15a-aaba-4af5-8bf8-da584c569687",
+        "resourceVersion": "3203391",
+        "creationTimestamp": "2024-11-26T08:48:15Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:48:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202671",
+        "fieldPath": "spec.containers{todonodejs}"
+      },
+      "reason": "Created",
+      "message": "Created container todonodejs",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:48:15Z",
+      "lastTimestamp": "2024-11-26T08:48:15Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c-nw89v.180b786df1a5c98b",
+        "namespace": "mysql",
+        "uid": "9cb02ab6-1bca-4f7b-a042-bb70b70d98f6",
+        "resourceVersion": "3203394",
+        "creationTimestamp": "2024-11-26T08:48:15Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:48:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c-nw89v",
+        "uid": "2bee3d11-10b5-4fd3-a744-b51ca1a17090",
+        "apiVersion": "v1",
+        "resourceVersion": "3202671",
+        "fieldPath": "spec.containers{todonodejs}"
+      },
+      "reason": "Started",
+      "message": "Started container todonodejs",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:48:15Z",
+      "lastTimestamp": "2024-11-26T08:48:15Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend-85d58fb74c.180b786926a7e671",
+        "namespace": "mysql",
+        "uid": "57a33e62-756c-48aa-abce-911c26357679",
+        "resourceVersion": "3202668",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "ReplicaSet",
+        "namespace": "mysql",
+        "name": "frontend-85d58fb74c",
+        "uid": "012cfe80-80db-4ef5-b0ab-0352ba6dc2ae",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202659"
+      },
+      "reason": "SuccessfulCreate",
+      "message": "Created pod: frontend-85d58fb74c-nw89v",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend.180b78691ffe0660",
+        "namespace": "mysql",
+        "uid": "d119e10b-e1e3-45b4-b8f8-87123576eee1",
+        "resourceVersion": "3202658",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Deployment",
+        "namespace": "mysql",
+        "name": "frontend",
+        "uid": "473fa2ba-eb54-4b46-a076-3020d501a04c",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202657"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource frontend of gvk:apps/v1, Kind=Deployment",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend.180b786921a4e263",
+        "namespace": "mysql",
+        "uid": "2607e3d0-1ab4-4a10-8053-8be9e3d543f8",
+        "resourceVersion": "3202661",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Deployment",
+        "namespace": "mysql",
+        "name": "frontend",
+        "uid": "473fa2ba-eb54-4b46-a076-3020d501a04c",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202657"
+      },
+      "reason": "ScalingReplicaSet",
+      "message": "Scaled up replica set frontend-85d58fb74c to 1",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend.180b786935c70079",
+        "namespace": "mysql",
+        "uid": "589f5a26-17c4-45be-9b91-35acd76483e6",
+        "resourceVersion": "3202711",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Route",
+        "namespace": "mysql",
+        "name": "frontend",
+        "uid": "6d5d5a7c-23c5-4a24-b5a8-07328afcd044",
+        "apiVersion": "route.openshift.io/v1",
+        "resourceVersion": "3202710"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource frontend of gvk:route.openshift.io/v1, Kind=Route",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "frontend.180b78693da7e595",
+        "namespace": "mysql",
+        "uid": "c818a527-741a-4d78-b724-82541999038c",
+        "resourceVersion": "3202721",
+        "creationTimestamp": "2024-11-26T08:47:55Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:55Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Service",
+        "namespace": "mysql",
+        "name": "frontend",
+        "uid": "1b5f13af-59c3-46a2-9687-5538c4130565",
+        "apiVersion": "v1",
+        "resourceVersion": "3202719"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource frontend of gvk:/v1, Kind=Service",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:55Z",
+      "lastTimestamp": "2024-11-26T08:47:55Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764-72frj.180b7869304d4975",
+        "namespace": "mysql",
+        "uid": "9f5197cb-a4a2-4edd-be0a-5e915e03a359",
+        "resourceVersion": "3202701",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-scheduler",
+            "operation": "Update",
+            "apiVersion": "events.k8s.io/v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:action": {},
+              "f:eventTime": {},
+              "f:note": {},
+              "f:reason": {},
+              "f:regarding": {},
+              "f:reportingController": {},
+              "f:reportingInstance": {},
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "mysql-554d598764-72frj",
+        "uid": "d537419a-f0bf-47c5-8b17-03b646178863",
+        "apiVersion": "v1",
+        "resourceVersion": "3202691"
+      },
+      "reason": "Scheduled",
+      "message": "Successfully assigned mysql/mysql-554d598764-72frj to master101",
+      "source": {},
+      "firstTimestamp": null,
+      "lastTimestamp": null,
+      "type": "Normal",
+      "eventTime": "2024-11-26T08:47:54.831340Z",
+      "action": "Binding",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-master101"
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764-72frj.180b7869c8b89f83",
+        "namespace": "mysql",
+        "uid": "ff45d568-6eec-4eec-b8bb-9064a45d4c11",
+        "resourceVersion": "3202828",
+        "creationTimestamp": "2024-11-26T08:47:57Z",
+        "managedFields": [
+          {
+            "manager": "multus",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "mysql-554d598764-72frj",
+        "uid": "d537419a-f0bf-47c5-8b17-03b646178863",
+        "apiVersion": "v1",
+        "resourceVersion": "3202709"
+      },
+      "reason": "AddedInterface",
+      "message": "Add eth0 [10.8.0.170/23] from openshift-sdn",
+      "source": {
+        "component": "multus"
+      },
+      "firstTimestamp": "2024-11-26T08:47:57Z",
+      "lastTimestamp": "2024-11-26T08:47:57Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764-72frj.180b7869ce081775",
+        "namespace": "mysql",
+        "uid": "fada7493-2acc-4ce4-8aac-2df496c0fb32",
+        "resourceVersion": "3202834",
+        "creationTimestamp": "2024-11-26T08:47:57Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "mysql-554d598764-72frj",
+        "uid": "d537419a-f0bf-47c5-8b17-03b646178863",
+        "apiVersion": "v1",
+        "resourceVersion": "3202698",
+        "fieldPath": "spec.containers{mysql}"
+      },
+      "reason": "Pulled",
+      "message": "Container image \"registry.redhat.io/rhel8/mysql-80:1-152\" already present on machine",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:47:57Z",
+      "lastTimestamp": "2024-11-26T08:47:57Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764-72frj.180b7869dfefed82",
+        "namespace": "mysql",
+        "uid": "d1a04e0a-4b80-40b4-b161-4c8b2b9f348c",
+        "resourceVersion": "3202844",
+        "creationTimestamp": "2024-11-26T08:47:57Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "mysql-554d598764-72frj",
+        "uid": "d537419a-f0bf-47c5-8b17-03b646178863",
+        "apiVersion": "v1",
+        "resourceVersion": "3202698",
+        "fieldPath": "spec.containers{mysql}"
+      },
+      "reason": "Created",
+      "message": "Created container mysql",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:47:57Z",
+      "lastTimestamp": "2024-11-26T08:47:57Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764-72frj.180b7869e351093e",
+        "namespace": "mysql",
+        "uid": "51a5deba-303e-4d73-b658-0de8f50bec3e",
+        "resourceVersion": "3202846",
+        "creationTimestamp": "2024-11-26T08:47:57Z",
+        "managedFields": [
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:57Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {},
+                "f:host": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Pod",
+        "namespace": "mysql",
+        "name": "mysql-554d598764-72frj",
+        "uid": "d537419a-f0bf-47c5-8b17-03b646178863",
+        "apiVersion": "v1",
+        "resourceVersion": "3202698",
+        "fieldPath": "spec.containers{mysql}"
+      },
+      "reason": "Started",
+      "message": "Started container mysql",
+      "source": {
+        "component": "kubelet",
+        "host": "master101"
+      },
+      "firstTimestamp": "2024-11-26T08:47:57Z",
+      "lastTimestamp": "2024-11-26T08:47:57Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-554d598764.180b78692f028639",
+        "namespace": "mysql",
+        "uid": "84647451-368a-4f91-9eaa-db1537b0bfc9",
+        "resourceVersion": "3202694",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "ReplicaSet",
+        "namespace": "mysql",
+        "name": "mysql-554d598764",
+        "uid": "5902d40e-97fd-4ef3-8df9-1f04fcaf3f75",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202672"
+      },
+      "reason": "SuccessfulCreate",
+      "message": "Created pod: mysql-554d598764-72frj",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-subscription-1-deployable.180b7868ddea3756",
+        "namespace": "mysql",
+        "uid": "8f8655a3-1da1-4916-ae28-586c80a3e592",
+        "resourceVersion": "3202942",
+        "creationTimestamp": "2024-11-26T08:47:53Z",
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-deployable",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:53Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Deployable",
+        "namespace": "mysql",
+        "name": "mysql-subscription-1-deployable",
+        "uid": "c1b23a63-6036-4def-b98e-4b153b4942a0",
+        "apiVersion": "apps.open-cluster-management.io/v1",
+        "resourceVersion": "3202613"
+      },
+      "reason": "Deploy",
+      "message": "Propagate Deployable local-cluster/mysql-subscription-1-deployable-gcpdt for cluster local-cluster/local-cluster",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:53Z",
+      "lastTimestamp": "2024-11-26T08:48:00Z",
+      "count": 2,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-subscription-1-local.180b7868e6c173b1",
+        "namespace": "mysql",
+        "uid": "eea8e498-83ee-4516-a6e2-4e93f0789c6b",
+        "resourceVersion": "3202625",
+        "creationTimestamp": "2024-11-26T08:47:53Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:53Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Subscription",
+        "namespace": "mysql",
+        "name": "mysql-subscription-1-local",
+        "uid": "122b87a1-bf3c-4efb-81ce-7a4c4d9aa304",
+        "apiVersion": "apps.open-cluster-management.io/v1",
+        "resourceVersion": "3202623"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource mysql-subscription-1-local of gvk:apps.open-cluster-management.io/v1, Kind=Subscription",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:53Z",
+      "lastTimestamp": "2024-11-26T08:47:53Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-subscription-1.180b7868db281ebc",
+        "namespace": "mysql",
+        "uid": "58fa74d3-b1a2-4559-8071-539c26a909d0",
+        "resourceVersion": "3202616",
+        "creationTimestamp": "2024-11-26T08:47:53Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:53Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Subscription",
+        "namespace": "mysql",
+        "name": "mysql-subscription-1",
+        "uid": "41b0bd22-e352-4a2a-928c-4f3ff5adbf11",
+        "apiVersion": "apps.open-cluster-management.io/v1",
+        "resourceVersion": "3202314"
+      },
+      "reason": "Deploy",
+      "message": "Depolyable mysql/mysql-subscription-1-deployable created in the subscription namespace for deploying the subscription to managed clusters",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:53Z",
+      "lastTimestamp": "2024-11-26T08:47:53Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql-subscription-1.180b786a7f506a5a",
+        "namespace": "mysql",
+        "uid": "3fb2ee37-25d6-4e24-a57b-4058d21656e5",
+        "resourceVersion": "3202938",
+        "creationTimestamp": "2024-11-26T08:48:00Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:48:00Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Subscription",
+        "namespace": "mysql",
+        "name": "mysql-subscription-1",
+        "uid": "41b0bd22-e352-4a2a-928c-4f3ff5adbf11",
+        "apiVersion": "apps.open-cluster-management.io/v1",
+        "resourceVersion": "3202414"
+      },
+      "reason": "Deploy",
+      "message": "Depolyable mysql/mysql-subscription-1-deployable updated in the subscription namespace for deploying the subscription to managed clusters",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:48:00Z",
+      "lastTimestamp": "2024-11-26T08:48:00Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql.180b7867876d6145",
+        "namespace": "mysql",
+        "uid": "6063c459-8b39-41e3-9414-36c2e2d2437c",
+        "resourceVersion": "3202884",
+        "creationTimestamp": "2024-11-26T08:47:47Z",
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-application",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:47Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Application",
+        "namespace": "mysql",
+        "name": "mysql",
+        "uid": "9eb8149e-3455-4b19-ada2-81a875ad072e",
+        "apiVersion": "app.k8s.io/v1beta1",
+        "resourceVersion": "3202332"
+      },
+      "reason": "Update",
+      "message": "The app annotations updated. App:mysql/mysql",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:47Z",
+      "lastTimestamp": "2024-11-26T08:47:58Z",
+      "count": 8,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql.180b786927bcfc8d",
+        "namespace": "mysql",
+        "uid": "18fc9862-0b87-41be-b6e0-c4ff8d9bc690",
+        "resourceVersion": "3202673",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Deployment",
+        "namespace": "mysql",
+        "name": "mysql",
+        "uid": "1b12eaa8-9fe7-4b1d-a2b7-46b0374c0963",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202667"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource mysql of gvk:apps/v1, Kind=Deployment",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql.180b7869295db4c9",
+        "namespace": "mysql",
+        "uid": "b4ac32b4-9554-4ec3-8bba-df16a7dfbd5c",
+        "resourceVersion": "3202676",
+        "creationTimestamp": "2024-11-26T08:47:54Z",
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:54Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Deployment",
+        "namespace": "mysql",
+        "name": "mysql",
+        "uid": "1b12eaa8-9fe7-4b1d-a2b7-46b0374c0963",
+        "apiVersion": "apps/v1",
+        "resourceVersion": "3202667"
+      },
+      "reason": "ScalingReplicaSet",
+      "message": "Scaled up replica set mysql-554d598764 to 1",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "firstTimestamp": "2024-11-26T08:47:54Z",
+      "lastTimestamp": "2024-11-26T08:47:54Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    },
+    {
+      "metadata": {
+        "name": "mysql.180b786946c8db66",
+        "namespace": "mysql",
+        "uid": "2f1f48fc-8277-41af-b148-69ae50ba54e4",
+        "resourceVersion": "3202736",
+        "creationTimestamp": "2024-11-26T08:47:55Z",
+        "managedFields": [
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T08:47:55Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:count": {},
+              "f:firstTimestamp": {},
+              "f:involvedObject": {},
+              "f:lastTimestamp": {},
+              "f:message": {},
+              "f:reason": {},
+              "f:source": {
+                "f:component": {}
+              },
+              "f:type": {}
+            }
+          }
+        ]
+      },
+      "involvedObject": {
+        "kind": "Service",
+        "namespace": "mysql",
+        "name": "mysql",
+        "uid": "26de6f7e-8d3b-4921-b53d-c6d87b16d000",
+        "apiVersion": "v1",
+        "resourceVersion": "3202734"
+      },
+      "reason": "CreateResource",
+      "message": "Synchronizer created resource mysql of gvk:/v1, Kind=Service",
+      "source": {
+        "component": "subscription"
+      },
+      "firstTimestamp": "2024-11-26T08:47:55Z",
+      "lastTimestamp": "2024-11-26T08:47:55Z",
+      "count": 1,
+      "type": "Normal",
+      "eventTime": null,
+      "reportingComponent": "",
+      "reportingInstance": ""
+    }
+  ]
+}¼-1äòÓ      gE‹ÂgE‹ÂG•D       ¯    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/api/v1/namespaces/mysql/events?limit=250&cluster=local-cluster necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEANgFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAThMIIE3TCCA0WgAwIBAgIBCjANBgkqhkiG9w0BAQsFADBHMRQwEgYDVQQKEwtFWEFNUExFLkNPTTEvMC0GA1UEAxMmUmVkIEhhdCBUcmFpbmluZyBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMjEwNTEwMTExODQxWhcNMjYwNTEwMTExODQxWjA1MRQwEgYDVQQKDAtFWEFNUExFLkNPTTEdMBsGA1UEAwwUYXBpLm9jcDQuZXhhbXBsZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDV87fbMPoDiwFXyZx42+8yHJ/ny7OZ3YZ0LOjVpMXdlNt9L0YP/8IRzXfMXNowopb+ew3ekS3xc26gLdw5QlbX3sN4EnjQI5iHKooz0cvp+JthQ6XSuJNLecru3LHCq6wjUD3ekETS4LDu32fIN/KWeNt+BzWdcqOKZZwcbRFr2e9YyDf5/Q4btBcOWpQhyIK06x/QCdNSega1FBlQyscr7gmyi7h6DilnVtuubqDbfM74QC5qgeZbn9o2keG+PbbOhUlwrCqq3HZ79Dl7C3A/81Y1lW5Tkjj9BOh95+9Feu17FC6yDVY8gk23ZtFX1xpxIZT5Jt45ULhi3Jghl583AgMBAAGjggFkMIIBYDAfBgNVHSMEGDAWgBSDTVweW/Bs2yofXUccZgaFeSZyZDA9BggrBgEFBQcBAQQxMC8wLQYIKwYBBQUHMAGGIWh0dHA6Ly9pcGEtY2EuZXhhbXBsZS5jb20vY2Evb2NzcDAOBgNVHQ8BAf8EBAMCBPAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHYGA1UdHwRvMG0wa6AzoDGGL2h0dHA6Ly9pcGEtY2EuZXhhbXBsZS5jb20vaXBhL2NybC9NYXN0ZXJDUkwuYmluojSkMjAwMQ4wDAYDVQQKDAVpcGFjYTEeMBwGA1UEAwwVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB0GA1UdDgQWBBRvdDRUxzLhbs/nOBBlZx16WRqGPjA4BgNVHREEMTAvghRhcGkub2NwNC5leGFtcGxlLmNvbYIXKi5hcHBzLm9jcDQuZXhhbXBsZS5jb20wDQYJKoZIhvcNAQELBQADggGBAFHoifCydn51y+99RPVb6hXVz46UhInNyGxBH7vDp2cDNnNdicj0EyYDcFDUJKYg9fdqC9jFcyrcYW92yaCp2JPXD7aD2OPhrlOlkaMEU2Jmw+baXzMMdzyUmzBuHYnXuuzz9RAddsIxYX+k9w9HhvfAsV41UDWrZSX39a/277XnlwvdoFiu1UEbx6lN/zezNnbveEV+Lops9AyfaLyH2rWonnAB5D43n6r8XXDeXBQPLj2lPHvOO+Ll5GNkIwOmCbJj/q9fUvVd53TEqqOLLzIR4oJ6T5gN0PThc3wAaJbRYfKOCZk52vlGGUQqjW7LJ0dFYRz2M4TZgbAr6wX3cEM+zRzLv7QtNEArz0X3IsgDsB9gAe2FJHo0g7ZECMBmAGM5MV8lmqt5cSeD7k1UuEc9x743tgQ7xujhMMNpR/dBdBIjKmcyrjrPK6eCacDvLc2WjTSwgejgw7QtWqP+5MlULFrirkj3dkh9gB+5OYWtVjIxdiocA6MLnMnzc97OSRMBAAQAAAAAAQEAAAAAAAAGeDI1NTE5AAAADlJTQS1QU1MtU0hBMjU2AAJmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAThMIIE3TCCA0WgAwIBAgIBCjANBgkqhkiG9w0BAQsFADBHMRQwEgYDVQQKEwtFWEFNUExFLkNPTTEvMC0GA1UEAxMmUmVkIEhhdCBUcmFpbmluZyBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMjEwNTEwMTExODQxWhcNMjYwNTEwMTExODQxWjA1MRQwEgYDVQQKDAtFWEFNUExFLkNPTTEdMBsGA1UEAwwUYXBpLm9jcDQuZXhhbXBsZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDV87fbMPoDiwFXyZx42+8yHJ/ny7OZ3YZ0LOjVpMXdlNt9L0YP/8IRzXfMXNowopb+ew3ekS3xc26gLdw5QlbX3sN4EnjQI5iHKooz0cvp+JthQ6XSuJNLecru3LHCq6wjUD3ekETS4LDu32fIN/KWeNt+BzWdcqOKZZwcbRFr2e9YyDf5/Q4btBcOWpQhyIK06x/QCdNSega1FBlQyscr7gmyi7h6DilnVtuubqDbfM74QC5qgeZbn9o2keG+PbbOhUlwrCqq3HZ79Dl7C3A/81Y1lW5Tkjj9BOh95+9Feu17FC6yDVY8gk23ZtFX1xpxIZT5Jt45ULhi3Jghl583AgMBAAGjggFkMIIBYDAfBgNVHSMEGDAWgBSDTVweW/Bs2yofXUccZgaFeSZyZDA9BggrBgEFBQcBAQQxMC8wLQYIKwYBBQUHMAGGIWh0dHA6Ly9pcGEtY2EuZXhhbXBsZS5jb20vY2Evb2NzcDAOBgNVHQ8BAf8EBAMCBPAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHYGA1UdHwRvMG0wa6AzoDGGL2h0dHA6Ly9pcGEtY2EuZXhhbXBsZS5jb20vaXBhL2NybC9NYXN0ZXJDUkwuYmluojSkMjAwMQ4wDAYDVQQKDAVpcGFjYTEeMBwGA1UEAwwVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB0GA1UdDgQWBBRvdDRUxzLhbs/nOBBlZx16WRqGPjA4BgNVHREEMTAvghRhcGkub2NwNC5leGFtcGxlLmNvbYIXKi5hcHBzLm9jcDQuZXhhbXBsZS5jb20wDQYJKoZIhvcNAQELBQADggGBAFHoifCydn51y+99RPVb6hXVz46UhInNyGxBH7vDp2cDNnNdicj0EyYDcFDUJKYg9fdqC9jFcyrcYW92yaCp2JPXD7aD2OPhrlOlkaMEU2Jmw+baXzMMdzyUmzBuHYnXuuzz9RAddsIxYX+k9w9HhvfAsV41UDWrZSX39a/277XnlwvdoFiu1UEbx6lN/zezNnbveEV+Lops9AyfaLyH2rWonnAB5D43n6r8XXDeXBQPLj2lPHvOO+Ll5GNkIwOmCbJj/q9fUvVd53TEqqOLLzIR4oJ6T5gN0PThc3wAaJbRYfKOCZk52vlGGUQqjW7LJ0dFYRz2M4TZgbAr6wX3cEM+zRzLv7QtNEArz0X3IsgDsB9gAe2FJHo0g7ZECMBmAGM5MV8lmqt5cSeD7k1UuEc9x743tgQ7xujhMMNpR/dBdBIjKmcyrjrPK6eCacDvLc2WjTSwgejgw7QtWqP+5MlULFrirkj3dkh9gB+5OYWtVjIxdiocA6MLnMnzc97OSWYKMiaRXE/7uyCJhaYy3wW9w5eaVCJM1YWJaWtuluqDAAAAAAAABDkwggQ1MIIDHaADAgECAhR90LvN+Hjir1YpnwvSuCxtuRd1TTANBgkqhkiG9w0BAQsFADCBjzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMRAwDgYDVQQKDAdSZWQgSGF0MRkwFwYDVQQLDBBSZWQgSGF0IFRyYWluaW5nMSgwJgYDVQQDDB9SZWQgSGF0IFRyYWluaW5nIFRydXN0IFNlcnZpY2VzMB4XDTIxMDUwNTE2MzQyMloXDTMxMDUwMzE2MzQyMlowRzEUMBIGA1UEChMLRVhBTVBMRS5DT00xLzAtBgNVBAMTJlJlZCBIYXQgVHJhaW5pbmcgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAl2xscOQ/seBpqiJlFJOSDIc6dE82wkr/rzU4hhnXnkMDLyfHFe4ZOV8qvSxoJLHMyFGJctZpcwQbOLPaAjM38kYuZCGBeVn2onpUrPOl+MmIbhwqRqtbIxHYckjTJknyiUzkb6lvXQ5gGWhXfIfv9mk24ZxdJryznGrEwqzPK5+P6fIPM1tCFIQNaoZWSvdwzZseUOUVnkLQcmgZZa9YVwQdjPKxYwwPiBJzlMyvbw1lYy2M4KGtkoCGAcPKxQjxKOcrI4Yd02DK5TNbA+iyoXjKAMPu/Cz1Uww5CyiRno9kkijTsNlJ1W9QF5Lx+gUbmBtXlUp8h+YdQg/Vb5yt1X1V8arEGjv2x1PMoYOobv1MhWMYRcTvH1SK3yhzv3aWRQ5EEBIc8Widg30MxFClcGeH3raQJYDot8sK4zOQG853stSXKJAXysAM9Zp02xEjorOp5sOeF2ZcMmALKew023r+MJG1JdBUxvnP1u46WRY9v40Nr+ga26+AEkdJGOipAgMBAAGjUDBOMB0GA1UdDgQWBBSDTVweW/Bs2yofXUccZgaFeSZyZDAfBgNVHSMEGDAWgBTsHnqmqfIQ93u9qkqQ+Vlt8hlI6zAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAClAUbR2k91rnVd/Ck8+5E76Vp+24G5ob6QeYxRilWQGCc6AdBzdTzHCmckIVtQ8us8kioUO3R3owq06AwpjL8nrSFlAr7mbU6UmR/PuIFsM+4bmzPrGdJDI70A5H6kvkepiRABw4DHe5u8Eb7LZLpfwJzXMcm7u22i6XhPuYE8rxV5jMvdLA1pfWCscUdhu1SS/3ah03fr3II6IVz608a+3aDrLSjhFi6eiZa+1wn6QEbeXIVT5MJ9rrRL0ZaBhzhTftERQxEvtSVWpOwEaYAWag27JnKHdGAZUQxIPDtYhjGc0ilzvCFh5Wy+I0gcDqKuq5RbL+ANRMv/GN/7mKLAAAAAQAAAAABAAA= request-method GET response-head HTTP/1.1 200 OK
+audit-id: fac8cdc8-d187-4afd-b1c3-26adbf154489
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 08:50:10 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: fac8cdc8-d187-4afd-b1c3-26adbf154489
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 08:50:10 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 172 net-response-time-onstop 173   ˜Ø

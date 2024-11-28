@@ -1,0 +1,2616 @@
+{
+  "kind": "ReplicaSetList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "8010438"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "central-quay-app-656d84ffc6",
+        "namespace": "registry",
+        "uid": "56bf9825-9e6b-4220-8f24-3f3ac0cbfc99",
+        "resourceVersion": "7955626",
+        "generation": 2,
+        "creationTimestamp": "2024-11-28T04:11:47Z",
+        "labels": {
+          "app": "quay",
+          "pod-template-hash": "656d84ffc6",
+          "quay-component": "quay-app",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "2",
+          "deployment.kubernetes.io/max-replicas": "3",
+          "deployment.kubernetes.io/revision": "2",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "base",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-app",
+            "uid": "41cab814-4ed0-47ef-abcd-75ce4db454ca",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:47Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"41cab814-4ed0-47ef-abcd-75ce4db454ca\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"quay-app\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"DEBUGLOG\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QE_K8S_CONFIG_SECRET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QE_K8S_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_REGISTRY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_SECSCAN\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_WEB\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8081,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":9091,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:startupProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/conf/stack\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/conf/stack/extra_ca_certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"extra-ca-certs\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:13:41Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:fullyLabeledReplicas": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app": "quay",
+            "pod-template-hash": "656d84ffc6",
+            "quay-component": "quay-app",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "quay",
+              "pod-template-hash": "656d84ffc6",
+              "quay-component": "quay-app",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "projected": {
+                  "sources": [
+                    {
+                      "secret": {
+                        "name": "central-quay-config-secret-f2fmtmdtg7"
+                      }
+                    },
+                    {
+                      "secret": {
+                        "name": "central-quay-config-tls-6gmt2k6kmg"
+                      }
+                    }
+                  ],
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "extra-ca-certs",
+                "configMap": {
+                  "name": "central-cluster-service-ca",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "quay-app",
+                "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+                "args": [
+                  "registry-nomigrate"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8443,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8081,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 9091,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "QE_K8S_CONFIG_SECRET",
+                    "value": "central-quay-config-secret-f2fmtmdtg7"
+                  },
+                  {
+                    "name": "QE_K8S_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DEBUGLOG",
+                    "value": "false"
+                  },
+                  {
+                    "name": "WORKER_COUNT_WEB",
+                    "value": "4"
+                  },
+                  {
+                    "name": "WORKER_COUNT_SECSCAN",
+                    "value": "2"
+                  },
+                  {
+                    "name": "WORKER_COUNT_REGISTRY",
+                    "value": "8"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "2",
+                    "memory": "8Gi"
+                  },
+                  "requests": {
+                    "cpu": "2",
+                    "memory": "8Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/conf/stack"
+                  },
+                  {
+                    "name": "extra-ca-certs",
+                    "readOnly": true,
+                    "mountPath": "/conf/stack/extra_ca_certs"
+                  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 10,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 10,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 20,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "central-quay-app",
+            "serviceAccount": "central-quay-app",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 2,
+        "fullyLabeledReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "observedGeneration": 2
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-app-664b555bb4",
+        "namespace": "registry",
+        "uid": "19f2ecc6-edff-489a-b066-5fde05790325",
+        "resourceVersion": "7950906",
+        "generation": 1,
+        "creationTimestamp": "2024-11-28T04:11:20Z",
+        "labels": {
+          "app": "quay",
+          "pod-template-hash": "664b555bb4",
+          "quay-component": "quay-app",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "0",
+          "deployment.kubernetes.io/max-replicas": "0",
+          "deployment.kubernetes.io/revision": "1",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "base",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-app",
+            "uid": "41cab814-4ed0-47ef-abcd-75ce4db454ca",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:20Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"41cab814-4ed0-47ef-abcd-75ce4db454ca\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"quay-app\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"DEBUGLOG\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QE_K8S_CONFIG_SECRET\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QE_K8S_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_REGISTRY\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_SECSCAN\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"WORKER_COUNT_WEB\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8081,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":9091,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:startupProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/conf/stack\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/conf/stack/extra_ca_certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"extra-ca-certs\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:20Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:observedGeneration": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 0,
+        "selector": {
+          "matchLabels": {
+            "app": "quay",
+            "pod-template-hash": "664b555bb4",
+            "quay-component": "quay-app",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "quay",
+              "pod-template-hash": "664b555bb4",
+              "quay-component": "quay-app",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "projected": {
+                  "sources": [
+                    {
+                      "secret": {
+                        "name": "central-quay-config-secret-t2bfb27hc5"
+                      }
+                    },
+                    {
+                      "secret": {
+                        "name": "central-quay-config-tls-6gmt2k6kmg"
+                      }
+                    }
+                  ],
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "extra-ca-certs",
+                "configMap": {
+                  "name": "central-cluster-service-ca",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "quay-app",
+                "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+                "args": [
+                  "registry-nomigrate"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8443,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 8081,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 9091,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "QE_K8S_CONFIG_SECRET",
+                    "value": "central-quay-config-secret-t2bfb27hc5"
+                  },
+                  {
+                    "name": "QE_K8S_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DEBUGLOG",
+                    "value": "false"
+                  },
+                  {
+                    "name": "WORKER_COUNT_WEB",
+                    "value": "4"
+                  },
+                  {
+                    "name": "WORKER_COUNT_SECSCAN",
+                    "value": "2"
+                  },
+                  {
+                    "name": "WORKER_COUNT_REGISTRY",
+                    "value": "8"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "2",
+                    "memory": "8Gi"
+                  },
+                  "requests": {
+                    "cpu": "2",
+                    "memory": "8Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/conf/stack"
+                  },
+                  {
+                    "name": "extra-ca-certs",
+                    "readOnly": true,
+                    "mountPath": "/conf/stack/extra_ca_certs"
+                  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 10,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 10,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/health/instance",
+                    "port": 8080,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 20,
+                  "periodSeconds": 15,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "central-quay-app",
+            "serviceAccount": "central-quay-app",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 0,
+        "observedGeneration": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-config-editor-6458454d68",
+        "namespace": "registry",
+        "uid": "71054b54-83ae-40f1-8743-4fed9dd63a76",
+        "resourceVersion": "7953808",
+        "generation": 1,
+        "creationTimestamp": "2024-11-28T04:12:40Z",
+        "labels": {
+          "app": "quay",
+          "pod-template-hash": "6458454d68",
+          "quay-component": "quay-config-editor",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "2",
+          "deployment.kubernetes.io/revision": "3",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "base",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-config-editor",
+            "uid": "8a86a236-9234-41aa-891b-e5ab5fa299c5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:12:40Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"8a86a236-9234-41aa-891b-e5ab5fa299c5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-managed-fieldgroups": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"quay-config-editor\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"DEBUGLOG\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"MY_POD_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MY_POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_PATH\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_READ_ONLY_FIELD_GROUPS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_OPERATOR_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/conf/stack\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/conf/stack/extra_ca_certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"extra-ca-certs\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:12:43Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:fullyLabeledReplicas": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "quay",
+            "pod-template-hash": "6458454d68",
+            "quay-component": "quay-config-editor",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "quay",
+              "pod-template-hash": "6458454d68",
+              "quay-component": "quay-config-editor",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-managed-fieldgroups": "Database,Redis,DistributedStorage,HostSettings",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "projected": {
+                  "sources": [
+                    {
+                      "secret": {
+                        "name": "central-quay-config-secret-f2fmtmdtg7"
+                      }
+                    },
+                    {
+                      "secret": {
+                        "name": "central-quay-config-tls-6gmt2k6kmg"
+                      }
+                    }
+                  ],
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "extra-ca-certs",
+                "configMap": {
+                  "name": "central-cluster-service-ca",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "quay-config-editor",
+                "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+                "args": [
+                  "config",
+                  "$(QUAY_PASSWORD)",
+                  "$(QUAY_OPERATOR_ENDPOINT)"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "QUAY_CONFIG_PATH",
+                    "value": "/conf/stack"
+                  },
+                  {
+                    "name": "DEBUGLOG",
+                    "value": "true"
+                  },
+                  {
+                    "name": "QUAY_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-quay-config-editor-credentials-g9f686559d",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_OPERATOR_ENDPOINT",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-operator-service-endpoint']"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_CONFIG_READ_ONLY_FIELD_GROUPS",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-managed-fieldgroups']"
+                      }
+                    }
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/conf/stack"
+                  },
+                  {
+                    "name": "extra-ca-certs",
+                    "mountPath": "/conf/stack/extra_ca_certs"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 1,
+        "fullyLabeledReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "observedGeneration": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-config-editor-6bcc6d8cdb",
+        "namespace": "registry",
+        "uid": "9897d9ef-4ac6-4a67-acfb-80c606195dc2",
+        "resourceVersion": "7953834",
+        "generation": 2,
+        "creationTimestamp": "2024-11-28T04:11:47Z",
+        "labels": {
+          "app": "quay",
+          "pod-template-hash": "6bcc6d8cdb",
+          "quay-component": "quay-config-editor",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "2",
+          "deployment.kubernetes.io/revision": "2",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "base",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-config-editor",
+            "uid": "8a86a236-9234-41aa-891b-e5ab5fa299c5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:47Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"8a86a236-9234-41aa-891b-e5ab5fa299c5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-managed-fieldgroups": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"quay-config-editor\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"DEBUGLOG\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"MY_POD_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MY_POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_PATH\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_READ_ONLY_FIELD_GROUPS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_OPERATOR_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/conf/stack\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/conf/stack/extra_ca_certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"extra-ca-certs\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:12:44Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:observedGeneration": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 0,
+        "selector": {
+          "matchLabels": {
+            "app": "quay",
+            "pod-template-hash": "6bcc6d8cdb",
+            "quay-component": "quay-config-editor",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "quay",
+              "pod-template-hash": "6bcc6d8cdb",
+              "quay-component": "quay-config-editor",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-managed-fieldgroups": "Database,Redis,DistributedStorage,HostSettings",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "projected": {
+                  "sources": [
+                    {
+                      "secret": {
+                        "name": "central-quay-config-secret-f2fmtmdtg7"
+                      }
+                    },
+                    {
+                      "secret": {
+                        "name": "central-quay-config-tls-6gmt2k6kmg"
+                      }
+                    }
+                  ],
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "extra-ca-certs",
+                "configMap": {
+                  "name": "central-cluster-service-ca",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "quay-config-editor",
+                "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+                "args": [
+                  "config",
+                  "$(QUAY_PASSWORD)",
+                  "$(QUAY_OPERATOR_ENDPOINT)"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "QUAY_CONFIG_PATH",
+                    "value": "/conf/stack"
+                  },
+                  {
+                    "name": "DEBUGLOG",
+                    "value": "true"
+                  },
+                  {
+                    "name": "QUAY_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-quay-config-editor-credentials-7b6g955k7d",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_OPERATOR_ENDPOINT",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-operator-service-endpoint']"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_CONFIG_READ_ONLY_FIELD_GROUPS",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-managed-fieldgroups']"
+                      }
+                    }
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/conf/stack"
+                  },
+                  {
+                    "name": "extra-ca-certs",
+                    "mountPath": "/conf/stack/extra_ca_certs"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 0,
+        "observedGeneration": 2
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-config-editor-6c6f6889b",
+        "namespace": "registry",
+        "uid": "c3fb49ea-1c55-4f55-8605-89db006ecc7d",
+        "resourceVersion": "7951981",
+        "generation": 2,
+        "creationTimestamp": "2024-11-28T04:11:19Z",
+        "labels": {
+          "app": "quay",
+          "pod-template-hash": "6c6f6889b",
+          "quay-component": "quay-config-editor",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "2",
+          "deployment.kubernetes.io/revision": "1",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "base",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-config-editor",
+            "uid": "8a86a236-9234-41aa-891b-e5ab5fa299c5",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"8a86a236-9234-41aa-891b-e5ab5fa299c5\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-managed-fieldgroups": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"quay-config-editor\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"DEBUGLOG\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"MY_POD_NAME\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"MY_POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_PATH\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"QUAY_CONFIG_READ_ONLY_FIELD_GROUPS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_OPERATOR_ENDPOINT\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"QUAY_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {},
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/conf/stack\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/conf/stack/extra_ca_certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:projected": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:sources": {}
+                        }
+                      },
+                      "k:{\"name\":\"extra-ca-certs\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:50Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:observedGeneration": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 0,
+        "selector": {
+          "matchLabels": {
+            "app": "quay",
+            "pod-template-hash": "6c6f6889b",
+            "quay-component": "quay-config-editor",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "quay",
+              "pod-template-hash": "6c6f6889b",
+              "quay-component": "quay-config-editor",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-managed-fieldgroups": "Database,Redis,DistributedStorage,HostSettings",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "config",
+                "projected": {
+                  "sources": [
+                    {
+                      "secret": {
+                        "name": "central-quay-config-secret-t2bfb27hc5"
+                      }
+                    },
+                    {
+                      "secret": {
+                        "name": "central-quay-config-tls-6gmt2k6kmg"
+                      }
+                    }
+                  ],
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "extra-ca-certs",
+                "configMap": {
+                  "name": "central-cluster-service-ca",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "quay-config-editor",
+                "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+                "args": [
+                  "config",
+                  "$(QUAY_PASSWORD)",
+                  "$(QUAY_OPERATOR_ENDPOINT)"
+                ],
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "QUAY_CONFIG_PATH",
+                    "value": "/conf/stack"
+                  },
+                  {
+                    "name": "DEBUGLOG",
+                    "value": "true"
+                  },
+                  {
+                    "name": "QUAY_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-quay-config-editor-credentials-hdb862fd62",
+                        "key": "password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  },
+                  {
+                    "name": "MY_POD_NAME",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_OPERATOR_ENDPOINT",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-operator-service-endpoint']"
+                      }
+                    }
+                  },
+                  {
+                    "name": "QUAY_CONFIG_READ_ONLY_FIELD_GROUPS",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.annotations['quay-managed-fieldgroups']"
+                      }
+                    }
+                  }
+                ],
+                "resources": {},
+                "volumeMounts": [
+                  {
+                    "name": "config",
+                    "mountPath": "/conf/stack"
+                  },
+                  {
+                    "name": "extra-ca-certs",
+                    "mountPath": "/conf/stack/extra_ca_certs"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 0,
+        "observedGeneration": 2
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-database-55f74bb45b",
+        "namespace": "registry",
+        "uid": "6bd56c05-a1c7-4b25-9409-26599bf7f42c",
+        "resourceVersion": "7951030",
+        "generation": 1,
+        "creationTimestamp": "2024-11-28T04:11:19Z",
+        "labels": {
+          "pod-template-hash": "55f74bb45b",
+          "quay-component": "postgres",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "1",
+          "deployment.kubernetes.io/revision": "1",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "postgres",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-database",
+            "uid": "11a48ed8-443b-45d2-81f0-871b51ee233e",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"11a48ed8-443b-45d2-81f0-871b51ee233e\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"postgres\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"POSTGRESQL_ADMIN_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POSTGRESQL_DATABASE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POSTGRESQL_MAX_CONNECTIONS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POSTGRESQL_PASSWORD\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          },
+                          "k:{\"name\":\"POSTGRESQL_SHARED_BUFFERS\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:value": {}
+                          },
+                          "k:{\"name\":\"POSTGRESQL_USER\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:secretKeyRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":5432,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/usr/share/pgsql/postgresql.conf.sample\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/var/lib/pgsql/data\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"postgres-conf-sample\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"postgres-data\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:persistentVolumeClaim": {
+                          ".": {},
+                          "f:claimName": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:fullyLabeledReplicas": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "pod-template-hash": "55f74bb45b",
+            "quay-component": "postgres",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "pod-template-hash": "55f74bb45b",
+              "quay-component": "postgres",
+              "quay-operator/quayregistry": "central"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "postgres-conf-sample",
+                "configMap": {
+                  "name": "central-postgres-conf-sample",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "postgres-data",
+                "persistentVolumeClaim": {
+                  "claimName": "central-quay-database"
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "postgres",
+                "image": "registry.redhat.io/rhel8/postgresql-10@sha256:c9455e224f2598bb2ca981fe8f6826dd017352e60e5287ebb621c274d1ec38b8",
+                "ports": [
+                  {
+                    "containerPort": 5432,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "POSTGRESQL_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-postgres-config-secret-9fc6h965mf",
+                        "key": "database-username"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_DATABASE",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-postgres-config-secret-9fc6h965mf",
+                        "key": "database-name"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_ADMIN_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-postgres-config-secret-9fc6h965mf",
+                        "key": "database-root-password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "central-postgres-config-secret-9fc6h965mf",
+                        "key": "database-password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_SHARED_BUFFERS",
+                    "value": "256MB"
+                  },
+                  {
+                    "name": "POSTGRESQL_MAX_CONNECTIONS",
+                    "value": "2000"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "500m",
+                    "memory": "2Gi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "postgres-conf-sample",
+                    "mountPath": "/usr/share/pgsql/postgresql.conf.sample",
+                    "subPath": "postgresql.conf.sample"
+                  },
+                  {
+                    "name": "postgres-data",
+                    "mountPath": "/var/lib/pgsql/data"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 180,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "central-quay-database",
+            "serviceAccount": "central-quay-database",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 1,
+        "fullyLabeledReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "observedGeneration": 1
+      }
+    },
+    {
+      "metadata": {
+        "name": "central-quay-redis-6b6d8c84bc",
+        "namespace": "registry",
+        "uid": "fde3ce77-7092-4921-91ec-49a35c99271c",
+        "resourceVersion": "7951062",
+        "generation": 1,
+        "creationTimestamp": "2024-11-28T04:11:19Z",
+        "labels": {
+          "pod-template-hash": "6b6d8c84bc",
+          "quay-component": "redis",
+          "quay-operator/quayregistry": "central"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/desired-replicas": "1",
+          "deployment.kubernetes.io/max-replicas": "2",
+          "deployment.kubernetes.io/revision": "1",
+          "quay-buildmanager-hostname": "",
+          "quay-component": "redis",
+          "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+          "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "Deployment",
+            "name": "central-quay-redis",
+            "uid": "13593788-541d-4588-b6e7-bdf47ed6294f",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:19Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/desired-replicas": {},
+                  "f:deployment.kubernetes.io/max-replicas": {},
+                  "f:deployment.kubernetes.io/revision": {},
+                  "f:quay-buildmanager-hostname": {},
+                  "f:quay-component": {},
+                  "f:quay-operator-service-endpoint": {},
+                  "f:quay-registry-hostname": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:pod-template-hash": {},
+                  "f:quay-component": {},
+                  "f:quay-operator/quayregistry": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"13593788-541d-4588-b6e7-bdf47ed6294f\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:replicas": {},
+                "f:selector": {},
+                "f:template": {
+                  "f:metadata": {
+                    "f:annotations": {
+                      ".": {},
+                      "f:quay-buildmanager-hostname": {},
+                      "f:quay-operator-service-endpoint": {},
+                      "f:quay-registry-hostname": {}
+                    },
+                    "f:labels": {
+                      ".": {},
+                      "f:pod-template-hash": {},
+                      "f:quay-component": {},
+                      "f:quay-operator/quayregistry": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:containers": {
+                      "k:{\"name\":\"redis-master\"}": {
+                        ".": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":6379,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-28T04:11:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:fullyLabeledReplicas": {},
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "pod-template-hash": "6b6d8c84bc",
+            "quay-component": "redis",
+            "quay-operator/quayregistry": "central"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "pod-template-hash": "6b6d8c84bc",
+              "quay-component": "redis",
+              "quay-operator/quayregistry": "central"
+            },
+            "annotations": {
+              "quay-buildmanager-hostname": "",
+              "quay-operator-service-endpoint": "http://quay-operator.openshift-operators:7071",
+              "quay-registry-hostname": "central-quay-registry.apps.ocp4.example.com"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "redis-master",
+                "image": "registry.redhat.io/rhel8/redis-5@sha256:b711e9f796376353db77a337befb39c31e844caaa2ab46985c9e5ad0b5e92996",
+                "ports": [
+                  {
+                    "containerPort": 6379,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "4",
+                    "memory": "16Gi"
+                  },
+                  "requests": {
+                    "cpu": "500m",
+                    "memory": "1Gi"
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "central-quay-redis",
+            "serviceAccount": "central-quay-redis",
+            "securityContext": {},
+            "schedulerName": "default-scheduler"
+          }
+        }
+      },
+      "status": {
+        "replicas": 1,
+        "fullyLabeledReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "observedGeneration": 1
+      }
+    }
+  ]
+}vöç±|∏      gGÙÊgGÙÊGñ»	       Ω    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/apps/v1/namespaces/registry/replicasets?limit=250&cluster=local-cluster necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 091ddebe-81de-475b-9565-549e1fa863d4
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 04:43:18 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 091ddebe-81de-475b-9565-549e1fa863d4
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 04:43:18 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 23 net-response-time-onstop 24  pŒ

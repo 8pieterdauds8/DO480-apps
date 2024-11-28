@@ -1,0 +1,891 @@
+{
+  "apiVersion": "operators.coreos.com/v1alpha1",
+  "items": [
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "creationTimestamp": "2024-11-25T07:57:12Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/advanced-cluster-management.open-cluster-management": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                ".": {},
+                "f:channel": {},
+                "f:installPlanApproval": {},
+                "f:name": {},
+                "f:source": {},
+                "f:sourceNamespace": {}
+              }
+            },
+            "manager": "OpenAPI-Generator",
+            "operation": "Update",
+            "time": "2024-11-25T07:57:12Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/advanced-cluster-management.open-cluster-management": {}
+                }
+              }
+            },
+            "manager": "olm",
+            "operation": "Update",
+            "time": "2024-11-25T07:57:13Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:conditions": {},
+                "f:currentCSV": {},
+                "f:installPlanGeneration": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:lastUpdated": {},
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2024-11-25T07:57:17Z"
+          }
+        ],
+        "name": "acm-operator-subscription",
+        "namespace": "open-cluster-management",
+        "resourceVersion": "2120147",
+        "uid": "e78eb91d-7c53-4815-b06f-61cbfa041de5"
+      },
+      "spec": {
+        "channel": "release-2.4",
+        "installPlanApproval": "Automatic",
+        "name": "advanced-cluster-management",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "344697",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2024-11-25T07:57:14Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2024-11-25T07:57:14Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "advanced-cluster-management.v2.4.2",
+        "installPlanGeneration": 1,
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-9c5ll",
+          "namespace": "open-cluster-management",
+          "resourceVersion": "420828",
+          "uid": "c1eba2bb-f8bc-4195-ab79-dfb86d8d4ceb"
+        },
+        "installedCSV": "advanced-cluster-management.v2.4.2",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-9c5ll",
+          "uuid": "c1eba2bb-f8bc-4195-ab79-dfb86d8d4ceb"
+        },
+        "lastUpdated": "2024-11-25T23:02:09Z",
+        "state": "AtLatestKnown"
+      }
+    },
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "creationTimestamp": "2024-11-28T03:17:27Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/quay-operator.openshift-operators": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                ".": {},
+                "f:channel": {},
+                "f:installPlanApproval": {},
+                "f:name": {},
+                "f:source": {},
+                "f:sourceNamespace": {},
+                "f:startingCSV": {}
+              }
+            },
+            "manager": "Mozilla",
+            "operation": "Update",
+            "time": "2024-11-28T03:17:27Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/quay-operator.openshift-operators": {}
+                }
+              }
+            },
+            "manager": "olm",
+            "operation": "Update",
+            "time": "2024-11-28T03:17:27Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:conditions": {},
+                "f:currentCSV": {},
+                "f:installPlanGeneration": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:lastUpdated": {},
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2024-11-28T03:17:57Z"
+          }
+        ],
+        "name": "quay-operator",
+        "namespace": "openshift-operators",
+        "resourceVersion": "7851543",
+        "uid": "7e5360ba-48ad-485e-9c65-b41df9e906c7"
+      },
+      "spec": {
+        "channel": "stable-3.6",
+        "installPlanApproval": "Automatic",
+        "name": "quay-operator",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace",
+        "startingCSV": "quay-operator.v3.6.4"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "344697",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2024-11-28T03:17:29Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2024-11-28T03:17:29Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "quay-operator.v3.6.4",
+        "installPlanGeneration": 1,
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-jp77x",
+          "namespace": "openshift-operators",
+          "resourceVersion": "7850515",
+          "uid": "4d3ccf32-ec5a-437f-a971-bcc5aff70777"
+        },
+        "installedCSV": "quay-operator.v3.6.4",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-jp77x",
+          "uuid": "4d3ccf32-ec5a-437f-a971-bcc5aff70777"
+        },
+        "lastUpdated": "2024-11-28T03:17:57Z",
+        "state": "AtLatestKnown"
+      }
+    },
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "annotations": {
+          "olm.generated-by": "install-gjm45"
+        },
+        "creationTimestamp": "2023-07-02T22:30:43Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/mcg-operator.openshift-storage": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/mcg-operator.openshift-storage": {}
+                }
+              }
+            },
+            "manager": "olm",
+            "operation": "Update",
+            "time": "2023-07-02T22:30:43Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:currentCSV": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "time": "2023-07-02T22:30:57Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"94940afe-975d-4f29-b3e8-348b052c86b0\"}": {}
+                }
+              }
+            },
+            "manager": "manager",
+            "operation": "Update",
+            "time": "2023-07-02T22:31:14Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {},
+                "f:lastUpdated": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2023-07-02T22:36:44Z"
+          }
+        ],
+        "name": "mcg-operator-stable-4.9-do480-catalog-openshift-marketplace",
+        "namespace": "openshift-storage",
+        "ownerReferences": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "Subscription",
+            "name": "odf-operator",
+            "uid": "94940afe-975d-4f29-b3e8-348b052c86b0"
+          }
+        ],
+        "resourceVersion": "106229",
+        "uid": "d600d01a-aaa1-4509-acf5-efb359b9c096"
+      },
+      "spec": {
+        "channel": "stable-4.9",
+        "installPlanApproval": "Automatic",
+        "name": "mcg-operator",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace",
+        "startingCSV": "mcg-operator.v4.9.4"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "99857",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2023-07-02T22:30:45Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2023-07-02T22:30:45Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "mcg-operator.v4.9.4",
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "namespace": "openshift-storage",
+          "resourceVersion": "100235",
+          "uid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "installedCSV": "mcg-operator.v4.9.4",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "uuid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "lastUpdated": "2023-07-02T22:36:44Z",
+        "state": "AtLatestKnown"
+      }
+    },
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "annotations": {
+          "olm.generated-by": "install-gjm45"
+        },
+        "creationTimestamp": "2023-07-02T22:30:43Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/ocs-operator.openshift-storage": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/ocs-operator.openshift-storage": {}
+                }
+              }
+            },
+            "manager": "olm",
+            "operation": "Update",
+            "time": "2023-07-02T22:30:43Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:currentCSV": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "time": "2023-07-02T22:30:49Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"94940afe-975d-4f29-b3e8-348b052c86b0\"}": {}
+                }
+              }
+            },
+            "manager": "manager",
+            "operation": "Update",
+            "time": "2023-07-02T22:31:14Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {},
+                "f:lastUpdated": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2023-07-02T22:36:44Z"
+          }
+        ],
+        "name": "ocs-operator-stable-4.9-do480-catalog-openshift-marketplace",
+        "namespace": "openshift-storage",
+        "ownerReferences": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "Subscription",
+            "name": "odf-operator",
+            "uid": "94940afe-975d-4f29-b3e8-348b052c86b0"
+          }
+        ],
+        "resourceVersion": "106228",
+        "uid": "a488447f-f90d-46ea-82e5-a811a7a35421"
+      },
+      "spec": {
+        "channel": "stable-4.9",
+        "installPlanApproval": "Automatic",
+        "name": "ocs-operator",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace",
+        "startingCSV": "ocs-operator.v4.9.4"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "99857",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2023-07-02T22:30:44Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2023-07-02T22:30:44Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "ocs-operator.v4.9.4",
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "namespace": "openshift-storage",
+          "resourceVersion": "100045",
+          "uid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "installedCSV": "ocs-operator.v4.9.4",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "uuid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "lastUpdated": "2023-07-02T22:36:44Z",
+        "state": "AtLatestKnown"
+      }
+    },
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "creationTimestamp": "2023-07-02T22:30:25Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/odf-operator.openshift-storage": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/odf-operator.openshift-storage": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:channel": {},
+                "f:installPlanApproval": {},
+                "f:name": {},
+                "f:source": {},
+                "f:sourceNamespace": {},
+                "f:startingCSV": {}
+              }
+            },
+            "manager": "OpenAPI-Generator",
+            "operation": "Update",
+            "time": "2023-07-02T22:30:25Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:conditions": {},
+                "f:currentCSV": {},
+                "f:installPlanGeneration": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:lastUpdated": {},
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2023-07-02T22:30:58Z"
+          }
+        ],
+        "name": "odf-operator",
+        "namespace": "openshift-storage",
+        "resourceVersion": "102738",
+        "uid": "94940afe-975d-4f29-b3e8-348b052c86b0"
+      },
+      "spec": {
+        "channel": "stable-4.9",
+        "installPlanApproval": "Manual",
+        "name": "odf-operator",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace",
+        "startingCSV": "odf-operator.v4.9.4"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "99001",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2023-07-02T22:30:26Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2023-07-02T22:30:26Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "odf-operator.v4.9.4",
+        "installPlanGeneration": 1,
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "namespace": "openshift-storage",
+          "resourceVersion": "99818",
+          "uid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "installedCSV": "odf-operator.v4.9.4",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-gjm45",
+          "uuid": "45a058c2-e08b-4d24-98a3-c0c9f856338c"
+        },
+        "lastUpdated": "2023-07-02T22:32:19Z",
+        "state": "AtLatestKnown"
+      }
+    },
+    {
+      "apiVersion": "operators.coreos.com/v1alpha1",
+      "kind": "Subscription",
+      "metadata": {
+        "creationTimestamp": "2024-11-28T09:15:05Z",
+        "generation": 1,
+        "labels": {
+          "operators.coreos.com/rhacs-operator.rhacs-operator": ""
+        },
+        "managedFields": [
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                ".": {},
+                "f:channel": {},
+                "f:installPlanApproval": {},
+                "f:name": {},
+                "f:source": {},
+                "f:sourceNamespace": {}
+              }
+            },
+            "manager": "config-policy-controller",
+            "operation": "Update",
+            "time": "2024-11-28T09:15:05Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:operators.coreos.com/rhacs-operator.rhacs-operator": {}
+                }
+              }
+            },
+            "manager": "olm",
+            "operation": "Update",
+            "time": "2024-11-28T09:15:05Z"
+          },
+          {
+            "apiVersion": "operators.coreos.com/v1alpha1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:catalogHealth": {},
+                "f:conditions": {},
+                "f:currentCSV": {},
+                "f:installPlanGeneration": {},
+                "f:installPlanRef": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:namespace": {},
+                  "f:resourceVersion": {},
+                  "f:uid": {}
+                },
+                "f:installedCSV": {},
+                "f:installplan": {
+                  ".": {},
+                  "f:apiVersion": {},
+                  "f:kind": {},
+                  "f:name": {},
+                  "f:uuid": {}
+                },
+                "f:lastUpdated": {},
+                "f:state": {}
+              }
+            },
+            "manager": "catalog",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2024-11-28T09:15:34Z"
+          }
+        ],
+        "name": "rhacs-operator",
+        "namespace": "rhacs-operator",
+        "resourceVersion": "8506644",
+        "uid": "838ca7a3-d716-48bd-9615-71ed68fbd7fa"
+      },
+      "spec": {
+        "channel": "latest",
+        "installPlanApproval": "Automatic",
+        "name": "rhacs-operator",
+        "source": "do480-catalog",
+        "sourceNamespace": "openshift-marketplace"
+      },
+      "status": {
+        "catalogHealth": [
+          {
+            "catalogSourceRef": {
+              "apiVersion": "operators.coreos.com/v1alpha1",
+              "kind": "CatalogSource",
+              "name": "do480-catalog",
+              "namespace": "openshift-marketplace",
+              "resourceVersion": "344697",
+              "uid": "20d6ad73-37a7-4dd4-8b86-6802e9f1ecd5"
+            },
+            "healthy": true,
+            "lastUpdated": "2024-11-28T09:15:06Z"
+          }
+        ],
+        "conditions": [
+          {
+            "lastTransitionTime": "2024-11-28T09:15:06Z",
+            "message": "all available catalogsources are healthy",
+            "reason": "AllCatalogSourcesHealthy",
+            "status": "False",
+            "type": "CatalogSourcesUnhealthy"
+          }
+        ],
+        "currentCSV": "rhacs-operator.v3.69.0",
+        "installPlanGeneration": 1,
+        "installPlanRef": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-lhvnl",
+          "namespace": "rhacs-operator",
+          "resourceVersion": "8505434",
+          "uid": "94e5c6bc-4b3d-468d-a451-9edce25d2d42"
+        },
+        "installedCSV": "rhacs-operator.v3.69.0",
+        "installplan": {
+          "apiVersion": "operators.coreos.com/v1alpha1",
+          "kind": "InstallPlan",
+          "name": "install-lhvnl",
+          "uuid": "94e5c6bc-4b3d-468d-a451-9edce25d2d42"
+        },
+        "lastUpdated": "2024-11-28T09:15:36Z",
+        "state": "AtLatestKnown"
+      }
+    }
+  ],
+  "kind": "SubscriptionList",
+  "metadata": {
+    "continue": "",
+    "resourceVersion": "8515254"
+  }
+}&3qGš           gH5ÅG–õ        Á    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/operators.coreos.com/v1alpha1/subscriptions?limit=250&cluster=local-cluster strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 841f1b9a-88ed-44b8-87ef-68d847a52e71
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:04 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 841f1b9a-88ed-44b8-87ef-68d847a52e71
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:04 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1   më

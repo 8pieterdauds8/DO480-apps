@@ -1,0 +1,2365 @@
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "3069448"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "observability-thanos-rule-0",
+        "generateName": "observability-thanos-rule-",
+        "namespace": "open-cluster-management-observability",
+        "uid": "66b5e8d0-3a3c-4ca8-9625-e50a09fdf712",
+        "resourceVersion": "3001022",
+        "creationTimestamp": "2024-11-26T06:58:11Z",
+        "labels": {
+          "app.kubernetes.io/component": "rule-evaluation-engine",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-rule",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "v0.17.1",
+          "controller-revision-hash": "observability-thanos-rule-54f76699d8",
+          "statefulset.kubernetes.io/pod-name": "observability-thanos-rule-0"
+        },
+        "annotations": {
+          "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.8.0.162\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.8.0.162\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "openshift.io/scc": "restricted"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "StatefulSet",
+            "name": "observability-thanos-rule",
+            "uid": "f56b4790-8508-401a-8075-2a784d454c05",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:58:11Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:controller-revision-hash": {},
+                  "f:statefulset.kubernetes.io/pod-name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"f56b4790-8508-401a-8075-2a784d454c05\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:podAntiAffinity": {
+                    ".": {},
+                    "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"configmap-reloader\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"thanos-rule\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"OBJSTORE_CONFIG\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":10901,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      },
+                      "k:{\"containerPort\":10902,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/var/thanos/rule\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:hostname": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:subdomain": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"alertmanager-ca-bundle\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"data\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:persistentVolumeClaim": {
+                      ".": {},
+                      "f:claimName": {}
+                    }
+                  },
+                  "k:{\"name\":\"thanos-ruler-config\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-custom-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-default-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "multus",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:58:22Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:k8s.v1.cni.cncf.io/network-status": {},
+                  "f:k8s.v1.cni.cncf.io/networks-status": {}
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:58:36Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"10.8.0.162\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "data",
+            "persistentVolumeClaim": {
+              "claimName": "data-observability-thanos-rule-0"
+            }
+          },
+          {
+            "name": "thanos-ruler-default-rules",
+            "configMap": {
+              "name": "thanos-ruler-default-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-custom-rules",
+            "configMap": {
+              "name": "thanos-ruler-custom-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "alertmanager-ca-bundle",
+            "configMap": {
+              "name": "alertmanager-ca-bundle",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-config",
+            "configMap": {
+              "name": "thanos-ruler-config",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-s4j86",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "openshift-service-ca.crt",
+                    "items": [
+                      {
+                        "key": "service-ca.crt",
+                        "path": "service-ca.crt"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "thanos-rule",
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "args": [
+              "rule",
+              "--log.level=info",
+              "--log.format=logfmt",
+              "--grpc-address=0.0.0.0:10901",
+              "--http-address=0.0.0.0:10902",
+              "--objstore.config=$(OBJSTORE_CONFIG)",
+              "--data-dir=/var/thanos/rule",
+              "--label=rule_replica=\"$(NAME)\"",
+              "--alert.label-drop=rule_replica",
+              "--tsdb.retention=24h",
+              "--tsdb.block-duration=2h",
+              "--eval-interval=30s",
+              "--query=dnssrv+_http._tcp.observability-thanos-query.open-cluster-management-observability.svc.cluster.local",
+              "--alertmanagers.config-file=/etc/thanos/config/thanos-ruler-config/config.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-default-rules/default_rules.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-custom-rules/custom_rules.yaml"
+            ],
+            "ports": [
+              {
+                "name": "grpc",
+                "containerPort": 10901,
+                "protocol": "TCP"
+              },
+              {
+                "name": "http",
+                "containerPort": 10902,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "OBJSTORE_CONFIG",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "thanos-object-storage",
+                    "key": "thanos.yaml"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "50m",
+                "memory": "512Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "data",
+                "mountPath": "/var/thanos/rule"
+              },
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-s4j86",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/-/healthy",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 24
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/-/ready",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 10,
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 18
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "FallbackToLogsOnError",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          },
+          {
+            "name": "configmap-reloader",
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "args": [
+              "-webhook-url=http://localhost:10902/-/reload",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-default-rules",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-custom-rules",
+              "-volume-dir=/etc/thanos/configmaps/alertmanager-ca-bundle",
+              "-volume-dir=/etc/thanos/config/thanos-ruler-config"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "4m",
+                "memory": "25Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-s4j86",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "observability-thanos-rule",
+        "serviceAccount": "observability-thanos-rule",
+        "nodeName": "master101",
+        "securityContext": {
+          "seLinuxOptions": {
+            "level": "s0:c30,c5"
+          },
+          "fsGroup": 1000880000
+        },
+        "imagePullSecrets": [
+          {
+            "name": "multiclusterhub-operator-pull-secret"
+          }
+        ],
+        "hostname": "observability-thanos-rule-0",
+        "subdomain": "observability-thanos-rule",
+        "affinity": {
+          "podAntiAffinity": {
+            "preferredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "weight": 30,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "kubernetes.io/hostname"
+                }
+              },
+              {
+                "weight": 70,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone"
+                }
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/memory-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:11Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:36Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:36Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:11Z"
+          }
+        ],
+        "hostIP": "192.168.50.10",
+        "podIP": "10.8.0.162",
+        "podIPs": [
+          {
+            "ip": "10.8.0.162"
+          }
+        ],
+        "startTime": "2024-11-26T06:58:11Z",
+        "containerStatuses": [
+          {
+            "name": "configmap-reloader",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:58:23Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "imageID": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:43de0fa7a7897e9e3288bd7efe0dc85d3d950f4cd589588efe4b91bb6a2d2e89",
+            "containerID": "cri-o://275b5b406a836a8cc059759be6757b83afe9f515969a9e53573cf8b60b9cf9b6",
+            "started": true
+          },
+          {
+            "name": "thanos-rule",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:58:22Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "imageID": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "containerID": "cri-o://c1a6692252cfd6769f51d63cf07c4a849c7c12952126b3b9d86eb420a12b05d6",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-thanos-rule-1",
+        "generateName": "observability-thanos-rule-",
+        "namespace": "open-cluster-management-observability",
+        "uid": "0659d0ed-0661-41ef-aa65-e8a12a120aaf",
+        "resourceVersion": "3000157",
+        "creationTimestamp": "2024-11-26T06:57:45Z",
+        "labels": {
+          "app.kubernetes.io/component": "rule-evaluation-engine",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-rule",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "v0.17.1",
+          "controller-revision-hash": "observability-thanos-rule-54f76699d8",
+          "statefulset.kubernetes.io/pod-name": "observability-thanos-rule-1"
+        },
+        "annotations": {
+          "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.10.0.231\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.10.0.231\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "openshift.io/scc": "restricted"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "StatefulSet",
+            "name": "observability-thanos-rule",
+            "uid": "f56b4790-8508-401a-8075-2a784d454c05",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:57:45Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:controller-revision-hash": {},
+                  "f:statefulset.kubernetes.io/pod-name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"f56b4790-8508-401a-8075-2a784d454c05\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:podAntiAffinity": {
+                    ".": {},
+                    "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"configmap-reloader\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"thanos-rule\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"OBJSTORE_CONFIG\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":10901,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      },
+                      "k:{\"containerPort\":10902,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/var/thanos/rule\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:hostname": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:subdomain": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"alertmanager-ca-bundle\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"data\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:persistentVolumeClaim": {
+                      ".": {},
+                      "f:claimName": {}
+                    }
+                  },
+                  "k:{\"name\":\"thanos-ruler-config\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-custom-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-default-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "multus",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:57:56Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:k8s.v1.cni.cncf.io/network-status": {},
+                  "f:k8s.v1.cni.cncf.io/networks-status": {}
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:58:10Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"10.10.0.231\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "data",
+            "persistentVolumeClaim": {
+              "claimName": "data-observability-thanos-rule-1"
+            }
+          },
+          {
+            "name": "thanos-ruler-default-rules",
+            "configMap": {
+              "name": "thanos-ruler-default-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-custom-rules",
+            "configMap": {
+              "name": "thanos-ruler-custom-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "alertmanager-ca-bundle",
+            "configMap": {
+              "name": "alertmanager-ca-bundle",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-config",
+            "configMap": {
+              "name": "thanos-ruler-config",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-c65kl",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "openshift-service-ca.crt",
+                    "items": [
+                      {
+                        "key": "service-ca.crt",
+                        "path": "service-ca.crt"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "thanos-rule",
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "args": [
+              "rule",
+              "--log.level=info",
+              "--log.format=logfmt",
+              "--grpc-address=0.0.0.0:10901",
+              "--http-address=0.0.0.0:10902",
+              "--objstore.config=$(OBJSTORE_CONFIG)",
+              "--data-dir=/var/thanos/rule",
+              "--label=rule_replica=\"$(NAME)\"",
+              "--alert.label-drop=rule_replica",
+              "--tsdb.retention=24h",
+              "--tsdb.block-duration=2h",
+              "--eval-interval=30s",
+              "--query=dnssrv+_http._tcp.observability-thanos-query.open-cluster-management-observability.svc.cluster.local",
+              "--alertmanagers.config-file=/etc/thanos/config/thanos-ruler-config/config.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-default-rules/default_rules.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-custom-rules/custom_rules.yaml"
+            ],
+            "ports": [
+              {
+                "name": "grpc",
+                "containerPort": 10901,
+                "protocol": "TCP"
+              },
+              {
+                "name": "http",
+                "containerPort": 10902,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "OBJSTORE_CONFIG",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "thanos-object-storage",
+                    "key": "thanos.yaml"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "50m",
+                "memory": "512Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "data",
+                "mountPath": "/var/thanos/rule"
+              },
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-c65kl",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/-/healthy",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 24
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/-/ready",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 10,
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 18
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "FallbackToLogsOnError",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          },
+          {
+            "name": "configmap-reloader",
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "args": [
+              "-webhook-url=http://localhost:10902/-/reload",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-default-rules",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-custom-rules",
+              "-volume-dir=/etc/thanos/configmaps/alertmanager-ca-bundle",
+              "-volume-dir=/etc/thanos/config/thanos-ruler-config"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "4m",
+                "memory": "25Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-c65kl",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "observability-thanos-rule",
+        "serviceAccount": "observability-thanos-rule",
+        "nodeName": "master103",
+        "securityContext": {
+          "seLinuxOptions": {
+            "level": "s0:c30,c5"
+          },
+          "fsGroup": 1000880000
+        },
+        "imagePullSecrets": [
+          {
+            "name": "multiclusterhub-operator-pull-secret"
+          }
+        ],
+        "hostname": "observability-thanos-rule-1",
+        "subdomain": "observability-thanos-rule",
+        "affinity": {
+          "podAntiAffinity": {
+            "preferredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "weight": 30,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "kubernetes.io/hostname"
+                }
+              },
+              {
+                "weight": 70,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone"
+                }
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/memory-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:45Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:10Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:58:10Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:45Z"
+          }
+        ],
+        "hostIP": "192.168.50.12",
+        "podIP": "10.10.0.231",
+        "podIPs": [
+          {
+            "ip": "10.10.0.231"
+          }
+        ],
+        "startTime": "2024-11-26T06:57:45Z",
+        "containerStatuses": [
+          {
+            "name": "configmap-reloader",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:57:57Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "imageID": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:43de0fa7a7897e9e3288bd7efe0dc85d3d950f4cd589588efe4b91bb6a2d2e89",
+            "containerID": "cri-o://099cd984bd77a83fb07e6a89bde0cc998c5cfc2dda27c6713ad01698898f5bd1",
+            "started": true
+          },
+          {
+            "name": "thanos-rule",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:57:56Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "imageID": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "containerID": "cri-o://f139afcbed485a6544119005df47e84a7eae2236cb33f9ad87ded7f32d722658",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-thanos-rule-2",
+        "generateName": "observability-thanos-rule-",
+        "namespace": "open-cluster-management-observability",
+        "uid": "07496ea4-e4da-48ae-acc6-3abb844ea3ed",
+        "resourceVersion": "2999278",
+        "creationTimestamp": "2024-11-26T06:57:21Z",
+        "labels": {
+          "app.kubernetes.io/component": "rule-evaluation-engine",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-rule",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "v0.17.1",
+          "controller-revision-hash": "observability-thanos-rule-54f76699d8",
+          "statefulset.kubernetes.io/pod-name": "observability-thanos-rule-2"
+        },
+        "annotations": {
+          "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.9.0.159\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.9.0.159\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+          "openshift.io/scc": "restricted"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "kind": "StatefulSet",
+            "name": "observability-thanos-rule",
+            "uid": "f56b4790-8508-401a-8075-2a784d454c05",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:57:21Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:generateName": {},
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {},
+                  "f:controller-revision-hash": {},
+                  "f:statefulset.kubernetes.io/pod-name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"f56b4790-8508-401a-8075-2a784d454c05\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:affinity": {
+                  ".": {},
+                  "f:podAntiAffinity": {
+                    ".": {},
+                    "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                  }
+                },
+                "f:containers": {
+                  "k:{\"name\":\"configmap-reloader\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"thanos-rule\"}": {
+                    ".": {},
+                    "f:args": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:fieldRef": {}
+                        }
+                      },
+                      "k:{\"name\":\"OBJSTORE_CONFIG\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:valueFrom": {
+                          ".": {},
+                          "f:secretKeyRef": {}
+                        }
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:livenessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:name": {},
+                    "f:ports": {
+                      ".": {},
+                      "k:{\"containerPort\":10901,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      },
+                      "k:{\"containerPort\":10902,\"protocol\":\"TCP\"}": {
+                        ".": {},
+                        "f:containerPort": {},
+                        "f:name": {},
+                        "f:protocol": {}
+                      }
+                    },
+                    "f:readinessProbe": {
+                      ".": {},
+                      "f:failureThreshold": {},
+                      "f:httpGet": {
+                        ".": {},
+                        "f:path": {},
+                        "f:port": {},
+                        "f:scheme": {}
+                      },
+                      "f:initialDelaySeconds": {},
+                      "f:periodSeconds": {},
+                      "f:successThreshold": {},
+                      "f:timeoutSeconds": {}
+                    },
+                    "f:resources": {
+                      ".": {},
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/etc/thanos/config/thanos-ruler-config\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/configmaps/alertmanager-ca-bundle\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-custom-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/etc/thanos/rules/thanos-ruler-default-rules\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      },
+                      "k:{\"mountPath\":\"/var/thanos/rule\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:enableServiceLinks": {},
+                "f:hostname": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                },
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:serviceAccount": {},
+                "f:serviceAccountName": {},
+                "f:subdomain": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"alertmanager-ca-bundle\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"data\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:persistentVolumeClaim": {
+                      ".": {},
+                      "f:claimName": {}
+                    }
+                  },
+                  "k:{\"name\":\"thanos-ruler-config\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-custom-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  },
+                  "k:{\"name\":\"thanos-ruler-default-rules\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "multus",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:57:29Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:k8s.v1.cni.cncf.io/network-status": {},
+                  "f:k8s.v1.cni.cncf.io/networks-status": {}
+                }
+              }
+            },
+            "subresource": "status"
+          },
+          {
+            "manager": "Go-http-client",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2024-11-26T06:57:42Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:conditions": {
+                  "k:{\"type\":\"ContainersReady\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Initialized\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Ready\"}": {
+                    ".": {},
+                    "f:lastProbeTime": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:containerStatuses": {},
+                "f:hostIP": {},
+                "f:phase": {},
+                "f:podIP": {},
+                "f:podIPs": {
+                  ".": {},
+                  "k:{\"ip\":\"10.9.0.159\"}": {
+                    ".": {},
+                    "f:ip": {}
+                  }
+                },
+                "f:startTime": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "data",
+            "persistentVolumeClaim": {
+              "claimName": "data-observability-thanos-rule-2"
+            }
+          },
+          {
+            "name": "thanos-ruler-default-rules",
+            "configMap": {
+              "name": "thanos-ruler-default-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-custom-rules",
+            "configMap": {
+              "name": "thanos-ruler-custom-rules",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "alertmanager-ca-bundle",
+            "configMap": {
+              "name": "alertmanager-ca-bundle",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "thanos-ruler-config",
+            "configMap": {
+              "name": "thanos-ruler-config",
+              "defaultMode": 420
+            }
+          },
+          {
+            "name": "kube-api-access-hzqm5",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "openshift-service-ca.crt",
+                    "items": [
+                      {
+                        "key": "service-ca.crt",
+                        "path": "service-ca.crt"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "thanos-rule",
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "args": [
+              "rule",
+              "--log.level=info",
+              "--log.format=logfmt",
+              "--grpc-address=0.0.0.0:10901",
+              "--http-address=0.0.0.0:10902",
+              "--objstore.config=$(OBJSTORE_CONFIG)",
+              "--data-dir=/var/thanos/rule",
+              "--label=rule_replica=\"$(NAME)\"",
+              "--alert.label-drop=rule_replica",
+              "--tsdb.retention=24h",
+              "--tsdb.block-duration=2h",
+              "--eval-interval=30s",
+              "--query=dnssrv+_http._tcp.observability-thanos-query.open-cluster-management-observability.svc.cluster.local",
+              "--alertmanagers.config-file=/etc/thanos/config/thanos-ruler-config/config.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-default-rules/default_rules.yaml",
+              "--rule-file=/etc/thanos/rules/thanos-ruler-custom-rules/custom_rules.yaml"
+            ],
+            "ports": [
+              {
+                "name": "grpc",
+                "containerPort": 10901,
+                "protocol": "TCP"
+              },
+              {
+                "name": "http",
+                "containerPort": 10902,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "NAME",
+                "valueFrom": {
+                  "fieldRef": {
+                    "apiVersion": "v1",
+                    "fieldPath": "metadata.name"
+                  }
+                }
+              },
+              {
+                "name": "OBJSTORE_CONFIG",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "thanos-object-storage",
+                    "key": "thanos.yaml"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "50m",
+                "memory": "512Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "data",
+                "mountPath": "/var/thanos/rule"
+              },
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-hzqm5",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/-/healthy",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 24
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/-/ready",
+                "port": 10902,
+                "scheme": "HTTP"
+              },
+              "initialDelaySeconds": 10,
+              "timeoutSeconds": 1,
+              "periodSeconds": 5,
+              "successThreshold": 1,
+              "failureThreshold": 18
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "FallbackToLogsOnError",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          },
+          {
+            "name": "configmap-reloader",
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "args": [
+              "-webhook-url=http://localhost:10902/-/reload",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-default-rules",
+              "-volume-dir=/etc/thanos/rules/thanos-ruler-custom-rules",
+              "-volume-dir=/etc/thanos/configmaps/alertmanager-ca-bundle",
+              "-volume-dir=/etc/thanos/config/thanos-ruler-config"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "4m",
+                "memory": "25Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "thanos-ruler-default-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-default-rules"
+              },
+              {
+                "name": "thanos-ruler-custom-rules",
+                "mountPath": "/etc/thanos/rules/thanos-ruler-custom-rules"
+              },
+              {
+                "name": "alertmanager-ca-bundle",
+                "mountPath": "/etc/thanos/configmaps/alertmanager-ca-bundle"
+              },
+              {
+                "name": "thanos-ruler-config",
+                "mountPath": "/etc/thanos/config/thanos-ruler-config"
+              },
+              {
+                "name": "kube-api-access-hzqm5",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "IfNotPresent",
+            "securityContext": {
+              "capabilities": {
+                "drop": [
+                  "KILL",
+                  "MKNOD",
+                  "SETGID",
+                  "SETUID"
+                ]
+              },
+              "runAsUser": 1000880000
+            }
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "observability-thanos-rule",
+        "serviceAccount": "observability-thanos-rule",
+        "nodeName": "master102",
+        "securityContext": {
+          "seLinuxOptions": {
+            "level": "s0:c30,c5"
+          },
+          "fsGroup": 1000880000
+        },
+        "imagePullSecrets": [
+          {
+            "name": "multiclusterhub-operator-pull-secret"
+          }
+        ],
+        "hostname": "observability-thanos-rule-2",
+        "subdomain": "observability-thanos-rule",
+        "affinity": {
+          "podAntiAffinity": {
+            "preferredDuringSchedulingIgnoredDuringExecution": [
+              {
+                "weight": 30,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "kubernetes.io/hostname"
+                }
+              },
+              {
+                "weight": 70,
+                "podAffinityTerm": {
+                  "labelSelector": {
+                    "matchExpressions": [
+                      {
+                        "key": "app.kubernetes.io/name",
+                        "operator": "In",
+                        "values": [
+                          "thanos-rule"
+                        ]
+                      },
+                      {
+                        "key": "app.kubernetes.io/instance",
+                        "operator": "In",
+                        "values": [
+                          "observability"
+                        ]
+                      }
+                    ]
+                  },
+                  "topologyKey": "topology.kubernetes.io/zone"
+                }
+              }
+            ]
+          }
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/memory-pressure",
+            "operator": "Exists",
+            "effect": "NoSchedule"
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:22Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:42Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:42Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2024-11-26T06:57:22Z"
+          }
+        ],
+        "hostIP": "192.168.50.11",
+        "podIP": "10.9.0.159",
+        "podIPs": [
+          {
+            "ip": "10.9.0.159"
+          }
+        ],
+        "startTime": "2024-11-26T06:57:22Z",
+        "containerStatuses": [
+          {
+            "name": "configmap-reloader",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:57:30Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:ca6df8d39998275a1b42c761df0379911025386ca4130c1801d83f4141ee3576",
+            "imageID": "registry.redhat.io/openshift4/ose-configmap-reloader@sha256:43de0fa7a7897e9e3288bd7efe0dc85d3d950f4cd589588efe4b91bb6a2d2e89",
+            "containerID": "cri-o://cc1efe080eabdecc4bdae74e8fe4475dd402d61cf04d1e0d913ede8cf8631198",
+            "started": true
+          },
+          {
+            "name": "thanos-rule",
+            "state": {
+              "running": {
+                "startedAt": "2024-11-26T06:57:29Z"
+              }
+            },
+            "lastState": {},
+            "ready": true,
+            "restartCount": 0,
+            "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "imageID": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+            "containerID": "cri-o://d16d902242720ba33d02ae5f34b2f995ce2fa72d38b9ffe3617ae05debbac251",
+            "started": true
+          }
+        ],
+        "qosClass": "Burstable"
+      }
+    }
+  ]
+}ùŸ‹Ï5¾      gEzkgEzkG•@      ˜    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/api/v1/namespaces/open-cluster-management-observability/pods?limit=250&labelSelector=app.kubernetes.io%2Fcomponent%3Drule-evaluation-engine%2Capp.kubernetes.io%2Finstance%3Dobservability%2Capp.kubernetes.io%2Fname%3Dthanos-rule%2Capp.kubernetes.io%2Fpart-of%3Dobservatorium&cluster=local-cluster necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: c8d21f5d-f128-45ca-9322-6ce9a182817d
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 07:36:11 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: c8d21f5d-f128-45ca-9322-6ce9a182817d
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 07:36:11 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 83 net-response-time-onstop 84  BQ

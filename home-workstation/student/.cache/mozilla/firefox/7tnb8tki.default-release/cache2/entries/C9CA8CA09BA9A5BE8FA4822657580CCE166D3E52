@@ -1,0 +1,312 @@
+{
+  "apiVersion": "ceph.rook.io/v1",
+  "items": [
+    {
+      "apiVersion": "ceph.rook.io/v1",
+      "kind": "CephCluster",
+      "metadata": {
+        "creationTimestamp": "2023-07-02T22:33:09Z",
+        "finalizers": [
+          "cephcluster.ceph.rook.io"
+        ],
+        "generation": 1,
+        "labels": {
+          "app": "ocs-external-storagecluster"
+        },
+        "managedFields": [
+          {
+            "apiVersion": "ceph.rook.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"0ca29fdf-f800-4214-9608-c2358619d462\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:cephVersion": {},
+                "f:cleanupPolicy": {
+                  ".": {},
+                  "f:sanitizeDisks": {}
+                },
+                "f:crashCollector": {
+                  ".": {},
+                  "f:disable": {}
+                },
+                "f:dashboard": {},
+                "f:disruptionManagement": {},
+                "f:external": {
+                  ".": {},
+                  "f:enable": {}
+                },
+                "f:healthCheck": {
+                  ".": {},
+                  "f:daemonHealth": {
+                    ".": {},
+                    "f:mon": {},
+                    "f:osd": {},
+                    "f:status": {}
+                  }
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:monitoring": {
+                    ".": {},
+                    "f:rook.io/managedBy": {}
+                  }
+                },
+                "f:logCollector": {},
+                "f:mgr": {},
+                "f:mon": {},
+                "f:monitoring": {
+                  ".": {},
+                  "f:enabled": {},
+                  "f:externalMgrEndpoints": {},
+                  "f:externalMgrPrometheusPort": {},
+                  "f:rulesNamespace": {}
+                },
+                "f:network": {},
+                "f:security": {
+                  ".": {},
+                  "f:kms": {}
+                },
+                "f:storage": {}
+              }
+            },
+            "manager": "ocs-operator",
+            "operation": "Update",
+            "time": "2023-07-02T22:33:09Z"
+          },
+          {
+            "apiVersion": "ceph.rook.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:finalizers": {
+                  ".": {},
+                  "v:\"cephcluster.ceph.rook.io\"": {}
+                }
+              }
+            },
+            "manager": "rook",
+            "operation": "Update",
+            "time": "2023-07-02T22:33:09Z"
+          },
+          {
+            "apiVersion": "ceph.rook.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:ceph": {
+                  ".": {},
+                  "f:capacity": {
+                    ".": {},
+                    "f:bytesAvailable": {},
+                    "f:bytesTotal": {},
+                    "f:bytesUsed": {},
+                    "f:lastUpdated": {}
+                  },
+                  "f:health": {},
+                  "f:lastChecked": {},
+                  "f:versions": {
+                    ".": {},
+                    "f:mds": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    },
+                    "f:mgr": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    },
+                    "f:mon": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    },
+                    "f:osd": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    },
+                    "f:overall": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    },
+                    "f:rgw": {
+                      ".": {},
+                      "f:ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": {}
+                    }
+                  }
+                },
+                "f:conditions": {},
+                "f:message": {},
+                "f:phase": {},
+                "f:state": {},
+                "f:version": {
+                  ".": {},
+                  "f:version": {}
+                }
+              }
+            },
+            "manager": "rook",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2023-07-02T22:33:18Z"
+          }
+        ],
+        "name": "ocs-external-storagecluster-cephcluster",
+        "namespace": "openshift-storage",
+        "ownerReferences": [
+          {
+            "apiVersion": "ocs.openshift.io/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "StorageCluster",
+            "name": "ocs-external-storagecluster",
+            "uid": "0ca29fdf-f800-4214-9608-c2358619d462"
+          }
+        ],
+        "resourceVersion": "8515213",
+        "uid": "105f2278-cae9-4f21-8726-0ccffe54ab9c"
+      },
+      "spec": {
+        "cephVersion": {},
+        "cleanupPolicy": {
+          "sanitizeDisks": {}
+        },
+        "crashCollector": {
+          "disable": true
+        },
+        "dashboard": {},
+        "disruptionManagement": {},
+        "external": {
+          "enable": true
+        },
+        "healthCheck": {
+          "daemonHealth": {
+            "mon": {},
+            "osd": {},
+            "status": {}
+          }
+        },
+        "labels": {
+          "monitoring": {
+            "rook.io/managedBy": "ocs-external-storagecluster"
+          }
+        },
+        "logCollector": {},
+        "mgr": {},
+        "mon": {},
+        "monitoring": {
+          "enabled": true,
+          "externalMgrEndpoints": [
+            {
+              "ip": "192.168.50.30"
+            }
+          ],
+          "externalMgrPrometheusPort": 9283,
+          "rulesNamespace": "openshift-storage"
+        },
+        "network": {},
+        "security": {
+          "kms": {}
+        },
+        "storage": {}
+      },
+      "status": {
+        "ceph": {
+          "capacity": {
+            "bytesAvailable": 478762696704,
+            "bytesTotal": 483171237888,
+            "bytesUsed": 4408541184,
+            "lastUpdated": "2024-11-28T09:20:02Z"
+          },
+          "health": "HEALTH_OK",
+          "lastChecked": "2024-11-28T09:20:02Z",
+          "versions": {
+            "mds": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 1
+            },
+            "mgr": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 1
+            },
+            "mon": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 1
+            },
+            "osd": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 3
+            },
+            "overall": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 7
+            },
+            "rgw": {
+              "ceph version 14.2.22-128.el8cp (40a2bf9c4e79e39754d69a95cd51bd60991284be) nautilus (stable)": 1
+            }
+          }
+        },
+        "conditions": [
+          {
+            "lastHeartbeatTime": "2024-11-25T06:37:29Z",
+            "lastTransitionTime": "2024-11-25T06:37:29Z",
+            "message": "Attempting to connect to an external Ceph cluster",
+            "reason": "ClusterConnecting",
+            "status": "True",
+            "type": "Connecting"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2023-07-02T22:33:18Z",
+            "message": "Cluster connected successfully",
+            "reason": "ClusterConnected",
+            "status": "True",
+            "type": "Connected"
+          }
+        ],
+        "message": "Cluster connected successfully",
+        "phase": "Connected",
+        "state": "Connected",
+        "version": {
+          "version": "14.2.22-128"
+        }
+      }
+    }
+  ],
+  "kind": "CephClusterList",
+  "metadata": {
+    "continue": "",
+    "resourceVersion": "8515269"
+  }
+}r´&×‡®           gH5ÅG–õ       ²    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/ceph.rook.io/v1/cephclusters?limit=250&cluster=local-cluster strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: bad3567f-8eab-4b2a-bffe-192902d18241
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:05 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: bad3567f-8eab-4b2a-bffe-192902d18241
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:05 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1   #b

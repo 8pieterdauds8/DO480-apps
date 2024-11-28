@@ -1,0 +1,843 @@
+{
+  "apiVersion": "operators.coreos.com/v1alpha1",
+  "kind": "ClusterServiceVersion",
+  "metadata": {
+    "annotations": {
+      "alm-examples": "[\n  {\n    \"apiVersion\": \"quay.redhat.com/v1\",\n    \"kind\": \"QuayRegistry\",\n    \"metadata\": {\n      \"name\": \"example-registry\"\n    },\n    \"spec\": {\n      \"components\": [\n        {\"kind\": \"clair\", \"managed\": true},\n        {\"kind\": \"postgres\", \"managed\": true},\n        {\"kind\": \"objectstorage\", \"managed\": true},\n        {\"kind\": \"redis\", \"managed\": true},\n        {\"kind\": \"horizontalpodautoscaler\", \"managed\": true},\n        {\"kind\": \"route\", \"managed\": true},\n        {\"kind\": \"mirror\", \"managed\": true},\n        {\"kind\": \"monitoring\", \"managed\": true},\n        {\"kind\": \"tls\", \"managed\": true}\n      ]\n    }\n  }\n]",
+      "capabilities": "Full Lifecycle",
+      "categories": "Integration \u0026 Delivery",
+      "containerImage": "registry.redhat.io/quay/quay-operator-rhel8@sha256:99de3a47361e3d16479a506088a82558079afecfd6345f2a3ef25daef57d1d82",
+      "createdAt": "2021-08-31 14:08 UTC",
+      "description": "Opinionated deployment of Red Hat Quay on Kubernetes.",
+      "olm.operatorGroup": "global-operators",
+      "olm.operatorNamespace": "openshift-operators",
+      "olm.skipRange": "\u003e=3.3.x \u003c3.6.4",
+      "olm.targetNamespaces": "",
+      "operatorframework.io/properties": "{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"quay.redhat.com\",\"kind\":\"QuayRegistry\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"quay-operator\",\"version\":\"3.6.4\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"redhatcop.redhat.io\",\"kind\":\"QuayEcosystem\",\"version\":\"v1alpha1\"}}]}",
+      "operators.openshift.io/infrastructure-features": "[\"disconnected\"]",
+      "operators.operatorframework.io/internal-objects": "[\"quayecosystems.redhatcop.redhat.io\"]",
+      "quay-version": "3.6.4",
+      "repository": "https://github.com/quay/quay-operator",
+      "tectonic-visibility": "ocs"
+    },
+    "creationTimestamp": "2024-11-28T03:17:55Z",
+    "generation": 1,
+    "labels": {
+      "operators.coreos.com/quay-operator.openshift-operators": ""
+    },
+    "managedFields": [
+      {
+        "apiVersion": "operators.coreos.com/v1alpha1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              ".": {},
+              "f:alm-examples": {},
+              "f:capabilities": {},
+              "f:categories": {},
+              "f:containerImage": {},
+              "f:createdAt": {},
+              "f:description": {},
+              "f:olm.skipRange": {},
+              "f:operatorframework.io/properties": {},
+              "f:operators.openshift.io/infrastructure-features": {},
+              "f:operators.operatorframework.io/internal-objects": {},
+              "f:quay-version": {},
+              "f:repository": {},
+              "f:tectonic-visibility": {}
+            }
+          },
+          "f:spec": {
+            ".": {},
+            "f:apiservicedefinitions": {},
+            "f:cleanup": {
+              ".": {},
+              "f:enabled": {}
+            },
+            "f:customresourcedefinitions": {
+              ".": {},
+              "f:owned": {}
+            },
+            "f:description": {},
+            "f:displayName": {},
+            "f:icon": {},
+            "f:install": {
+              ".": {},
+              "f:spec": {
+                ".": {},
+                "f:deployments": {},
+                "f:permissions": {}
+              },
+              "f:strategy": {}
+            },
+            "f:installModes": {},
+            "f:keywords": {},
+            "f:labels": {
+              ".": {},
+              "f:alm-owner-quay-operator": {},
+              "f:operated-by": {}
+            },
+            "f:links": {},
+            "f:maintainers": {},
+            "f:maturity": {},
+            "f:provider": {
+              ".": {},
+              "f:name": {}
+            },
+            "f:relatedImages": {},
+            "f:replaces": {},
+            "f:selector": {
+              ".": {},
+              "f:matchLabels": {
+                ".": {},
+                "f:alm-owner-quay-operator": {},
+                "f:operated-by": {}
+              }
+            },
+            "f:version": {}
+          }
+        },
+        "manager": "catalog",
+        "operation": "Update",
+        "time": "2024-11-28T03:17:55Z"
+      },
+      {
+        "apiVersion": "operators.coreos.com/v1alpha1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            ".": {},
+            "f:cleanup": {},
+            "f:conditions": {},
+            "f:lastTransitionTime": {},
+            "f:lastUpdateTime": {},
+            "f:message": {},
+            "f:phase": {},
+            "f:reason": {},
+            "f:requirementStatus": {}
+          }
+        },
+        "manager": "olm",
+        "operation": "Update",
+        "subresource": "status",
+        "time": "2024-11-28T03:17:55Z"
+      },
+      {
+        "apiVersion": "operators.coreos.com/v1alpha1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              "f:olm.operatorGroup": {},
+              "f:olm.operatorNamespace": {},
+              "f:olm.targetNamespaces": {}
+            },
+            "f:labels": {
+              ".": {},
+              "f:operators.coreos.com/quay-operator.openshift-operators": {}
+            }
+          }
+        },
+        "manager": "olm",
+        "operation": "Update",
+        "time": "2024-11-28T03:17:57Z"
+      }
+    ],
+    "name": "quay-operator.v3.6.4",
+    "namespace": "openshift-operators",
+    "resourceVersion": "7852474",
+    "uid": "e77344f8-5f1f-44c1-b7a5-41acc21b9f04"
+  },
+  "spec": {
+    "apiservicedefinitions": {},
+    "cleanup": {
+      "enabled": false
+    },
+    "customresourcedefinitions": {
+      "owned": [
+        {
+          "description": "Represents a full Quay registry installation.",
+          "displayName": "Quay Registry",
+          "kind": "QuayRegistry",
+          "name": "quayregistries.quay.redhat.com",
+          "resources": [
+            {
+              "kind": "Deployment",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "ReplicaSet",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Pod",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Secret",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Job",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "ConfigMap",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "ServiceAccount",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "PersistentVolumeClaim",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Ingress",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Route",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Role",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "Rolebinding",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "HorizontalPodAutoscaler",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "ServiceMonitor",
+              "name": "",
+              "version": ""
+            },
+            {
+              "kind": "PrometheusRule",
+              "name": "",
+              "version": ""
+            }
+          ],
+          "specDescriptors": [
+            {
+              "description": "Name of the Quay config secret containing base configuration and custom SSL certificates.",
+              "displayName": "Config Bundle Secret",
+              "path": "configBundleSecret",
+              "x-descriptors": [
+                "urn:alm:descriptor:io.kubernetes:Secret"
+              ]
+            },
+            {
+              "description": "Declares how the Operator should handle supplemental Quay services.",
+              "displayName": "Components",
+              "path": "components",
+              "x-descriptors": [
+                "urn:alm:descriptor:com.tectonic.ui:advanced"
+              ]
+            },
+            {
+              "description": "The unique name of this type of component.",
+              "displayName": "Kind",
+              "path": "components[0].kind"
+            },
+            {
+              "description": "Indicates whether lifecycle of this component is managed by the Operator or externally.",
+              "displayName": "Managed",
+              "path": "components[0].managed"
+            }
+          ],
+          "statusDescriptors": [
+            {
+              "description": "The currently installed version of all Quay components.",
+              "displayName": "Current Version",
+              "path": "currentVersion"
+            },
+            {
+              "description": "Observed conditions of Quay components.",
+              "displayName": "Conditions",
+              "path": "conditions",
+              "x-descriptors": [
+                "urn:alm:descriptor:io.kubernetes.conditions"
+              ]
+            },
+            {
+              "description": "Name of the secret containing credentials for the Quay config editor.",
+              "displayName": "Config Editor Credentials Secret",
+              "path": "configEditorCredentialsSecret",
+              "x-descriptors": [
+                "urn:alm:descriptor:io.kubernetes:Secret"
+              ]
+            },
+            {
+              "description": "Externally accessible URL for container pull/push and web frontend.",
+              "displayName": "Registry Endpoint",
+              "path": "registryEndpoint",
+              "x-descriptors": [
+                "urn:alm:descriptor:org.w3:link"
+              ]
+            },
+            {
+              "description": "Externally accessible URL for the config editor UI.",
+              "displayName": "Config Editor Endpoint",
+              "path": "configEditorEndpoint",
+              "x-descriptors": [
+                "urn:alm:descriptor:org.w3:link"
+              ]
+            }
+          ],
+          "version": "v1"
+        },
+        {
+          "description": "[DEPRECATED] Old representation of a full Quay installation.",
+          "displayName": "Quay Ecosystem",
+          "kind": "QuayEcosystem",
+          "name": "quayecosystems.redhatcop.redhat.io",
+          "version": "v1alpha1"
+        }
+      ]
+    },
+    "description": "The Red Hat Quay Operator deploys and manages a production-ready\n[Red Hat Quay](https://www.openshift.com/products/quay) private container registry.\nThis operator provides an opinionated installation and configuration of Red Hat Quay.\nAll components required, including Clair, database, and storage, are provided in an\noperator-managed fashion. Each component may optionally be self-managed.\n\n## Operator Features\n\n* Automated installation of Red Hat Quay\n* Provisions instance of Redis\n* Provisions PostgreSQL to support both Quay and Clair\n* Installation of Clair for container scanning and integration with Quay\n* Provisions and configures RHOCS for supported registry object storage\n* Enables and configures Quay's registry mirroring feature\n\n## Prerequisites\n\nBy default, the Red Hat Quay operator expects RHOCS to be installed on the cluster to\nprovide the _ObjectBucketClaim_ API for object storage. For instructions installing and\nconfiguring the RHOCS Operator, see the \"Enabling OpenShift Container Storage\" in the\n[official documentation](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/deploy_red_hat_quay_on_openshift_with_the_quay_operator/index#enabling_openshift_container_storage).\n\n## Simplified Deployment\n\nThe following example provisions a fully operator-managed deployment of Red Hat Quay,\nincluding all services necessary for production:\n\n```\napiVersion: quay.redhat.com/v1\nkind: QuayRegistry\nmetadata:\n  name: my-registry\n```\n\n## Documentation\n\nSee the\n[official documentation](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploy_red_hat_quay_on_openshift_with_the_quay_operator/index)\nfor more complex deployment scenarios and information.",
+    "displayName": "Red Hat Quay",
+    "icon": [
+      {
+        "base64data": "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",
+        "mediatype": "image/png"
+      }
+    ],
+    "install": {
+      "spec": {
+        "deployments": [
+          {
+            "name": "quay-operator.v3.6.4",
+            "spec": {
+              "replicas": 1,
+              "selector": {
+                "matchLabels": {
+                  "name": "quay-operator-alm-owned"
+                }
+              },
+              "strategy": {},
+              "template": {
+                "metadata": {
+                  "creationTimestamp": null,
+                  "labels": {
+                    "name": "quay-operator-alm-owned"
+                  },
+                  "name": "quay-operator-alm-owned"
+                },
+                "spec": {
+                  "containers": [
+                    {
+                      "command": [
+                        "/workspace/manager",
+                        "--namespace=$(WATCH_NAMESPACE)"
+                      ],
+                      "env": [
+                        {
+                          "name": "MY_POD_NAMESPACE",
+                          "valueFrom": {
+                            "fieldRef": {
+                              "fieldPath": "metadata.namespace"
+                            }
+                          }
+                        },
+                        {
+                          "name": "MY_POD_NAME",
+                          "valueFrom": {
+                            "fieldRef": {
+                              "fieldPath": "metadata.name"
+                            }
+                          }
+                        },
+                        {
+                          "name": "WATCH_NAMESPACE",
+                          "valueFrom": {
+                            "fieldRef": {
+                              "fieldPath": "metadata.annotations['olm.targetNamespaces']"
+                            }
+                          }
+                        },
+                        {
+                          "name": "QUAY_VERSION",
+                          "valueFrom": {
+                            "fieldRef": {
+                              "fieldPath": "metadata.annotations['quay-version']"
+                            }
+                          }
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_QUAY",
+                          "value": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe"
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_CLAIR",
+                          "value": "registry.redhat.io/quay/clair-rhel8@sha256:438b8eb1982325da3908e965336e980128b20451e7d91e1edf23a267a6be60ca"
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_BUILDER",
+                          "value": "registry.redhat.io/quay/quay-builder-rhel8@sha256:f4ec4f92b649da84da65c21e15f8550fe69d6c0df32c5ac31f0803440f7b3682"
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_BUILDER_QEMU",
+                          "value": "registry.redhat.io/quay/quay-builder-qemu-rhcos-rhel8@sha256:c3ed85e2635b3c3b483a431ec49362c2693484f9d059ec2ee98513aa10d456a7"
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_POSTGRES",
+                          "value": "registry.redhat.io/rhel8/postgresql-10@sha256:c9455e224f2598bb2ca981fe8f6826dd017352e60e5287ebb621c274d1ec38b8"
+                        },
+                        {
+                          "name": "RELATED_IMAGE_COMPONENT_REDIS",
+                          "value": "registry.redhat.io/rhel8/redis-5@sha256:b711e9f796376353db77a337befb39c31e844caaa2ab46985c9e5ad0b5e92996"
+                        }
+                      ],
+                      "image": "registry.redhat.io/quay/quay-operator-rhel8@sha256:99de3a47361e3d16479a506088a82558079afecfd6345f2a3ef25daef57d1d82",
+                      "name": "quay-operator",
+                      "resources": {}
+                    }
+                  ],
+                  "serviceAccountName": "quay-operator"
+                }
+              }
+            }
+          }
+        ],
+        "permissions": [
+          {
+            "rules": [
+              {
+                "apiGroups": [
+                  "quay.redhat.com"
+                ],
+                "resources": [
+                  "quayregistries",
+                  "quayregistries/status"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "redhatcop.redhat.io"
+                ],
+                "resources": [
+                  "quayecosystems",
+                  "quayecosystems/status"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "apps"
+                ],
+                "resources": [
+                  "deployments"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  ""
+                ],
+                "resources": [
+                  "pods",
+                  "services",
+                  "secrets",
+                  "configmaps",
+                  "serviceaccounts",
+                  "persistentvolumeclaims",
+                  "events"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  ""
+                ],
+                "resources": [
+                  "namespaces"
+                ],
+                "verbs": [
+                  "get",
+                  "watch",
+                  "list",
+                  "update",
+                  "patch"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "rbac.authorization.k8s.io"
+                ],
+                "resources": [
+                  "roles",
+                  "rolebindings"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "route.openshift.io"
+                ],
+                "resources": [
+                  "routes",
+                  "routes/custom-host"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "autoscaling"
+                ],
+                "resources": [
+                  "horizontalpodautoscalers"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "objectbucket.io"
+                ],
+                "resources": [
+                  "objectbucketclaims"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "monitoring.coreos.com"
+                ],
+                "resources": [
+                  "prometheusrules",
+                  "servicemonitors"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              },
+              {
+                "apiGroups": [
+                  "batch"
+                ],
+                "resources": [
+                  "jobs"
+                ],
+                "verbs": [
+                  "*"
+                ]
+              }
+            ],
+            "serviceAccountName": "quay-operator"
+          }
+        ]
+      },
+      "strategy": "deployment"
+    },
+    "installModes": [
+      {
+        "supported": true,
+        "type": "OwnNamespace"
+      },
+      {
+        "supported": true,
+        "type": "SingleNamespace"
+      },
+      {
+        "supported": true,
+        "type": "MultiNamespace"
+      },
+      {
+        "supported": true,
+        "type": "AllNamespaces"
+      }
+    ],
+    "keywords": [
+      "open source",
+      "containers",
+      "registry"
+    ],
+    "labels": {
+      "alm-owner-quay-operator": "quay-operator",
+      "operated-by": "quay-operator"
+    },
+    "links": [
+      {
+        "name": "Source Code",
+        "url": "https://github.com/quay/quay-operator"
+      }
+    ],
+    "maintainers": [
+      {
+        "email": "support@redhat.com",
+        "name": "Red Hat"
+      }
+    ],
+    "maturity": "stable",
+    "provider": {
+      "name": "Red Hat"
+    },
+    "relatedImages": [
+      {
+        "image": "registry.redhat.io/quay/quay-operator-rhel8@sha256:99de3a47361e3d16479a506088a82558079afecfd6345f2a3ef25daef57d1d82",
+        "name": "quay-operator-rhel8-99de3a47361e3d16479a506088a82558079afecfd6345f2a3ef25daef57d1d82-annotation"
+      },
+      {
+        "image": "registry.redhat.io/quay/quay-operator-rhel8@sha256:99de3a47361e3d16479a506088a82558079afecfd6345f2a3ef25daef57d1d82",
+        "name": "quay-operator"
+      },
+      {
+        "image": "registry.redhat.io/quay/quay-rhel8@sha256:2d035f7177b4a8621e5bf2058f04b5fa1105e4965fbd3e0bbc6a63039847ccbe",
+        "name": "component_quay"
+      },
+      {
+        "image": "registry.redhat.io/quay/clair-rhel8@sha256:438b8eb1982325da3908e965336e980128b20451e7d91e1edf23a267a6be60ca",
+        "name": "component_clair"
+      },
+      {
+        "image": "registry.redhat.io/quay/quay-builder-rhel8@sha256:f4ec4f92b649da84da65c21e15f8550fe69d6c0df32c5ac31f0803440f7b3682",
+        "name": "component_builder"
+      },
+      {
+        "image": "registry.redhat.io/quay/quay-builder-qemu-rhcos-rhel8@sha256:c3ed85e2635b3c3b483a431ec49362c2693484f9d059ec2ee98513aa10d456a7",
+        "name": "component_builder_qemu"
+      },
+      {
+        "image": "registry.redhat.io/rhel8/postgresql-10@sha256:c9455e224f2598bb2ca981fe8f6826dd017352e60e5287ebb621c274d1ec38b8",
+        "name": "component_postgres"
+      },
+      {
+        "image": "registry.redhat.io/rhel8/redis-5@sha256:b711e9f796376353db77a337befb39c31e844caaa2ab46985c9e5ad0b5e92996",
+        "name": "component_redis"
+      }
+    ],
+    "replaces": "quay-operator.v3.6.2",
+    "selector": {
+      "matchLabels": {
+        "alm-owner-quay-operator": "quay-operator",
+        "operated-by": "quay-operator"
+      }
+    },
+    "version": "3.6.4"
+  },
+  "status": {
+    "cleanup": {},
+    "conditions": [
+      {
+        "lastTransitionTime": "2024-11-28T03:17:55Z",
+        "lastUpdateTime": "2024-11-28T03:17:55Z",
+        "message": "requirements not yet checked",
+        "phase": "Pending",
+        "reason": "RequirementsUnknown"
+      },
+      {
+        "lastTransitionTime": "2024-11-28T03:17:55Z",
+        "lastUpdateTime": "2024-11-28T03:17:55Z",
+        "message": "one or more requirements couldn't be found",
+        "phase": "Pending",
+        "reason": "RequirementsNotMet"
+      },
+      {
+        "lastTransitionTime": "2024-11-28T03:17:57Z",
+        "lastUpdateTime": "2024-11-28T03:17:57Z",
+        "message": "all requirements found, attempting install",
+        "phase": "InstallReady",
+        "reason": "AllRequirementsMet"
+      },
+      {
+        "lastTransitionTime": "2024-11-28T03:17:57Z",
+        "lastUpdateTime": "2024-11-28T03:17:57Z",
+        "message": "waiting for install components to report healthy",
+        "phase": "Installing",
+        "reason": "InstallSucceeded"
+      },
+      {
+        "lastTransitionTime": "2024-11-28T03:17:57Z",
+        "lastUpdateTime": "2024-11-28T03:17:58Z",
+        "message": "installing: waiting for deployment quay-operator.v3.6.4 to become ready: deployment \"quay-operator.v3.6.4\" not available: Deployment does not have minimum availability.",
+        "phase": "Installing",
+        "reason": "InstallWaiting"
+      },
+      {
+        "lastTransitionTime": "2024-11-28T03:18:21Z",
+        "lastUpdateTime": "2024-11-28T03:18:21Z",
+        "message": "install strategy completed with no errors",
+        "phase": "Succeeded",
+        "reason": "InstallSucceeded"
+      }
+    ],
+    "lastTransitionTime": "2024-11-28T03:18:21Z",
+    "lastUpdateTime": "2024-11-28T03:18:21Z",
+    "message": "install strategy completed with no errors",
+    "phase": "Succeeded",
+    "reason": "InstallSucceeded",
+    "requirementStatus": [
+      {
+        "group": "apiextensions.k8s.io",
+        "kind": "CustomResourceDefinition",
+        "message": "CRD is present and Established condition is true",
+        "name": "quayecosystems.redhatcop.redhat.io",
+        "status": "Present",
+        "uuid": "b909771b-198b-4a86-89fd-01534547878f",
+        "version": "v1"
+      },
+      {
+        "group": "apiextensions.k8s.io",
+        "kind": "CustomResourceDefinition",
+        "message": "CRD is present and Established condition is true",
+        "name": "quayregistries.quay.redhat.com",
+        "status": "Present",
+        "uuid": "b0aa9dab-61b9-412f-a583-cca721f08977",
+        "version": "v1"
+      },
+      {
+        "dependents": [
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"quay.redhat.com\"],\"resources\":[\"quayregistries\",\"quayregistries/status\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"redhatcop.redhat.io\"],\"resources\":[\"quayecosystems\",\"quayecosystems/status\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"apps\"],\"resources\":[\"deployments\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"\"],\"resources\":[\"pods\",\"services\",\"secrets\",\"configmaps\",\"serviceaccounts\",\"persistentvolumeclaims\",\"events\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"get\",\"watch\",\"list\",\"update\",\"patch\"],\"apiGroups\":[\"\"],\"resources\":[\"namespaces\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"rbac.authorization.k8s.io\"],\"resources\":[\"roles\",\"rolebindings\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"route.openshift.io\"],\"resources\":[\"routes\",\"routes/custom-host\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"autoscaling\"],\"resources\":[\"horizontalpodautoscalers\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"objectbucket.io\"],\"resources\":[\"objectbucketclaims\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"monitoring.coreos.com\"],\"resources\":[\"prometheusrules\",\"servicemonitors\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "kind": "PolicyRule",
+            "message": "namespaced rule:{\"verbs\":[\"*\"],\"apiGroups\":[\"batch\"],\"resources\":[\"jobs\"]}",
+            "status": "Satisfied",
+            "version": "v1"
+          }
+        ],
+        "group": "",
+        "kind": "ServiceAccount",
+        "message": "",
+        "name": "quay-operator",
+        "status": "Present",
+        "version": "v1"
+      }
+    ]
+  }
+}Ë­YLd           gGãgG–»é       Þ    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/operators.coreos.com/v1alpha1/namespaces/openshift-operators/clusterserviceversions/quay-operator.v3.6.4 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 45523f29-cf43-40f3-ba91-5302689c3988
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 03:28:39 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 45523f29-cf43-40f3-ba91-5302689c3988
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 03:28:39 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1   ‡

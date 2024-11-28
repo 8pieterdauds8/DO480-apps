@@ -1,0 +1,673 @@
+{
+  "kind": "IngressList",
+  "apiVersion": "networking.k8s.io/v1",
+  "metadata": {
+    "resourceVersion": "2543434"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "application-chart-d837d-applicationui",
+        "namespace": "open-cluster-management",
+        "uid": "cdea9e4f-3c6e-4269-b64c-4ccae9221d26",
+        "resourceVersion": "428552",
+        "generation": 1,
+        "creationTimestamp": "2024-11-25T07:59:23Z",
+        "labels": {
+          "app": "application-chart",
+          "app.kubernetes.io/instance": "application-chart-d837d",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "application-chart",
+          "chart": "application-chart-2.4.2",
+          "helm.sh/chart": "application-chart-2.4.2",
+          "heritage": "Helm",
+          "release": "application-chart-d837d"
+        },
+        "annotations": {
+          "ingress.open-cluster-management.io/auth-type": "access-token",
+          "ingress.open-cluster-management.io/secure-backends": "true",
+          "kubernetes.io/ingress.class": "ingress-open-cluster-management",
+          "meta.helm.sh/release-name": "application-chart-d837d",
+          "meta.helm.sh/release-namespace": "open-cluster-management"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps.open-cluster-management.io/v1",
+            "kind": "HelmRelease",
+            "name": "application-chart-d837d",
+            "uid": "ba318e80-7521-4c3c-b82e-35b3d12d8956",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-subscription",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T07:59:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:ingress.open-cluster-management.io/auth-type": {},
+                  "f:ingress.open-cluster-management.io/secure-backends": {},
+                  "f:kubernetes.io/ingress.class": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:chart": {},
+                  "f:helm.sh/chart": {},
+                  "f:heritage": {},
+                  "f:release": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"ba318e80-7521-4c3c-b82e-35b3d12d8956\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "management-ingress",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:00:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "rules": [
+          {
+            "http": {
+              "paths": [
+                {
+                  "path": "/multicloud/applications",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "application-chart-d837d-applicationui",
+                      "port": {
+                        "number": 3001
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "192.168.50.11"
+            },
+            {
+              "ip": "192.168.50.12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "console-chart-a4eeb-console-v2",
+        "namespace": "open-cluster-management",
+        "uid": "d4b4b198-899f-4619-9dcf-c4dfee014ee4",
+        "resourceVersion": "428551",
+        "generation": 1,
+        "creationTimestamp": "2024-11-25T07:59:23Z",
+        "labels": {
+          "app": "console-chart-v2",
+          "app.kubernetes.io/instance": "console-chart-a4eeb",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "console-chart",
+          "chart": "console-chart-2.4.2",
+          "helm.sh/chart": "console-chart-2.4.2",
+          "heritage": "Helm",
+          "release": "console-chart-a4eeb"
+        },
+        "annotations": {
+          "ingress.open-cluster-management.io/auth-type": "access-token",
+          "ingress.open-cluster-management.io/secure-backends": "true",
+          "kubernetes.io/ingress.class": "ingress-open-cluster-management",
+          "meta.helm.sh/release-name": "console-chart-a4eeb",
+          "meta.helm.sh/release-namespace": "open-cluster-management"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps.open-cluster-management.io/v1",
+            "kind": "HelmRelease",
+            "name": "console-chart-a4eeb",
+            "uid": "05d0441c-0ea7-428a-8895-f947c78fd2d6",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-subscription",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T07:59:23Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:ingress.open-cluster-management.io/auth-type": {},
+                  "f:ingress.open-cluster-management.io/secure-backends": {},
+                  "f:kubernetes.io/ingress.class": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:chart": {},
+                  "f:helm.sh/chart": {},
+                  "f:heritage": {},
+                  "f:release": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"05d0441c-0ea7-428a-8895-f947c78fd2d6\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "management-ingress",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:00:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "rules": [
+          {
+            "http": {
+              "paths": [
+                {
+                  "path": "/multicloud",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "console-chart-a4eeb-console-v2",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "192.168.50.11"
+            },
+            {
+              "ip": "192.168.50.12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "grc-b01f9-grcui",
+        "namespace": "open-cluster-management",
+        "uid": "4fd5f4a5-791e-4a76-8880-f14696536e37",
+        "resourceVersion": "433123",
+        "generation": 1,
+        "creationTimestamp": "2024-11-25T08:01:38Z",
+        "labels": {
+          "app": "grc",
+          "app.kubernetes.io/instance": "grc-b01f9",
+          "app.kubernetes.io/managed-by": "Helm",
+          "app.kubernetes.io/name": "grc",
+          "chart": "grc-2.4.2",
+          "helm.sh/chart": "grc-2.4.2",
+          "heritage": "Helm",
+          "release": "grc-b01f9"
+        },
+        "annotations": {
+          "ingress.open-cluster-management.io/auth-type": "access-token",
+          "kubernetes.io/ingress.class": "ingress-open-cluster-management",
+          "meta.helm.sh/release-name": "grc-b01f9",
+          "meta.helm.sh/release-namespace": "open-cluster-management"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps.open-cluster-management.io/v1",
+            "kind": "HelmRelease",
+            "name": "grc-b01f9",
+            "uid": "602be3a3-6460-4d38-aacc-d37e666af135",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-subscription",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:01:38Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:ingress.open-cluster-management.io/auth-type": {},
+                  "f:kubernetes.io/ingress.class": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:chart": {},
+                  "f:helm.sh/chart": {},
+                  "f:heritage": {},
+                  "f:release": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"602be3a3-6460-4d38-aacc-d37e666af135\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "management-ingress",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:02:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "rules": [
+          {
+            "http": {
+              "paths": [
+                {
+                  "path": "/multicloud/policies",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/welcome",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/logout",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/common/applinks",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/common/configure",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/common/username",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/common/version",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "grc-b01f9-grcui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "192.168.50.11"
+            },
+            {
+              "ip": "192.168.50.12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "search-ui",
+        "namespace": "open-cluster-management",
+        "uid": "3e1e024d-5082-4fe2-8d54-00fad1a90411",
+        "resourceVersion": "430707",
+        "generation": 1,
+        "creationTimestamp": "2024-11-25T08:00:36Z",
+        "labels": {
+          "app": "search",
+          "app.kubernetes.io/managed-by": "Helm",
+          "chart": "search-prod-2.4.2",
+          "component": "search-ui",
+          "heritage": "Helm",
+          "release": "search-prod-17cc5"
+        },
+        "annotations": {
+          "ingress.open-cluster-management.io/auth-type": "access-token",
+          "kubernetes.io/ingress.class": "ingress-open-cluster-management",
+          "meta.helm.sh/release-name": "search-prod-17cc5",
+          "meta.helm.sh/release-namespace": "open-cluster-management"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "apps.open-cluster-management.io/v1",
+            "kind": "HelmRelease",
+            "name": "search-prod-17cc5",
+            "uid": "af1ab4a3-47c8-45b5-893d-110c3b8d2c81",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "multicluster-operators-subscription",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:00:36Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:ingress.open-cluster-management.io/auth-type": {},
+                  "f:kubernetes.io/ingress.class": {},
+                  "f:meta.helm.sh/release-name": {},
+                  "f:meta.helm.sh/release-namespace": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:app.kubernetes.io/managed-by": {},
+                  "f:chart": {},
+                  "f:component": {},
+                  "f:heritage": {},
+                  "f:release": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"af1ab4a3-47c8-45b5-893d-110c3b8d2c81\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:rules": {}
+              }
+            }
+          },
+          {
+            "manager": "management-ingress",
+            "operation": "Update",
+            "apiVersion": "networking.k8s.io/v1",
+            "time": "2024-11-25T08:01:30Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                "f:loadBalancer": {
+                  "f:ingress": {}
+                }
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "rules": [
+          {
+            "http": {
+              "paths": [
+                {
+                  "path": "/search",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/overview",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/resources",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/search",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/overview",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                },
+                {
+                  "path": "/multicloud/details",
+                  "pathType": "ImplementationSpecific",
+                  "backend": {
+                    "service": {
+                      "name": "search-ui",
+                      "port": {
+                        "number": 3000
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "192.168.50.11"
+            },
+            {
+              "ip": "192.168.50.12"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}⁄!¨ê`      gE7˙gE7˙Gî‚2       ¥    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/networking.k8s.io/v1/ingresses?limit=250&cluster=local-cluster necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: be0b84b7-11be-4c83-96f9-7fe15b0c2196
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 02:52:42 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: be0b84b7-11be-4c83-96f9-7fe15b0c2196
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 02:52:42 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 19 net-response-time-onstop 20   O

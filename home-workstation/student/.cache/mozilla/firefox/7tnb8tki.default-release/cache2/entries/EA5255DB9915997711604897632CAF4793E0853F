@@ -1,0 +1,288 @@
+{
+  "apiVersion": "ocs.openshift.io/v1",
+  "items": [
+    {
+      "apiVersion": "ocs.openshift.io/v1",
+      "kind": "StorageCluster",
+      "metadata": {
+        "annotations": {
+          "storagesystem.odf.openshift.io/watched-by": "ocs-external-storagecluster-storagesystem",
+          "uninstall.ocs.openshift.io/cleanup-policy": "delete",
+          "uninstall.ocs.openshift.io/mode": "graceful"
+        },
+        "creationTimestamp": "2023-07-02T22:33:08Z",
+        "finalizers": [
+          "storagecluster.ocs.openshift.io"
+        ],
+        "generation": 3,
+        "managedFields": [
+          {
+            "apiVersion": "ocs.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                ".": {},
+                "f:externalStorage": {
+                  ".": {},
+                  "f:enable": {}
+                }
+              }
+            },
+            "manager": "OpenAPI-Generator",
+            "operation": "Update",
+            "time": "2023-07-02T22:33:08Z"
+          },
+          {
+            "apiVersion": "ocs.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:storagesystem.odf.openshift.io/watched-by": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"db4e0d97-7013-4ebc-9c84-a06926fe6529\"}": {}
+                }
+              }
+            },
+            "manager": "manager",
+            "operation": "Update",
+            "time": "2023-07-02T22:33:08Z"
+          },
+          {
+            "apiVersion": "ocs.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:uninstall.ocs.openshift.io/cleanup-policy": {},
+                  "f:uninstall.ocs.openshift.io/mode": {}
+                },
+                "f:finalizers": {
+                  ".": {},
+                  "v:\"storagecluster.ocs.openshift.io\"": {}
+                }
+              },
+              "f:spec": {
+                "f:arbiter": {},
+                "f:encryption": {
+                  ".": {},
+                  "f:kms": {}
+                },
+                "f:managedResources": {
+                  ".": {},
+                  "f:cephBlockPools": {},
+                  "f:cephConfig": {},
+                  "f:cephDashboard": {},
+                  "f:cephFilesystems": {},
+                  "f:cephObjectStoreUsers": {},
+                  "f:cephObjectStores": {}
+                },
+                "f:mirroring": {},
+                "f:version": {}
+              }
+            },
+            "manager": "ocs-operator",
+            "operation": "Update",
+            "time": "2023-07-02T22:33:08Z"
+          },
+          {
+            "apiVersion": "ocs.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:status": {
+                ".": {},
+                "f:conditions": {},
+                "f:externalSecretHash": {},
+                "f:images": {
+                  ".": {},
+                  "f:ceph": {
+                    ".": {},
+                    "f:desiredImage": {}
+                  },
+                  "f:noobaaCore": {
+                    ".": {},
+                    "f:actualImage": {},
+                    "f:desiredImage": {}
+                  },
+                  "f:noobaaDB": {
+                    ".": {},
+                    "f:actualImage": {},
+                    "f:desiredImage": {}
+                  }
+                },
+                "f:phase": {},
+                "f:relatedObjects": {}
+              }
+            },
+            "manager": "ocs-operator",
+            "operation": "Update",
+            "subresource": "status",
+            "time": "2023-07-02T22:33:18Z"
+          }
+        ],
+        "name": "ocs-external-storagecluster",
+        "namespace": "openshift-storage",
+        "ownerReferences": [
+          {
+            "apiVersion": "odf.openshift.io/v1alpha1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "StorageSystem",
+            "name": "ocs-external-storagecluster-storagesystem",
+            "uid": "db4e0d97-7013-4ebc-9c84-a06926fe6529"
+          }
+        ],
+        "resourceVersion": "8515249",
+        "uid": "0ca29fdf-f800-4214-9608-c2358619d462"
+      },
+      "spec": {
+        "arbiter": {},
+        "encryption": {
+          "kms": {}
+        },
+        "externalStorage": {
+          "enable": true
+        },
+        "managedResources": {
+          "cephBlockPools": {},
+          "cephConfig": {},
+          "cephDashboard": {},
+          "cephFilesystems": {},
+          "cephObjectStoreUsers": {},
+          "cephObjectStores": {}
+        },
+        "mirroring": {},
+        "version": "4.9.0"
+      },
+      "status": {
+        "conditions": [
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2024-11-25T06:37:56Z",
+            "message": "Reconcile completed successfully",
+            "reason": "ReconcileCompleted",
+            "status": "True",
+            "type": "ReconcileComplete"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2023-07-02T22:35:11Z",
+            "message": "Reconcile completed successfully",
+            "reason": "ReconcileCompleted",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2024-11-25T06:38:31Z",
+            "message": "Reconcile completed successfully",
+            "reason": "ReconcileCompleted",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2023-07-02T22:33:10Z",
+            "message": "Reconcile completed successfully",
+            "reason": "ReconcileCompleted",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-28T09:20:03Z",
+            "lastTransitionTime": "2023-07-02T22:35:11Z",
+            "message": "Reconcile completed successfully",
+            "reason": "ReconcileCompleted",
+            "status": "True",
+            "type": "Upgradeable"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-25T06:37:56Z",
+            "lastTransitionTime": "2023-07-02T22:33:11Z",
+            "message": "External CephCluster is trying to connect: Attempting to connect to an external Ceph cluster",
+            "reason": "ExternalClusterStateConnecting",
+            "status": "True",
+            "type": "ExternalClusterConnecting"
+          },
+          {
+            "lastHeartbeatTime": "2024-11-25T06:37:56Z",
+            "lastTransitionTime": "2023-07-02T22:33:11Z",
+            "message": "External CephCluster is trying to connect: Attempting to connect to an external Ceph cluster",
+            "reason": "ExternalClusterStateConnecting",
+            "status": "False",
+            "type": "ExternalClusterConnected"
+          }
+        ],
+        "externalSecretHash": "f17cb80ccd65230bc0768add6c45279c101ece80ec9764073ae8e269b9e00d1f6d1a44ecc8d95403e1d4faca5a403c684af7127c3478adc5b1e56bd90e03ffaa",
+        "images": {
+          "ceph": {
+            "desiredImage": "registry.redhat.io/rhceph/rhceph-5-rhel8@sha256:2296c19fbd3a0be84d6030dff789ce3e79b38cc30c39f45913aec97967b65cce"
+          },
+          "noobaaCore": {
+            "actualImage": "registry.redhat.io/odf4/mcg-core-rhel8@sha256:62c322de8d9818008b846778b2e2b51dede990c9cbf33cfe9dae23d744ec80d2",
+            "desiredImage": "registry.redhat.io/odf4/mcg-core-rhel8@sha256:62c322de8d9818008b846778b2e2b51dede990c9cbf33cfe9dae23d744ec80d2"
+          },
+          "noobaaDB": {
+            "actualImage": "registry.redhat.io/rhel8/postgresql-12@sha256:b006af9af125adce28546d0ed9d77421abe54182741f6b5e1d31c88dd763580b",
+            "desiredImage": "registry.redhat.io/rhel8/postgresql-12@sha256:b006af9af125adce28546d0ed9d77421abe54182741f6b5e1d31c88dd763580b"
+          }
+        },
+        "phase": "Ready",
+        "relatedObjects": [
+          {
+            "apiVersion": "ceph.rook.io/v1",
+            "kind": "CephCluster",
+            "name": "ocs-external-storagecluster-cephcluster",
+            "namespace": "openshift-storage",
+            "resourceVersion": "8515213",
+            "uid": "105f2278-cae9-4f21-8726-0ccffe54ab9c"
+          },
+          {
+            "apiVersion": "noobaa.io/v1alpha1",
+            "kind": "NooBaa",
+            "name": "noobaa",
+            "namespace": "openshift-storage",
+            "resourceVersion": "8515214",
+            "uid": "c4ad7386-8176-4fdc-bf32-ee4351f6df2d"
+          }
+        ]
+      }
+    }
+  ],
+  "kind": "StorageClusterList",
+  "metadata": {
+    "continue": "",
+    "resourceVersion": "8515254"
+  }
+}ÔÓQma„           gH5ÅG–õ        ¹    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/ocs.openshift.io/v1/storageclusters?limit=250&cluster=local-cluster strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 96c9041a-1593-47c6-8a31-7d17bb9129d2
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:05 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 96c9041a-1593-47c6-8a31-7d17bb9129d2
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Thu, 28 Nov 2024 09:20:05 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1   #°

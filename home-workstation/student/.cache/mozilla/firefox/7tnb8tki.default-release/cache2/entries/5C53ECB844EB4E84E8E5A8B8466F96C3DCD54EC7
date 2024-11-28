@@ -1,0 +1,1386 @@
+{
+  "apiVersion": "console.openshift.io/v1",
+  "items": [
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:introduction": {},
+                "f:nextQuickStart": {},
+                "f:prerequisites": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "add-healthchecks",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22971",
+        "uid": "f7f2b6ae-9fdf-4723-a81c-4a01d805b7a8"
+      },
+      "spec": {
+        "conclusion": "Your sample application now has health checks. To ensure that your application is running correctly, take the **Monitor your sample application** quick start.",
+        "description": "You just created a sample application. Now, let’s add health checks to it.",
+        "displayName": "Add health checks to your sample application",
+        "durationMinutes": 10,
+        "introduction": "### This quick start shows you how to add health checks to your sample application.\nYou should have previously created the **sample-app** application and **nodejs-basic** deployment using the **Get started with a sample** quick start. If you haven't, you may be able to follow these tasks with any existing deployment without configured health checks.",
+        "nextQuickStart": [
+          "monitor-sampleapp"
+        ],
+        "prerequisites": [
+          "You completed the \"Getting started with a sample\" quick start."
+        ],
+        "tasks": [
+          {
+            "description": "To view the details of your sample application:\n\n1. Go to the project your sample application was created in.\n\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n\n1. Click on the **nodejs-basic** deployment to view its details.\n\nA side panel is displayed containing the details of your sample application.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify you are viewing the details of your sample application:\nIs the side panel titled **nodejs-basic**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have viewed the details of your sample app!"
+            },
+            "title": "View the details of your sample application"
+          },
+          {
+            "description": "### To verify that there your sample application has no health checks configured:\n1. View the information in the **Resources** tab in the side panel.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify there are no health checks configured:\nDo you see an inline alert stating that **nodejs-basic** does not have health checks?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have verified that there are no existing health checks!"
+            },
+            "title": "Verify that there are no health checks"
+          },
+          {
+            "description": "### To add health checks to your sample:\n1. Add health checks to your **nodejs-basic** deployment in one of the following ways: \n\n  a. On the side panel, click on the **Actions** menu, where you will see an **Add Health Checks** menu item or \n  \n  b. Click on the **Add Health Checks** link on the inline notification in the side panel.\n\n2. In the Add Health Checks form, click on the **Add Readiness Probe** link.  Leave the default values, and click on the check to add the Readiness Probe.\n3. Click on the **Add Liveness Probe** link.  Leave the default values, and click on the check to add the Liveness Probe.\n4. Click on the **Add Startup Probe** link.  Leave the default values, and click on the check to add the Startup Probe.\n5. Click **Add** when you’re done.\n\nYou will be brought back to the Topology View.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again, or [read more](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/building_applications/application-health#odc-adding-health-checks) about this topic.",
+              "instructions": "#### Verify that health checks are now configured:\nIs the inline notification gone?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have added health checks to your sample app!"
+            },
+            "title": "Add health checks to your sample"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:accessReviewResources": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:nextQuickStart": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "explore-pipelines",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22972",
+        "uid": "b571f145-0fc7-4a61-a4c8-b6c852865136"
+      },
+      "spec": {
+        "accessReviewResources": [
+          {
+            "group": "operators.coreos.com",
+            "resource": "operatorgroups",
+            "verb": "list"
+          },
+          {
+            "group": "packages.operators.coreos.com",
+            "resource": "packagemanifests",
+            "verb": "list"
+          }
+        ],
+        "conclusion": "You successfully installed the OpenShift Pipelines Operator! If you want to learn how to deploy an application and associate a Pipeline with it, take the Creating a Pipeline quick start.",
+        "description": "Install the OpenShift Pipelines Operator to build Pipelines using Tekton.",
+        "displayName": "Install the OpenShift Pipelines Operator",
+        "durationMinutes": 10,
+        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAYAAABUfC3PAAAQrElEQVR4Xu2dd3wU1RbHfymkQBomkAYEiICCSFDkw3uACaIi0mJBKT4JRgSehSAoyEMMykMUpfgBBaSEjw8BfX4oL4ogQmjqB5CignQSSgrpZdOTeZ8zYdbdzczO3dm5uxtx/oLMnXvPOd97bj33rhuawFOTeVmoPnsC1edOoC4rHbWZ6aLU9P/6smJZDTzDo+AZ3l58531vHNz9g+DVOQa+vQa4ubrKLilg1dnjQnnaVlT9nGbV8FqNS8AIEMFqHhePZhEdXMoOLiOMYe8WoWLfVhAMpdqvFYLadwTJNzYefsMS4N2lp9Nt4lQBqFkq+XwJDKkpDgehBIoA+Y9OQuCYqU6zjVMKrji6VyhelYzKY/vUKrFT3/sNHYfAF5Id3rw5FEpTgWFZExwNxyFQqOMu/DDJ5T1DzS39R01B8PSl3G3GvYD8D6YIpZuWqunbZN67+wWKTRrPPocbFGqq8ucmoDYro8kY3BZBfe6JRXByCpf+hguUP5t3KMEir2k5bQn8h43X1Y66ZkZD3Nxp8ag+f9KWStfk09JAICR5vW621C0jaq5yp8e7zHzD0aS9OvVAxMaTuthTl0xK/7dOyJ873tF2cLnyaOLZ6oOtdq8K2A3lLyDmdYP6mdCVaXaBsQvKX0DkndWtRQCC522EX/8hmuyr6SMSxVWA0PK8z71x8IxoWKan5fzKn9NQX1rklOZNAFBSA9TDDR3f34jAQaNstrHNH7gKEFp6p+EozRfkHpqwFq1KdigcCUgd/QOAm5s2MDZDoSX23Ncec0otlAr1G5qA4LfWqcpQdeFX5E4dirrsK6pp7U1gCUTKz8PTEz2O1dpkZ5sS0xpWzsQ4pw57yUPCNxxXtaEgCCgpKYFQVYniIWGq6e1JoAREyrOZjy+6H65gtjVzQiogc3QPwdkTQxrZKDVZkhEkIHV1dQ3NyO+HUZI02B67K36rBkT6sEW7aHRJvchkb6ZElPGNaSOE8n3buCjGmimLl1gCobzdhXoUP9KKtRjmdKxApAwjE2cidMoCVZurJnCVjp3kCBidhJavLlautTebLMlDTBNWTh+Gml9/YDa4WkJbgUgdf+eU/WjRs79Vu6tCofWsrDExTu1HJAMF0ZL5hLdk7SXnIaYJa1fPQcWXy9VszfReCxApY++AIHQ7WGQfFGc3W7R0EZj4Jnz7DoFHiHyHrQaEDOLv1wJuN66h9ItlKNm4hMn4consASLlF/p4IiKT1yiCsUrMmcNf7x79EJKcAs/IjhCqK1Hx407UXD6NwPGzzGzFAkRsOjYvRouBT8Ar+i7x+/IDqShclGTTfo8eQKRmrOdJQRuUa8OiBEdvUpFnhH78PTzbRKP22kUUfPAKKg59IxqSZu+R2y8bobACsezoW770LvyemAT3FoGgwQvLvEsvIJLwAXfG4PbNJ2TBKNIq/nyxULhoqmY31/Jhq4Vb0Dx2BGpvXEPev8ag6uTBRtkEv5UC2r9gBUIZCLs3oWzhi43yooFD0Ivzxb8XLZ9l1qzRBNWrSwwKPkyC3kAkQbqsPyDb6StCuRIXKDgqKI68IzzlMNwDb0Ph0testvkUfhqxPR1ldYDcKMvS8u6VBhSPaGe1joR+9C18/jYIVcf2IXtiHKQVA5qTZY6JEdeypKUTLZVN6RuluYssFN5eIi0iUk30+ftgNGvXGbWZl5EzaQBTG+/9wJPwnrFSrMHWHvfaGpQl9mZaZmnx0NM3l24EuHk3N2b7S4wbFyDWvEUWCo++hEBQFIi4ohse1ciW1K5TyCrr4xHWDn4Lt0No3bYRHFEpDbP4215dLEZHmj7nEweg7Ggaq1g2p5PzlkZQeC7JS/2BnOQZ96lOmRQV9h35IjzadxXf16Wf1jQfUZIte8VcZH2SbLOxWT+glWTLkVgjS2S/ECvwDCeVU14cAU2PZ9VD93TWVp0NJw7h3Lh+updpmmHwwHhELd5qZGEGhWbv14d34CoAzT/CVh8wK4P298tSU7iWq5Y5DSAo8t4rNh4BcSOMyYW6Wpy4p5na53a9t1xFNoPCu4MnydsdLBcP/dQV3jCu9lJFqM1qOAjkrMdy2Bv4QDxaPvwUgh58AqU/7MTFV4ZzFS164SbjLqUZFN5L82Er0+DVrTeu9GsunqyiZXh6aG3NmY+1eUhAv0cRvfxrpL8+CoU7N3MT03QyaYTCu+ny7fsoWi/5GnmzRsHwXYNy0pE32lN31sMyMey0Jg3Nu/fGyd5/DJX1lte0CTNC4d10td1biJpzJ8XJmas8LEAkWWOOVqEg9TNcSX6em/jSDN8IhedqsLgPMnURro+gvsM1Ar5tAUIUWo1NQpvXFuHU4A6o5qSDtHpshMJzWcXVvMRWIJJr3H2wEEW7v+LmLdJEUoRCARFZY3tycUtxCPzpfpfxEq1AyDhtZn6EkKcmcxsiS5EvIhSes3iKPHFv7o/rj93OBbotmdoDxNi3HKtBxhvPcBuJ3fML3EQohSvfEoo/nWuLfsxpo36qQf6CySjbupr5Gx4J9QBCct2xuSG86czTfFqWqBmLIULRe2mFFh8pjNSn1wBxKzejtzsPOzPnqRcQKjD0uRkIf/nfuDDhQbF8vRcraclFhKLXpJFub6CVYDqrYfmUpa4HHdN29MxdLyB+veIQPjkZfr0ah8kWbF8vLlpW37yehLm2yCRseV9sA5T0XqpbE6rlWFsBlj6mTbOcpKGoltlRVC1AQwK9gLR5fQlajZ1iVYK6smJkrngbeZ8t0iDpH59QtIsuUFiAULFVVVUoNxhQ9d5EVO35r13Cq32sFxDyjrBJ8mFNpjKQbgaDASUr5qBws/ZQJhEKHYujHT+tD21aha7Yq/q5JDQlpB1BnvG9egHximiPbjv+CNRQUtJUNzehHukPaI/G1AUKHSejYAdrj6nQUjo9g+NMy9YLCOUZ9U4Kbhs+zmbdKndtQs67jQM1VGvuzQR2e0rUEes75XJAqGweQdd6AiEZu32bDi+ZrWvJuEq64cZVZDytfeWbKxRFoakJY4gyYa1ZlE5vIJRnz5PKFc6abm6VBqQPth5BY003blCsCS32KzpC4QHEGhQ13VwSiprQIpQrZ1A8oa8tziCblhcQpeaLRTe34nykx3fWrJvdnmLZ0bMILTY3ClGLtmjCE4hcR8+qW81Pu5D5xmhbVDFLazcUmsVTuCk9rELrcYiHNxDSh2bxndY0DPdZdaOJ3/XRPVGj8Zwl7UDqMnkkb/Ho84g4eWJ56r9aBsMq9QmZUl6OACKVTbP5gCcnMetmr5foNqOnvXb/TWdQ76keimNvs+VIIBKYqA1HgIiO6vXNzqEwFWCEoleYasCSHcCdvWUX0qjJql6TrCl6UbKGM4AYPWbZDnh2k9eNZvFlX36MvE+0e79UDkW16L50TzG+vv+YAffIjvBs3UY89FO67HW7YPCah6hXffMUzcLaofXL8+E/8HGUHW24lLTy1GFdYEglGVeJeV6aFnW4HtkT7pc9a8JqFGd6iKWMHRdvgU+n7jg9lM9OqnGTi2d4UeSWC6gvykPW+D6sDMzSuRIQEqzH4XLkbliKzKVvaNJH7SMKMxKbL3tXiq0VJIYXTVmIjD7qgwDLfFwNSPDjz6PdnFU4HsNnJ1WKwDeGGOmx0aUEh/bpaecxfx57IJurASHduqZeQE3ONZxP5BNQ6NMqDF2/z24InKBH7316U0DBs1eL5xRZvcUVgbTo2Q+dUw7gXEJ/GI43Poup1iyxvJeORBih8IxoIYFYvcUVgZD83fflovLCKW5eQmVIkfdGKDwD8qhAltBVVwFCO46mQRBhL8xG+D/f5hqyanoFldlRCL0mkUqu2mZHlvjq2uDwRklcBYiHfxAoPPXS1MdQvGeruMnVbccl5Kx7n9uIi4xhevbRDArP+QoVTAdQI7ZcQNXRvSheN1+8VpAeVwFCstBhIZqLUHTK+efiEP3xDlHG3wY2rkgs/QRrGtMbjsyg8G7CRKUTZyNo0juirBRyRCeCCw+noXDPVtQ56d5HU8OZ7svT0ToKIj39aDS3SHsq2/L2vEYHUXk3YbR42XZPoWwFKt67DdfeT9IlqI21hlqmu/tQETz8Ao1/rq8sx7ln+6Li7AmtWap+Z3klSCMoPGf3knSR29Nlz9JTpGHGmwmqSvBKYLp/YloGNWVnRsZwqyyW14HIHl7neVaFlJUL3suYMx4F22w7IUydcvCIBHEziv5ND9Xo0qNpYidt62MtEpJXhZEmjKayykLh2eFTp+4xOAFt3za/LTV/yxqbDuO0fiYJYZOTzZoaU8XotNWlKfHMzQ5Bveu7q3D39ROzoVVgCt4uP3sCZUfSuPV3tAAZPNb8979kofA6lCqNsuguyDu+aDhSQB7i4RckHl2ryc/BuWf6qHaqLEFyoteUFCFn2WzVMFJa02o7azlqC/Nw9Z2JKN6faquTaUqvdEueLBQqQW9vsRz2UqAbdepSM0Pzgc7/+QnNgkNR+O0mpM8cI6uoNGRVs4K0p25tz5zK7LhkK3y79EDpj7twYfIjatnq+l7OS6gARSj0Uq++RW4eQs2F3BCYDnxGTlsoKk/tuOVpXLWoRfquUZCDxTYtwYiatx5+994veufl6SO5rWcpUbR2l6RVKHqsh2mdGLZLXm2M4608/xty1i4QDShFlygpKxd1QkqmDwhGxJR3EfTQSHi3jUZNXjZy1r6H3A3a75O0x22ULmBT9RRKYM+BIq1ATJUlz2k1+iV4t6HABQFwU97LsBYGFBgQAHc3wHD8EDKXzXa4Z5jqRFu+HdbsU3QIq54idpYaj0roAcSyJnb8aDsCY4fJVlC1uKyq1BRkfzjNnsqty7csd9+rQtHS6fMAQnIoHeBRA0Lf2nuYRxcitIUhMwS2zJsJii3NGC8gJIPcyIsFSIP82qMW9QKi1mxJ5TBDYflFCJ5ASGAasdHoS1qbYgVib8C1HlBs+WUIZigkmLXLo3kDkQwjNWGsQFyh6ZK7ktAaaJugUEZyw2RHAZEU6bTtLKoDQpgqsJB+BlfG23/kgqkwmURafm3IZihUbl7yOIGiU+hxNBAqkyIVI1fshhAYbNVWdacO49pLfH43hRWS2r32cvlogiKBKU1dz+0iZRalQybPhd+g0WZwSCHhxlUUfDoPpbv5HgtXk1ELEMpTMxT6+OJTPYTiM7fWT9KqgZDeawViNxTK4OzQaMFw5SKrrLdEOnuA6ALlLzDm9cxeILpBoYwuJ8YKhUcajgfcio+WUZaSnezqUywzzVk6U8hc+574Mxq30kMTw44rd6n+1harTXSFQoUajh8QLk18GDWVFawyNOl0tvxUIKuiukORCv6zN2fUXEU8N4PpJwJZYUjpuEGhAop3bhKuvDn+T+c1chEothreWnquUKSCM6bGCwV7tjX5vob6jogp8xtFn+gJRNfRF4tg1KQVHd3f5ODQxlTI8HFWfwaQRX/WNA7xFEthmgocR8NwSJ+iVjOuJycKBd987nJ9DvUZwcMTuHTiajZxePOlJBANCHLXLoDh/G+oq61lkVv3NNRfBPQdhJBnp+k239AqpFOaL2vCEqCCLz5B+dmTqCop0qqX6nc0pPUOCUVg/yEIGpHgdBCmArscFEtrEqSyH79Dxe8/o+p6OmrLy2z2JvG+E28f+LbvguZ3/w1+9w9xKQiWOrs8FDWvqs1rOLJn+fh07eXShrem1/8BWjy0OmdfIfEAAAAASUVORK5CYII=",
+        "introduction": "OpenShift® Pipelines is a cloud-native, continuous integration and continuous delivery (CI/CD) solution based on Kubernetes resources. It uses Tekton building blocks to automate deployments across multiple Kubernetes distributions by abstracting away the underlying implementation details.\n* OpenShift Pipelines is a serverless CI/CD system that runs pipelines with all the required dependencies in isolated containers.\n* They are designed for decentralized teams that work on a microservice-based architecture.\n* They are defined using standard Custom Resource Definitions making them extensible and easy to integrate with the existing Kubernetes tools. This enables you to scale on-demand.\n* You can use OpenShift Pipelines to build images with Kubernetes tools such as Source-to-Image (S2I), Buildah, Buildpacks, and Kaniko that are portable across any Kubernetes platform.\n* You can use the Developer perspective to create and manage pipelines and view logs in your namespaces.\n\nTo start using Pipelines, install the OpenShift Pipelines Operator on your cluster.",
+        "nextQuickStart": [
+          "install-app-and-associate-pipeline"
+        ],
+        "tasks": [
+          {
+            "description": "\nTo install the OpenShift Pipelines Operator:\n\n  1. From the **Administrator** perspective, go to the **OperatorHub**\n  from the [Operators]{{highlight qs-nav-operators}} section of the navigation.\n\n  \n  1. In the **Filter by keyword** field, type `OpenShift Pipelines\n  Operator`.\n  \n  1. If the tile has an Installed label, the Operator is already installed.\n  Proceed to the next quick start to create a Pipeline.\n  \n  1. Click the **tile**\n  to open the Operator details.\n  \n  1. At the top of the OpenShift Pipelines Operator\n  panel that opens, click **Install**.\n  \n  1. Fill out the Operator subscription\n  form by selecting the channel that matches your OpenShift cluster, and then\n  click **Install**.\n  \n  1. On the **Installed Operators** page, wait for the OpenShift\n  Pipelines Operator's status to change from **Installing** to **Succeeded**.\n",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again, or [read more](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/cicd/pipelines#op-installing-pipelines-operator-in-web-console_installing-pipelines) about this topic.",
+              "instructions": "#### To verify that the OpenShift Pipelines Operator is installed:\n1. From the **Operators** section of the navigation, go to the **Installed Operators** page.\n2. Verify that the **OpenShift Pipelines Operator** appears in the list of Operators.\n\nIn the status column, is the status of the OpenShift Pipelines Operator **Succeeded**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have installed the Pipelines Operator!"
+            },
+            "title": "Install the OpenShift Pipelines Operator"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tags": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "install-helmchartrepo-ns",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22973",
+        "uid": "9d7cb3c2-d15f-4324-b874-d37cd2f7a31a"
+      },
+      "spec": {
+        "conclusion": "Helm Charts from the new repository are now available to developers in your project.",
+        "description": "Enable additional Helm Charts by adding a namespace scoped Helm Chart Repository to your project.",
+        "displayName": "Add Helm Chart Repositories to extend the Developer Catalog for your project",
+        "durationMinutes": 5,
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHJvbGU9ImltZyIgdmlld0JveD0iLTYuNDkgLTYuNzQgMzE2LjQ5IDM2My43NCI+PG1hc2sgaWQ9ImEiIGZpbGw9IiNmZmYiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0ibTAgMGgzMTMuMzAzMTU1djE1OS44NjQ4NjVoLTMxMy4zMDMxNTV6Ii8+PC9tYXNrPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0wIDBoMzEzLjMwMzE1NXYxNTkuODY0ODY1aC0zMTMuMzAzMTU1eiIvPjwvbWFzaz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Im0xMS42Nzg1NzE0IDE4OWgxOS43ODU4MzU3djI2Ljc4OWgyMy45MDM3di0yNi43ODloMTkuNzg1ODM1OHY3NS4yNWgtMTkuNzg1ODM1OHYtMjguNjk1MzMzaC0yMy45MDM3djI4LjY5NTMzM2gtMTkuNzg1ODM1N3ptODYuMTczODQyOSA3NS4yNXYtNzUuMjVoNDYuODAzMDQyN3YxNi4zNTQzMzNoLTI3LjAxNzIwN3YxMi4yNDA2NjdoMjMuOTAzN3YxNi42NTUzMzNoLTIzLjkwMzd2MTMuODQ2aDI3LjAxNzIwN3YxNi4xNTM2Njd6bTY4LjQ5NzE1NjcgMHYtNzUuMjVoMTkuNzg1ODM2djU1LjM4NGgyNy4xMTc2NDN2MTkuODY2em03Ny41MzYzNzItNzUuMjUgMzAuNzMzMzI4IDI3Ljg5MjY2NyAzMC42MzI4OTMtMjcuODkyNjY3aDguOTM4Nzc5djc1LjI1aC0xOS44ODYyNzJ2LTM4LjYyODMzM2wtMTkuNjg1NCAxNy45NTk2NjYtMTkuNzg1ODM1LTE3Ljg1OTMzM3YzOC41MjhoLTE5Ljg4NjI3MnYtNzUuMjV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEgLTUxKSIvPjxnPjxnIGZpbGw9IiMwMDAiIG1hc2s9InVybCgjYSkiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIC45NTggNDA0KSI+PHBhdGggZD0ibTIwMy40NjA2NzYgOTUuNjg3NTQyNWM2LjkzNjMxIDAgMTIuNTU5MzAxLTE0LjgwOTIxOTQgMTIuNTU5MzAxLTMzLjA3NzMxNzJzLTUuNjIyOTkxLTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzJjLTYuOTM2MzExIDAtMTIuNTU5MzAxIDE0LjgwOTIxOTQtMTIuNTU5MzAxIDMzLjA3NzMxNzJzNS42MjI5OSAzMy4wNzczMTcyIDEyLjU1OTMwMSAzMy4wNzczMTcyeiIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTM3LjkzMSAxNTEuNTUpIi8+PHBhdGggZD0ibTMwLjE0MjMyMjMgOTUuNjg3NTQyNWM2LjkzNjMxMDQgMCAxMi41NTkzMDEtMTQuODA5MjE5NCAxMi41NTkzMDEtMzMuMDc3MzE3MnMtNS42MjI5OTA2LTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzItMTIuNTU5MzAwOSAxNC44MDkyMTk0LTEyLjU1OTMwMDkgMzMuMDc3MzE3MiA1LjYyMjk5MDUgMzMuMDc3MzE3MiAxMi41NTkzMDA5IDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09InNjYWxlKC0xIDEpIHJvdGF0ZSgzNSAtMTA0LjY5MiAtNjguMjU4KSIvPjxwYXRoIGQ9Im0xMTYuNzMyODE1IDY2LjI3NTI2NzZjNi45MzYzMTEgMCAxMi41NTkzMDEtMTQuODA5MjE5MyAxMi41NTkzMDEtMzMuMDc3MzE3MiAwLTE4LjI2ODA5NzgtNS42MjI5OS0zMy4wNzczMTcxMy0xMi41NTkzMDEtMzMuMDc3MzE3MTMtNi45MzYzMSAwLTEyLjU1OTMwMSAxNC44MDkyMTkzMy0xMi41NTkzMDEgMzMuMDc3MzE3MTMgMCAxOC4yNjgwOTc5IDUuNjIyOTkxIDMzLjA3NzMxNzIgMTIuNTU5MzAxIDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAyNzIuNjI5IDUzLjY3KSIvPjwvZz48cGF0aCBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMjAiIGQ9Im0yNTEuNDY3MDA2IDE3My4wOTk4NDljLTIwLjIzMDA3Ni0zMy42MDk5NjktNTYuODg5NTY1LTU2LjA2NzkwOC05OC43NTU3NzYtNTYuMDY3OTA4LTQwLjcyMDc5OCAwLTc2LjUxNTg3NjYgMjEuMjQ1OTAxLTk3LjA1ODY5NTkgNTMuMzM0NTg4bTIuMTk4MTEwNyAxMjkuMTY5NTM0YzIwLjg0MDMwMzYgMzAuMjMyNzAxIDU1LjU1NTkwNDIgNTAuMDI2NTkxIDk0Ljg2MDU4NTIgNTAuMDI2NTkxIDM5LjM3NjA5OSAwIDc0LjE0NjQyNC0xOS44NjU4ODcgOTQuOTc0MDQ5LTUwLjE5MTQ5NSIgbWFzaz0idXJsKCNhKSIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgLjk1OCA0MDQpIi8+PC9nPjxnPjxnIGZpbGw9IiMwMDAiIG1hc2s9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC45NTggLTUxKSI+PHBhdGggZD0ibTIwMy40NjA2NzYgOTUuNjg3NTQyNWM2LjkzNjMxIDAgMTIuNTU5MzAxLTE0LjgwOTIxOTQgMTIuNTU5MzAxLTMzLjA3NzMxNzJzLTUuNjIyOTkxLTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzJjLTYuOTM2MzExIDAtMTIuNTU5MzAxIDE0LjgwOTIxOTQtMTIuNTU5MzAxIDMzLjA3NzMxNzJzNS42MjI5OSAzMy4wNzczMTcyIDEyLjU1OTMwMSAzMy4wNzczMTcyeiIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTQxLjgzMSAxNTAuMzIpIi8+PHBhdGggZD0ibTMwLjE0MjMyMjMgOTUuNjg3NTQyNWM2LjkzNjMxMDQgMCAxMi41NTkzMDEtMTQuODA5MjE5NCAxMi41NTkzMDEtMzMuMDc3MzE3MnMtNS42MjI5OTA2LTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzItMTIuNTU5MzAwOSAxNC44MDkyMTk0LTEyLjU1OTMwMDkgMzMuMDc3MzE3MiA1LjYyMjk5MDUgMzMuMDc3MzE3MiAxMi41NTkzMDA5IDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09InNjYWxlKC0xIDEpIHJvdGF0ZSgzNSAtMTAwLjc5MiAtNjkuNDg4KSIvPjxwYXRoIGQ9Im0xMTYuNzMyODE1IDY2LjI3NTI2NzZjNi45MzYzMTEgMCAxMi41NTkzMDEtMTQuODA5MjE5MyAxMi41NTkzMDEtMzMuMDc3MzE3MiAwLTE4LjI2ODA5NzgtNS42MjI5OS0zMy4wNzczMTcxMy0xMi41NTkzMDEtMzMuMDc3MzE3MTMtNi45MzYzMSAwLTEyLjU1OTMwMSAxNC44MDkyMTkzMy0xMi41NTkzMDEgMzMuMDc3MzE3MTMgMCAxOC4yNjgwOTc5IDUuNjIyOTkxIDMzLjA3NzMxNzIgMTIuNTU5MzAxIDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAyNzIuNjI5IDUxLjIxMSkiLz48L2c+PHBhdGggc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIwIiBkPSJtMjUxLjQ2NzAwNiAxNzAuNjQwMzljLTIwLjIzMDA3Ni0zMy42MDk5NjktNTYuODg5NTY1LTU2LjA2NzkwOC05OC43NTU3NzYtNTYuMDY3OTA4LTQwLjcyMDc5OCAwLTc2LjUxNTg3NjYgMjEuMjQ1OS05Ny4wNTg2OTU5IDUzLjMzNDU4N20yLjE5ODExMDcgMTI5LjE2OTUzNGMyMC44NDAzMDM2IDMwLjIzMjcwMiA1NS41NTU5MDQyIDUwLjAyNjU5MSA5NC44NjA1ODUyIDUwLjAyNjU5MSAzOS4zNzYwOTkgMCA3NC4xNDY0MjQtMTkuODY1ODg2IDk0Ljk3NDA0OS01MC4xOTE0OTQiIG1hc2s9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC45NTggLTUxKSIvPjwvZz48L2c+PC9zdmc+Cg==",
+        "introduction": "Content in the Helm Chart Catalog is defined by **HelmChartRepository** and **ProjectHelmChartRepository** CRs. Both CRs provide a URL and are used to populate the available Helm Charts in the Developer Catalog. A default **HelmChartRepository** is provided, called the **openshift-helm-charts**.\n- **HelmChartRepository** CRs which are cluster scoped and defined by users with the admin role\n- **ProjectHelmChartRepository** CRs which are namespace-scoped and defined by users with read/write access to the namespace",
+        "tags": [
+          "helm"
+        ],
+        "tasks": [
+          {
+            "description": "Follow these steps to create a ProjectHelmChartRepository CR:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Search]{{highlight qs-nav-search}}.\n1. In the project selector, select the project to populate with the new Helm Charts.\n1. Click the **Resources dropdown** menu and select **ProjectHelmChartRepository**.\n1. Click **Create ProjectHelmChartRepository** to bring up the YAML editor.\n1. Replace the contents of the YAML editor with:\n\n    ```\n    apiVersion: helm.openshift.io/v1beta1\n    kind: ProjectHelmChartRepository\n    metadata:\n      name: my-helm-chart-repo\n    spec:\n      connectionConfig:\n        url: 'https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs'\n      name: My Helm Chart Repo\n\n    ```\n\n1. Click **Create**.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that the ProjectHelmChartRepository was successfully installed:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. On the **+Add** page, click **Helm Chart** in the **Developer Catalog** tile. \n1. Do you see **My Helm Chart Repo** in the **Chart Repositories** filter?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Charts from the **myChartRepo** repository are now available."
+            },
+            "title": "Create a ProjectHelmChartRepository CR"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:accessReviewResources": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:nextQuickStart": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "install-serverless",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22976",
+        "uid": "5cc9715d-bf43-4c06-aff0-43c5fcbc9512"
+      },
+      "spec": {
+        "accessReviewResources": [
+          {
+            "group": "operators.coreos.com",
+            "resource": "operatorgroups",
+            "verb": "list"
+          },
+          {
+            "group": "packages.operators.coreos.com",
+            "resource": "packagemanifests",
+            "verb": "list"
+          }
+        ],
+        "conclusion": "Your Serverless Operator is ready! If you want to learn how to deploy a serverless application, take the **Exploring Serverless applications** quick start.",
+        "description": "Install the OpenShift Serverless Operator to deploy stateless, event-trigger-based applications.",
+        "displayName": "Install the OpenShift Serverless Operator",
+        "durationMinutes": 10,
+        "icon": "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2UwMzQwMDt9LmNscy0ye2ZpbGw6I2NlMmUwMDt9LmNscy0ze2ZpbGw6bm9uZTt9LmNscy00e2ZpbGw6I2ZmZjt9LmNscy01e2ZpbGw6I2RjZGNkYzt9LmNscy02e2ZpbGw6I2FhYTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPlJlZF9IYXQtT3BlbnNoaWZ0NC1DYXRhbG9nX0ljb25zLVNlcnZlcmxlc3M8L3RpdGxlPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iNTAiIGN5PSI1MCIgcj0iNTAiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik04NS4zNiwxNC42NEE1MCw1MCwwLDAsMSwxNC42NCw4NS4zNloiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik00MC41Nyw0Ny40MmEzLjg5LDMuODksMCwxLDAsMy44OCwzLjg4QTMuODksMy44OSwwLDAsMCw0MC41Nyw0Ny40MloiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0yMS40Miw0Ny40MkEzLjg5LDMuODksMCwxLDAsMjUuMyw1MS4zLDMuODksMy44OSwwLDAsMCwyMS40Miw0Ny40MloiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik01MC4wOSw0OC44NmgtLjE4YTQuMTEsNC4xMSwwLDAsMS0zLjI2LTEuNjMsNy42OSw3LjY5LDAsMCwwLTEyLjE2LDAsNC4xMyw0LjEzLDAsMCwxLTMuMjYsMS42M0gzMWE0LjA5LDQuMDksMCwwLDEtMy4yNS0xLjYzQTcuNjksNy42OSwwLDAsMCwxNCw1MS45M2gwVjY0LjZhMi43OSwyLjc5LDAsMCwwLDIuNzksMi43OWgxNS44TDUxLjM0LDQ4LjY2QTQsNCwwLDAsMSw1MC4wOSw0OC44NloiLz48cGF0aCBjbGFzcz0iY2xzLTUiIGQ9Ik03OC4wNSw0NC4yNWE3LjY1LDcuNjUsMCwwLDAtNS44NSwzQTQuMSw0LjEsMCwwLDEsNjksNDguODZoLS4xOWE0LjEzLDQuMTMsMCwwLDEtMy4yNi0xLjYzLDcuNjksNy42OSwwLDAsMC0xMi4xNiwwLDQuMTYsNC4xNiwwLDAsMS0yLDEuNDNMMzIuNjEsNjcuMzlIODMuMTlBMi43OSwyLjc5LDAsMCwwLDg2LDY0LjZWNTIuMDdBNy43Nyw3Ljc3LDAsMCwwLDc4LjA1LDQ0LjI1WiIvPjxwYXRoIGNsYXNzPSJjbHMtNiIgZD0iTTIxLjEsNjNoMTBhMS44MywxLjgzLDAsMSwwLDAtMy42NmgtMTBhMS44MywxLjgzLDAsMCwwLDAsMy42NloiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjQwLjU3IiBjeT0iMzcuNzMiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjQwLjU3IiBjeT0iMjguMjMiIHI9IjEuMzUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjU5LjcyIiBjeT0iMjguMjMiIHI9IjEuMzUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjIxLjQyIiBjeT0iMzcuNzMiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjUwIiBjeT0iNDMuNDUiIHI9IjIuOTMiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjY4Ljg5IiBjeT0iNDMuNDUiIHI9IjIuOTMiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjMxLjA5IiBjeT0iNDMuNDUiIHI9IjIuOTMiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNiIgY3g9Ijc3Ljk0IiBjeT0iNTQuMzEiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNiIgY3g9IjY4LjkxIiBjeT0iNTQuMzEiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9Ijc3Ljk0IiBjeT0iMzcuNzMiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjU5LjcyIiBjeT0iMzcuNzMiIHI9IjIuMTUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9IjUwIiBjeT0iMzMuMSIgcj0iMy4wMSIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMzEuMDkiIGN5PSIzMy4xIiByPSIzLjAxIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTQiIGN4PSI2OC44OSIgY3k9IjMzLjEiIHI9IjMuMDEiLz48L3N2Zz4=",
+        "introduction": "Red Hat OpenShift® Serverless lets you run stateless, serverless workloads on a single multi-cloud container platform.\n- Serverless reduces the need to manage infrastructure or perform back-end development. Scaling is automated, and applications can run on any cloud, hybrid, or on-premises environment. \n- Choosing Serverless means simplicity, portability, and efficiency.\n- Adding OpenShift Serverless to your OpenShift Container Platform cluster is quick and easy. This quick start walks you through the process.",
+        "nextQuickStart": [
+          "serverless-application"
+        ],
+        "tasks": [
+          {
+            "description": "To install the Serverless Operator:\n1. From the **Administrator** perspective, go to the **OperatorHub** from the [Operators]{{highlight qs-nav-operators}} section of the navigation.\n1. In the **Filter by keyword** field, type `Serverless`.\n1. Look for **Red Hat OpenShift Serverless**. If the tile has an **Installed** label on it, the Operator is already installed. Proceed to task two.\n1. Click the tile to open the side panel.\n1. At the top of the side panel, click **Install**.\n1. Verify that the **OpenShift Serverless Operator Update Channel** is set to the latest version, then click **Install**.\n1. Wait for the OpenShift Serverless Operator's status to change from **Installing operator** to **Operator installed - Ready for use**.\n",
+            "review": {
+              "failedTaskHelp": "This task is incomplete. Try the task again, or [read more](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/serverless/administration-guide#install-serverless-operator) about this topic.",
+              "instructions": "Verify that the OpenShift Serverless Operator is installed:\n\n  - In the Status column of the **Installed Operators** page, is the\nOpenShift Serverless Operator’s status **Operator installed - Ready for use**?"
+            },
+            "summary": {
+              "failed": "This task is incomplete. Try the task again, or read more about this topic.",
+              "success": "You just installed the OpenShift Serverless Operator! Next, we'll install the required Knative Eventing and Knative Serving Custom Resource components for this Operator to run."
+            },
+            "title": "Install the OpenShift Serverless Operator"
+          },
+          {
+            "description": "Install the Knative Serving application program interface (API) needed to support deploying and serving your serverless applications and functions.\n##### To create the Knative Serving API:\n1. In the main navigation menu, click **Operators \u003e Installed Operators**.\n1. Click the **Red Hat OpenShift Serverless** Operator.\n1. In the **Project** dropdown menu, select **knative-serving**. If that project doesn’t exist, click **Create Project** and complete the process to create the knative-serving project.\n1. In the **Provided APIs** column, click **Knative Serving**.\n1. Click **Create Knative Serving**.\n1. Click **Create** to create the custom resource using the default settings.\n",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again, or [read more](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/serverless/administration-guide#installing-knative-serving) about this topic.",
+              "instructions": "Verify that the Knative Serving API was installed successfully:\n\n  - Under the **Knative Serving** tab, click the **knative-serving**\n  custom resource. Scroll down to the **Conditions** section to see a\n  list of condition types.\n\n  - Does each condition type have a status of **True**?\n\n\n**Note**: If the condition types have a status of **False**, wait a few minutes to allow the Knative Serving resources creation process to complete. You can check the status in the **Resources** tab.\n"
+            },
+            "summary": {
+              "failed": "Check your work to make sure that the Knative Service resource was created.",
+              "success": "You just created an instance of the Knative Service resource."
+            },
+            "title": "Create the Knative Serving API"
+          },
+          {
+            "description": "Install the Knative Eventing application program interface (API) needed to create event producers and consumers for your serverless applications. \n##### To create the Knative Eventing API:\n1. In the main navigation menu, click **Operators \u003e Installed Operators**.\n1. Click the **Red Hat OpenShift Serverless** Operator.\n1. In the **Project** dropdown menu, select **knative-eventing**. If that project doesn’t exist, click **Create Project** and complete the process to create the knative-eventing project.\n1. In the **Provided APIs** column, click **Knative Eventing**. \n1. Click **Create Knative Eventing**.\n1. Click **Create** to create the custom resource using the default settings.\n",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again, or [read more](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/serverless/administration-guide#installing-knative-eventing) about this topic.",
+              "instructions": "Verify that the Knative Eventing API was installed successfully:\n\n  - Under the **Knative Eventing** tab, click the **knative-eventing** custom\n  resource. Scroll down to the **Conditions** section to see a list of\n  condition types.\n\n  - Does each condition type have a status of **True**?\n\n**Note**: If the condition types have a status of **False**, wait a few minutes to allow the Knative Eventing resources creation process to complete. You can check the status in the **Resources** tab.\n"
+            },
+            "summary": {
+              "failed": "Check your work to make sure that the Knative Eventing resource was created.",
+              "success": "You just created an instance of the Knative Eventing resource."
+            },
+            "title": "Create the Knative Eventing API"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:accessReviewResources": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tags": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "manage-helm-repos",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22977",
+        "uid": "56f7df2a-75fb-43e3-9032-58209397df39"
+      },
+      "spec": {
+        "accessReviewResources": [
+          {
+            "group": "helm.openshift.io",
+            "resource": "helmchartrepositories",
+            "verb": "create"
+          }
+        ],
+        "conclusion": "Helm Charts from the new repository are now available to developers. ",
+        "description": "Manage available content in the Helm Chart Catalog by adding a Helm Chart Repository.",
+        "displayName": "Manage available content in the Helm Chart Catalog",
+        "durationMinutes": 5,
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHJvbGU9ImltZyIgdmlld0JveD0iLTYuNDkgLTYuNzQgMzE2LjQ5IDM2My43NCI+PG1hc2sgaWQ9ImEiIGZpbGw9IiNmZmYiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0ibTAgMGgzMTMuMzAzMTU1djE1OS44NjQ4NjVoLTMxMy4zMDMxNTV6Ii8+PC9tYXNrPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0wIDBoMzEzLjMwMzE1NXYxNTkuODY0ODY1aC0zMTMuMzAzMTU1eiIvPjwvbWFzaz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Im0xMS42Nzg1NzE0IDE4OWgxOS43ODU4MzU3djI2Ljc4OWgyMy45MDM3di0yNi43ODloMTkuNzg1ODM1OHY3NS4yNWgtMTkuNzg1ODM1OHYtMjguNjk1MzMzaC0yMy45MDM3djI4LjY5NTMzM2gtMTkuNzg1ODM1N3ptODYuMTczODQyOSA3NS4yNXYtNzUuMjVoNDYuODAzMDQyN3YxNi4zNTQzMzNoLTI3LjAxNzIwN3YxMi4yNDA2NjdoMjMuOTAzN3YxNi42NTUzMzNoLTIzLjkwMzd2MTMuODQ2aDI3LjAxNzIwN3YxNi4xNTM2Njd6bTY4LjQ5NzE1NjcgMHYtNzUuMjVoMTkuNzg1ODM2djU1LjM4NGgyNy4xMTc2NDN2MTkuODY2em03Ny41MzYzNzItNzUuMjUgMzAuNzMzMzI4IDI3Ljg5MjY2NyAzMC42MzI4OTMtMjcuODkyNjY3aDguOTM4Nzc5djc1LjI1aC0xOS44ODYyNzJ2LTM4LjYyODMzM2wtMTkuNjg1NCAxNy45NTk2NjYtMTkuNzg1ODM1LTE3Ljg1OTMzM3YzOC41MjhoLTE5Ljg4NjI3MnYtNzUuMjV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEgLTUxKSIvPjxnPjxnIGZpbGw9IiMwMDAiIG1hc2s9InVybCgjYSkiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIC45NTggNDA0KSI+PHBhdGggZD0ibTIwMy40NjA2NzYgOTUuNjg3NTQyNWM2LjkzNjMxIDAgMTIuNTU5MzAxLTE0LjgwOTIxOTQgMTIuNTU5MzAxLTMzLjA3NzMxNzJzLTUuNjIyOTkxLTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzJjLTYuOTM2MzExIDAtMTIuNTU5MzAxIDE0LjgwOTIxOTQtMTIuNTU5MzAxIDMzLjA3NzMxNzJzNS42MjI5OSAzMy4wNzczMTcyIDEyLjU1OTMwMSAzMy4wNzczMTcyeiIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTM3LjkzMSAxNTEuNTUpIi8+PHBhdGggZD0ibTMwLjE0MjMyMjMgOTUuNjg3NTQyNWM2LjkzNjMxMDQgMCAxMi41NTkzMDEtMTQuODA5MjE5NCAxMi41NTkzMDEtMzMuMDc3MzE3MnMtNS42MjI5OTA2LTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzItMTIuNTU5MzAwOSAxNC44MDkyMTk0LTEyLjU1OTMwMDkgMzMuMDc3MzE3MiA1LjYyMjk5MDUgMzMuMDc3MzE3MiAxMi41NTkzMDA5IDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09InNjYWxlKC0xIDEpIHJvdGF0ZSgzNSAtMTA0LjY5MiAtNjguMjU4KSIvPjxwYXRoIGQ9Im0xMTYuNzMyODE1IDY2LjI3NTI2NzZjNi45MzYzMTEgMCAxMi41NTkzMDEtMTQuODA5MjE5MyAxMi41NTkzMDEtMzMuMDc3MzE3MiAwLTE4LjI2ODA5NzgtNS42MjI5OS0zMy4wNzczMTcxMy0xMi41NTkzMDEtMzMuMDc3MzE3MTMtNi45MzYzMSAwLTEyLjU1OTMwMSAxNC44MDkyMTkzMy0xMi41NTkzMDEgMzMuMDc3MzE3MTMgMCAxOC4yNjgwOTc5IDUuNjIyOTkxIDMzLjA3NzMxNzIgMTIuNTU5MzAxIDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAyNzIuNjI5IDUzLjY3KSIvPjwvZz48cGF0aCBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMjAiIGQ9Im0yNTEuNDY3MDA2IDE3My4wOTk4NDljLTIwLjIzMDA3Ni0zMy42MDk5NjktNTYuODg5NTY1LTU2LjA2NzkwOC05OC43NTU3NzYtNTYuMDY3OTA4LTQwLjcyMDc5OCAwLTc2LjUxNTg3NjYgMjEuMjQ1OTAxLTk3LjA1ODY5NTkgNTMuMzM0NTg4bTIuMTk4MTEwNyAxMjkuMTY5NTM0YzIwLjg0MDMwMzYgMzAuMjMyNzAxIDU1LjU1NTkwNDIgNTAuMDI2NTkxIDk0Ljg2MDU4NTIgNTAuMDI2NTkxIDM5LjM3NjA5OSAwIDc0LjE0NjQyNC0xOS44NjU4ODcgOTQuOTc0MDQ5LTUwLjE5MTQ5NSIgbWFzaz0idXJsKCNhKSIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgLjk1OCA0MDQpIi8+PC9nPjxnPjxnIGZpbGw9IiMwMDAiIG1hc2s9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC45NTggLTUxKSI+PHBhdGggZD0ibTIwMy40NjA2NzYgOTUuNjg3NTQyNWM2LjkzNjMxIDAgMTIuNTU5MzAxLTE0LjgwOTIxOTQgMTIuNTU5MzAxLTMzLjA3NzMxNzJzLTUuNjIyOTkxLTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzJjLTYuOTM2MzExIDAtMTIuNTU5MzAxIDE0LjgwOTIxOTQtMTIuNTU5MzAxIDMzLjA3NzMxNzJzNS42MjI5OSAzMy4wNzczMTcyIDEyLjU1OTMwMSAzMy4wNzczMTcyeiIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTQxLjgzMSAxNTAuMzIpIi8+PHBhdGggZD0ibTMwLjE0MjMyMjMgOTUuNjg3NTQyNWM2LjkzNjMxMDQgMCAxMi41NTkzMDEtMTQuODA5MjE5NCAxMi41NTkzMDEtMzMuMDc3MzE3MnMtNS42MjI5OTA2LTMzLjA3NzMxNzItMTIuNTU5MzAxLTMzLjA3NzMxNzItMTIuNTU5MzAwOSAxNC44MDkyMTk0LTEyLjU1OTMwMDkgMzMuMDc3MzE3MiA1LjYyMjk5MDUgMzMuMDc3MzE3MiAxMi41NTkzMDA5IDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09InNjYWxlKC0xIDEpIHJvdGF0ZSgzNSAtMTAwLjc5MiAtNjkuNDg4KSIvPjxwYXRoIGQ9Im0xMTYuNzMyODE1IDY2LjI3NTI2NzZjNi45MzYzMTEgMCAxMi41NTkzMDEtMTQuODA5MjE5MyAxMi41NTkzMDEtMzMuMDc3MzE3MiAwLTE4LjI2ODA5NzgtNS42MjI5OS0zMy4wNzczMTcxMy0xMi41NTkzMDEtMzMuMDc3MzE3MTMtNi45MzYzMSAwLTEyLjU1OTMwMSAxNC44MDkyMTkzMy0xMi41NTkzMDEgMzMuMDc3MzE3MTMgMCAxOC4yNjgwOTc5IDUuNjIyOTkxIDMzLjA3NzMxNzIgMTIuNTU5MzAxIDMzLjA3NzMxNzJ6IiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSAyNzIuNjI5IDUxLjIxMSkiLz48L2c+PHBhdGggc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIwIiBkPSJtMjUxLjQ2NzAwNiAxNzAuNjQwMzljLTIwLjIzMDA3Ni0zMy42MDk5NjktNTYuODg5NTY1LTU2LjA2NzkwOC05OC43NTU3NzYtNTYuMDY3OTA4LTQwLjcyMDc5OCAwLTc2LjUxNTg3NjYgMjEuMjQ1OS05Ny4wNTg2OTU5IDUzLjMzNDU4N20yLjE5ODExMDcgMTI5LjE2OTUzNGMyMC44NDAzMDM2IDMwLjIzMjcwMiA1NS41NTU5MDQyIDUwLjAyNjU5MSA5NC44NjA1ODUyIDUwLjAyNjU5MSAzOS4zNzYwOTkgMCA3NC4xNDY0MjQtMTkuODY1ODg2IDk0Ljk3NDA0OS01MC4xOTE0OTQiIG1hc2s9InVybCgjYikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC45NTggLTUxKSIvPjwvZz48L2c+PC9zdmc+Cg==",
+        "introduction": "Content in the Helm Chart Catalog is defined by HelmChartRepository (HCR) CRs. The HelmChartRepository (HCR) provides a URL, the Helm Catalog is populated by pulling available Helm Charts from each of the HCR URLs.\n- HCRs are cluster scoped. \n- A default HelmChartRepository (HCR) is provided, called the **redhat-helm-repo**.\n- An administrator can add additional HCRs to provide additional Helm Charts.",
+        "tags": [
+          "helm"
+        ],
+        "tasks": [
+          {
+            "description": "Follow these steps to create a HelmChartRepository CR:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Administrator**.\n1. In the navigation menu, click [Home]{{highlight qs-nav-home}}.\n1. In the [Home navigation section]{{highlight qs-nav-home}}, click **Search**.\n1. Click the **Resources dropdown** menu and select **HelmChartRepository**.\n1. Click **Create HelmChartRepository** to bring up the YAML editor.\n1. Replace the contents of the YAML editor with:\n\n    ```\n    apiVersion: helm.openshift.io/v1beta1\n    kind: HelmChartRepository\n\n    metadata:\n      name: azure-sample-repo\n\n    spec:\n      name: azure-sample-repo\n\n      connectionConfig:\n        url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs\n    ```\n\n1. Click **Create**.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that the HelmChartRepository was successfully installed:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. On the **+Add** page, click **Helm Chart**. \n1. Confirm that the **azure-sample-repo** is an available catalog.\n1. In the **Chart Repositories** filter, do you see **azure-sample-repo**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Charts from the **azure-sample-repo** repository are now available."
+            },
+            "title": "Create a HelmChartRepository CR"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:introduction": {},
+                "f:prerequisites": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "monitor-sampleapp",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22978",
+        "uid": "954b35ca-d7db-4f2c-9ac5-e830e92c15d7"
+      },
+      "spec": {
+        "conclusion": "You have learned how to access workload monitoring and metrics!",
+        "description": "Now that you’ve created a sample application and added health checks, let’s monitor your application.",
+        "displayName": "Monitor your sample application",
+        "durationMinutes": 10,
+        "introduction": "### This quick start shows you how to monitor your sample application.\nYou should have previously created the **sample-app** application and **nodejs-basic** deployment via the **Get started with a sample** quick start. If you haven't, you may be able to follow these tasks with any existing deployment.",
+        "prerequisites": [
+          "You completed the \"Getting started with a sample\" quick start."
+        ],
+        "tasks": [
+          {
+            "description": "To view the details of your sample application:\n\n1. Go to the project your sample application was created in.\n\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n\n1. Click on the **nodejs-basic** deployment to view its details.\n\n1. Click on the **Observe** tab in the side panel.\n\nYou can see context sensitive metrics and alerts in the **Observe** tab.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify you can view the monitoring information:\n1. Do you see a **Metrics** accordion in the side panel?\n2. Do you see a **View dashboard** link in the **Metrics** accordion?\n3. Do you see three charts in the **Metrics** accordion: **CPU usage**, **Memory usage** and **Receive bandwidth**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have learned how you can monitor your sample app!"
+            },
+            "title": "View the monitoring details of your sample application"
+          },
+          {
+            "description": "### To view the project metrics in the dashboard in the context of **nodejs-basic**:\n1. Click on the **View dashboard** link in the side panel.\n2. You can change the **Time Range** and **Refresh Interval** of the dashboard.\n3. Click on the **Dashboard** drop-down list to view a list of available dashboards.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify that you are able to view the project metrics in the dashboard:\nDo you see metrics charts in the dashboard?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have learned how to view the dashboard in the context of your sample app!"
+            },
+            "title": "View project metrics in the dashboard"
+          },
+          {
+            "description": "### To view custom metrics:\n1. Click on the **Metrics** tab of the **Observe** page.\n2. Click the **Select Query** drop-down list to see the available queries.\n3. Click on **Filesystem Usage** from the list to run the query.\n\n#### Note: select **Custom Query** from the dropdown to create and run a custom query utilizing PromQL.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### Verify you can see the chart associated with the query:\n\n- Do you see a chart displayed with filesystem usage for your project?\n"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have learned how to run a query!"
+            },
+            "title": "View custom metrics"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "node-with-s2i",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22979",
+        "uid": "f1d55776-b9e0-40bf-927e-19da37d4de12"
+      },
+      "spec": {
+        "conclusion": "Your Node application is deployed and ready.",
+        "description": "Import a Node Application from git, build, and deploy it onto OpenShift.",
+        "displayName": "Get started with Node",
+        "durationMinutes": 10,
+        "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojNjk5RjYzO30KCS5zdDF7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojMzMzMzMzO30KCS5zdDJ7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojNjk5RjYzO30KCS5zdDN7Y2xpcC1wYXRoOnVybCgjWE1MSURfNV8pO30KCS5zdDR7ZmlsbDpub25lO30KCS5zdDV7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9Cgkuc3Q2e2ZpbGw6dXJsKCNTVkdJRF8yXyk7fQoJLnN0N3tmaWxsOnVybCgjU1ZHSURfM18pO30KCS5zdDh7ZmlsbDp1cmwoI1NWR0lEXzRfKTt9Cgkuc3Q5e2ZpbGw6dXJsKCNTVkdJRF81Xyk7fQoJLnN0MTB7ZmlsbDp1cmwoI1NWR0lEXzZfKTt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1LjgyLDI1LjY1Yy0wLjExLDAtMC4yMS0wLjAzLTAuMy0wLjA4TDE0LjU1LDI1Yy0wLjE0LTAuMDgtMC4wNy0wLjExLTAuMDMtMC4xMwoJCQljMC4xOS0wLjA3LDAuMjMtMC4wOCwwLjQ0LTAuMmMwLjAyLTAuMDEsMC4wNS0wLjAxLDAuMDcsMC4wMWwwLjc0LDAuNDRjMC4wMywwLjAxLDAuMDYsMC4wMSwwLjA5LDBsMi44OS0xLjY3CgkJCWMwLjAzLTAuMDIsMC4wNC0wLjA1LDAuMDQtMC4wOHYtMy4zNGMwLTAuMDMtMC4wMi0wLjA2LTAuMDQtMC4wOGwtMi44OS0xLjY3Yy0wLjAzLTAuMDItMC4wNi0wLjAyLTAuMDksMGwtMi44OSwxLjY3CgkJCWMtMC4wMywwLjAyLTAuMDUsMC4wNS0wLjA1LDAuMDh2My4zNGMwLDAuMDMsMC4wMiwwLjA2LDAuMDUsMC4wOGwwLjc5LDAuNDZjMC40MywwLjIxLDAuNjktMC4wNCwwLjY5LTAuMjl2LTMuMjkKCQkJYzAtMC4wNSwwLjA0LTAuMDgsMC4wOC0wLjA4aDAuMzdjMC4wNSwwLDAuMDgsMC4wNCwwLjA4LDAuMDh2My4yOWMwLDAuNTctMC4zMSwwLjktMC44NiwwLjljLTAuMTcsMC0wLjMsMC0wLjY3LTAuMThsLTAuNzYtMC40NAoJCQljLTAuMTktMC4xMS0wLjMtMC4zMS0wLjMtMC41M3YtMy4zNGMwLTAuMjIsMC4xMi0wLjQyLDAuMy0wLjUzbDIuODktMS42N2MwLjE4LTAuMSwwLjQzLTAuMSwwLjYxLDBsMi44OSwxLjY3CgkJCWMwLjE5LDAuMTEsMC4zLDAuMzEsMC4zLDAuNTN2My4zNGMwLDAuMjItMC4xMiwwLjQyLTAuMywwLjUzbC0yLjg5LDEuNjdDMTYuMDMsMjUuNjIsMTUuOTIsMjUuNjUsMTUuODIsMjUuNjV6Ii8+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2LjcxLDIzLjM1Yy0xLjI2LDAtMS41My0wLjU4LTEuNTMtMS4wN2MwLTAuMDUsMC4wNC0wLjA4LDAuMDgtMC4wOGgwLjM3YzAuMDQsMCwwLjA4LDAuMDMsMC4wOCwwLjA3CgkJCWMwLjA2LDAuMzgsMC4yMiwwLjU3LDAuOTksMC41N2MwLjYxLDAsMC44Ny0wLjE0LDAuODctMC40NmMwLTAuMTktMC4wNy0wLjMyLTEuMDItMC40MmMtMC43OS0wLjA4LTEuMjgtMC4yNS0xLjI4LTAuODkKCQkJYzAtMC41OCwwLjQ5LTAuOTMsMS4zMi0wLjkzYzAuOTMsMCwxLjM4LDAuMzIsMS40NCwxLjAxYzAsMC4wMi0wLjAxLDAuMDUtMC4wMiwwLjA2Yy0wLjAyLDAuMDItMC4wNCwwLjAzLTAuMDYsMC4wM2gtMC4zOAoJCQljLTAuMDQsMC0wLjA3LTAuMDMtMC4wOC0wLjA3Yy0wLjA5LTAuNC0wLjMxLTAuNTMtMC45LTAuNTNjLTAuNjYsMC0wLjc0LDAuMjMtMC43NCwwLjQxYzAsMC4yMSwwLjA5LDAuMjcsMC45OSwwLjM5CgkJCWMwLjg5LDAuMTIsMS4zMSwwLjI4LDEuMzEsMC45MUMxOC4xNSwyMi45OSwxNy42MiwyMy4zNSwxNi43MSwyMy4zNXoiLz4KCTwvZz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMC44OCwxOS44NmMwLDAuMzEtMC4yNSwwLjU2LTAuNTYsMC41NmMtMC4zLDAtMC41Ni0wLjI1LTAuNTYtMC41NmMwLTAuMzIsMC4yNi0wLjU2LDAuNTYtMC41NgoJCQlDMjAuNjIsMTkuMywyMC44OCwxOS41NCwyMC44OCwxOS44NnogTTE5Ljg1LDE5Ljg2YzAsMC4yNiwwLjIxLDAuNDcsMC40NywwLjQ3YzAuMjYsMCwwLjQ3LTAuMjEsMC40Ny0wLjQ3CgkJCWMwLTAuMjYtMC4yMS0wLjQ3LTAuNDctMC40N0MyMC4wNiwxOS4zOSwxOS44NSwxOS41OSwxOS44NSwxOS44NnogTTIwLjExLDE5LjU0aDAuMjJjMC4wNywwLDAuMjIsMCwwLjIyLDAuMTcKCQkJYzAsMC4xMS0wLjA3LDAuMTQtMC4xMiwwLjE1YzAuMDksMC4wMSwwLjA5LDAuMDYsMC4xLDAuMTRjMC4wMSwwLjA1LDAuMDEsMC4xNCwwLjAzLDAuMTZoLTAuMTNjMC0wLjAzLTAuMDItMC4xOS0wLjAyLTAuMgoJCQljLTAuMDEtMC4wNC0wLjAyLTAuMDUtMC4wNi0wLjA1aC0wLjExdjAuMjVoLTAuMTJWMTkuNTR6IE0yMC4yMywxOS44MmgwLjFjMC4wOCwwLDAuMDktMC4wNiwwLjA5LTAuMDkKCQkJYzAtMC4wOS0wLjA2LTAuMDktMC4wOS0wLjA5aC0wLjFWMTkuODJ6Ii8+Cgk8L2c+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNi44NywxMi42YzAtMC4xMy0wLjA3LTAuMjYtMC4xOS0wLjMybC0zLjA2LTEuNzZjLTAuMDUtMC4wMy0wLjExLTAuMDUtMC4xNy0wLjA1Yy0wLjAxLDAtMC4wMywwLTAuMDMsMAoJCWMtMC4wNiwwLTAuMTIsMC4wMi0wLjE3LDAuMDVsLTMuMDYsMS43NkMwLjA3LDEyLjM1LDAsMTIuNDcsMCwxMi42bDAuMDEsNC43NWMwLDAuMDcsMC4wMywwLjEzLDAuMDksMC4xNgoJCWMwLjA2LDAuMDMsMC4xMywwLjAzLDAuMTgsMGwxLjgyLTEuMDRjMC4xMi0wLjA3LDAuMTktMC4xOSwwLjE5LTAuMzJ2LTIuMjJjMC0wLjEzLDAuMDctMC4yNSwwLjE4LTAuMzJsMC43OC0wLjQ1CgkJYzAuMDYtMC4wMywwLjEyLTAuMDUsMC4xOS0wLjA1YzAuMDYsMCwwLjEzLDAuMDIsMC4xOCwwLjA1bDAuNzgsMC40NWMwLjExLDAuMDcsMC4xOSwwLjE5LDAuMTksMC4zMnYyLjIyCgkJYzAsMC4xMywwLjA3LDAuMjUsMC4xOSwwLjMybDEuODIsMS4wNGMwLjA2LDAuMDMsMC4xMywwLjAzLDAuMTksMGMwLjA2LTAuMDMsMC4wOS0wLjA5LDAuMDktMC4xNkw2Ljg3LDEyLjZ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjEuNjEsNi4wOGMtMC4wNi0wLjAzLTAuMTMtMC4wMy0wLjE4LDBjLTAuMDYsMC4wMy0wLjA5LDAuMDktMC4wOSwwLjE2djQuN2MwLDAuMDUtMC4wMiwwLjA5LTAuMDYsMC4xMQoJCWMtMC4wNCwwLjAyLTAuMDksMC4wMi0wLjEzLDBsLTAuNzctMC40NGMtMC4xMS0wLjA3LTAuMjYtMC4wNy0wLjM3LDBsLTMuMDcsMS43N2MtMC4xMSwwLjA3LTAuMTksMC4xOS0wLjE5LDAuMzJ2My41NAoJCWMwLDAuMTMsMC4wNywwLjI1LDAuMTksMC4zMkwyMCwxOC4zM2MwLjExLDAuMDcsMC4yNiwwLjA3LDAuMzcsMGwzLjA3LTEuNzdjMC4xMS0wLjA3LDAuMTktMC4xOSwwLjE5LTAuMzJWNy40MgoJCWMwLTAuMTMtMC4wNy0wLjI2LTAuMTktMC4zMkwyMS42MSw2LjA4eiBNMjEuMzMsMTUuMDhjMCwwLjAzLTAuMDIsMC4wNi0wLjA1LDAuMDhsLTEuMDUsMC42MWMtMC4wMywwLjAyLTAuMDYsMC4wMi0wLjA5LDAKCQlsLTEuMDUtMC42MWMtMC4wMy0wLjAyLTAuMDUtMC4wNS0wLjA1LTAuMDh2LTEuMjJjMC0wLjAzLDAuMDItMC4wNiwwLjA1LTAuMDhsMS4wNS0wLjYxYzAuMDMtMC4wMiwwLjA2LTAuMDIsMC4wOSwwbDEuMDUsMC42MQoJCWMwLjAzLDAuMDIsMC4wNSwwLjA1LDAuMDUsMC4wOFYxNS4wOHoiLz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zMS44MiwxMy44M2MwLjExLTAuMDcsMC4xOC0wLjE5LDAuMTgtMC4zMnYtMC44NmMwLTAuMTMtMC4wNy0wLjI1LTAuMTgtMC4zMmwtMy4wNS0xLjc3CgkJCWMtMC4xMS0wLjA3LTAuMjYtMC4wNy0wLjM3LDBsLTMuMDYsMS43N2MtMC4xMSwwLjA3LTAuMTksMC4xOS0wLjE5LDAuMzJ2My41NGMwLDAuMTMsMC4wNywwLjI2LDAuMTksMC4zMmwzLjA0LDEuNzQKCQkJYzAuMTEsMC4wNiwwLjI1LDAuMDYsMC4zNiwwbDEuODQtMS4wMmMwLjA2LTAuMDMsMC4wOS0wLjA5LDAuMS0wLjE2YzAtMC4wNy0wLjA0LTAuMTMtMC4wOS0wLjE2bC0zLjA4LTEuNzcKCQkJYy0wLjA2LTAuMDMtMC4wOS0wLjA5LTAuMDktMC4xNnYtMS4xMWMwLTAuMDcsMC4wNC0wLjEzLDAuMDktMC4xNmwwLjk2LTAuNTVjMC4wNi0wLjAzLDAuMTMtMC4wMywwLjE4LDBsMC45NiwwLjU1CgkJCWMwLjA2LDAuMDMsMC4wOSwwLjA5LDAuMDksMC4xNnYwLjg3YzAsMC4wNywwLjA0LDAuMTMsMC4wOSwwLjE2YzAuMDYsMC4wMywwLjEzLDAuMDMsMC4xOSwwTDMxLjgyLDEzLjgzeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0yOC41NCwxMy42NmMwLjAyLTAuMDEsMC4wNS0wLjAxLDAuMDcsMEwyOS4yLDE0YzAuMDIsMC4wMSwwLjA0LDAuMDQsMC4wNCwwLjA2djAuNjgKCQkJYzAsMC4wMy0wLjAxLDAuMDUtMC4wNCwwLjA2bC0wLjU5LDAuMzRjLTAuMDIsMC4wMS0wLjA1LDAuMDEtMC4wNywwbC0wLjU5LTAuMzRjLTAuMDItMC4wMS0wLjA0LTAuMDQtMC4wNC0wLjA2di0wLjY4CgkJCWMwLTAuMDMsMC4wMS0wLjA1LDAuMDQtMC4wNkwyOC41NCwxMy42NnoiLz4KCTwvZz4KCTxnPgoJCTxkZWZzPgoJCQk8cGF0aCBpZD0iWE1MSURfMTQzXyIgZD0iTTExLjk5LDEwLjU4Yy0wLjExLTAuMDctMC4yNS0wLjA3LTAuMzcsMGwtMy4wNSwxLjc2Yy0wLjExLDAuMDctMC4xOCwwLjE5LTAuMTgsMC4zMnYzLjUyCgkJCQljMCwwLjEzLDAuMDcsMC4yNSwwLjE4LDAuMzJsMy4wNSwxLjc2YzAuMTEsMC4wNywwLjI1LDAuMDcsMC4zNywwbDMuMDUtMS43NmMwLjExLTAuMDcsMC4xOC0wLjE5LDAuMTgtMC4zMnYtMy41MgoJCQkJYzAtMC4xMy0wLjA3LTAuMjUtMC4xOC0wLjMyTDExLjk5LDEwLjU4eiIvPgoJCTwvZGVmcz4KCQk8bGluZWFyR3JhZGllbnQgaWQ9IlhNTElEXzRfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEzLjA0OTQiIHkxPSIxMS44OTE3IiB4Mj0iMTAuMjk1OSIgeTI9IjE3LjUwODkiPgoJCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNDE4NzNGIi8+CgkJCTxzdG9wICBvZmZzZXQ9IjAuMzI4OCIgc3R5bGU9InN0b3AtY29sb3I6IzQxOEIzRCIvPgoJCQk8c3RvcCAgb2Zmc2V0PSIwLjYzNTIiIHN0eWxlPSJzdG9wLWNvbG9yOiM0MTk2MzciLz4KCQkJPHN0b3AgIG9mZnNldD0iMC45MzE5IiBzdHlsZT0ic3RvcC1jb2xvcjojM0ZBOTJEIi8+CgkJCTxzdG9wICBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMzRkFFMkEiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJCTx1c2UgeGxpbms6aHJlZj0iI1hNTElEXzE0M18iICBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOnVybCgjWE1MSURfNF8pOyIvPgoJCTxjbGlwUGF0aCBpZD0iWE1MSURfNV8iPgoJCQk8dXNlIHhsaW5rOmhyZWY9IiNYTUxJRF8xNDNfIiAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7Ii8+CgkJPC9jbGlwUGF0aD4KCQk8ZyBjbGFzcz0ic3QzIj4KCQkJPHBhdGggY2xhc3M9InN0NCIgZD0iTTExLjYyLDEwLjU4bC0zLjI0LDEuNzZDOC4yNywxMi40MSw4LDEyLjUzLDgsMTIuNjZ2My41MmMwLDAuMDksMC4yMiwwLjE3LDAuMjgsMC4yM2wzLjUyLTUuODcKCQkJCUMxMS43MSwxMC41MiwxMS43LDEwLjUzLDExLjYyLDEwLjU4eiIvPgoJCQk8cGF0aCBjbGFzcz0ic3Q0IiBkPSJNMTEuOTEsMTguMjljMC4wMy0wLjAxLDAuMDYtMC4wMiwwLjA5LTAuMDRsMy40My0xLjc2YzAuMTEtMC4wNywwLjU3LTAuMTksMC41Ny0wLjMydi0zLjUyCgkJCQljMC0wLjEtMC40Mi0wLjE5LTAuNDktMC4yNkwxMS45MSwxOC4yOXoiLz4KCQkJPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxMS4zNDYzIiB5MT0iMTQuODMxNCIgeDI9IjE5LjA3MjQiIHkyPSI5LjEyMjkiPgoJCQkJPHN0b3AgIG9mZnNldD0iMC4xMzc2IiBzdHlsZT0ic3RvcC1jb2xvcjojNDE4NzNGIi8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjQwMzIiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NEEwNDQiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuNzEzNiIgc3R5bGU9InN0b3AtY29sb3I6IzY2Qjg0OCIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC45MDgxIiBzdHlsZT0ic3RvcC1jb2xvcjojNkNDMDRBIi8+CgkJCTwvbGluZWFyR3JhZGllbnQ+CgkJCTxwYXRoIGNsYXNzPSJzdDUiIGQ9Ik0xNS4wNSwxMi4zNGwtMy4wNi0xLjc2Yy0wLjAzLTAuMDItMC4wNi0wLjAzLTAuMS0wLjA0bC0zLjQzLDUuODdjMC4wMywwLjAzLDAuMDYsMC4wNiwwLjEsMC4wOGwzLjA2LDEuNzYKCQkJCWMwLjA5LDAuMDUsMC4xOSwwLjA2LDAuMjgsMC4wNGwzLjIyLTUuODlDMTUuMTEsMTIuMzgsMTUuMDgsMTIuMzYsMTUuMDUsMTIuMzR6Ii8+CgkJPC9nPgoJCTxnIGNsYXNzPSJzdDMiPgoJCQk8cGF0aCBjbGFzcz0ic3Q0IiBkPSJNMTYsMTYuMTh2LTMuNTJjMC0wLjEzLTAuNDYtMC4yNS0wLjU3LTAuMzJsLTMuMjUtMS43NmMtMC4wNC0wLjAyLTAuMTctMC4wMy0wLjIxLTAuMDRsMy42OCw1LjcyCgkJCQlDMTUuNjYsMTYuMjQsMTYsMTYuMjEsMTYsMTYuMTh6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDQiIGQ9Ik04LjM4LDEyLjM0QzguMjcsMTIuNDEsOCwxMi41Myw4LDEyLjY2djMuNTJjMCwwLjEzLDAuMjcsMC4yNSwwLjM4LDAuMzJsMy4xNSwxLjc2CgkJCQljMC4wNywwLjA0LDAuMiwwLjA2LDAuMjgsMC4wNWwtMy4zNS01Ljk3TDguMzgsMTIuMzR6Ii8+CgkJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOC4yODY3IiB5MT0iOS45NDczIiB4Mj0iMTUuMzMzNiIgeTI9IjkuOTQ3MyI+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjA5MTkiIHN0eWxlPSJzdG9wLWNvbG9yOiM2Q0MwNEEiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuMjg2NCIgc3R5bGU9InN0b3AtY29sb3I6IzY2Qjg0OCIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC41OTY4IiBzdHlsZT0ic3RvcC1jb2xvcjojNTRBMDQ0Ii8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjg2MjQiIHN0eWxlPSJzdG9wLWNvbG9yOiM0MTg3M0YiLz4KCQkJPC9saW5lYXJHcmFkaWVudD4KCQkJPHBvbHlnb24gY2xhc3M9InN0NiIgcG9pbnRzPSIxMS41Miw5Ljk0IDExLjQ4LDkuOTYgMTEuNTQsOS45NiAJCQkiLz4KCQkJPGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8zXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI4LjI4NjciIHkxPSIxNC40MTkiIHgyPSIxNS4zMzM2IiB5Mj0iMTQuNDE5Ij4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuMDkxOSIgc3R5bGU9InN0b3AtY29sb3I6IzZDQzA0QSIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC4yODY0IiBzdHlsZT0ic3RvcC1jb2xvcjojNjZCODQ4Ii8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjU5NjgiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NEEwNDQiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuODYyNCIgc3R5bGU9InN0b3AtY29sb3I6IzQxODczRiIvPgoJCQk8L2xpbmVhckdyYWRpZW50PgoJCQk8cGF0aCBjbGFzcz0ic3Q3IiBkPSJNMTUuMDUsMTYuNWMwLjA5LTAuMDUsMC4xNi0wLjE0LDAuMTgtMC4yM2wtMy4zNS01LjcyYy0wLjA5LTAuMDItMC4xOCwwLTAuMjYsMC4wNGwtMy4wNCwxLjc1bDMuMjgsNS45NwoJCQkJYzAuMDUtMC4wMSwwLjA5LTAuMDIsMC4xMy0wLjA1TDE1LjA1LDE2LjV6Ii8+CgkJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfNF8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iOC4yODY3IiB5MT0iMTYuNDMwNyIgeDI9IjE1LjMzMzYiIHkyPSIxNi40MzA3Ij4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuMDkxOSIgc3R5bGU9InN0b3AtY29sb3I6IzZDQzA0QSIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC4yODY0IiBzdHlsZT0ic3RvcC1jb2xvcjojNjZCODQ4Ii8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjU5NjgiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NEEwNDQiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuODYyNCIgc3R5bGU9InN0b3AtY29sb3I6IzQxODczRiIvPgoJCQk8L2xpbmVhckdyYWRpZW50PgoJCQk8cG9seWdvbiBjbGFzcz0ic3Q4IiBwb2ludHM9IjE1LjMzLDE2LjQ0IDE1LjMxLDE2LjQxIDE1LjMxLDE2LjQ1IAkJCSIvPgoJCQk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzVfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjcuNTc0NyIgeTE9IjE3LjM0IiB4Mj0iMTYuMDI0MiIgeTI9IjE3LjM0Ij4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuMDkxOSIgc3R5bGU9InN0b3AtY29sb3I6IzZDQzA0QSIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC4yODY0IiBzdHlsZT0ic3RvcC1jb2xvcjojNjZCODQ4Ii8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjU5NjgiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NEEwNDQiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuODYyNCIgc3R5bGU9InN0b3AtY29sb3I6IzQxODczRiIvPgoJCQk8L2xpbmVhckdyYWRpZW50PgoJCQk8cGF0aCBjbGFzcz0ic3Q5IiBkPSJNMTUuMDUsMTYuNUwxMiwxOC4yNmMtMC4wNCwwLjAyLTAuMDksMC4wNC0wLjEzLDAuMDVsMC40LDAuMTFMMTYsMTYuNDV2LTAuMDVsLTAuNDMtMC4xNAoJCQkJQzE1LjU1LDE2LjM2LDE1LjE0LDE2LjQ1LDE1LjA1LDE2LjV6Ii8+CgkJCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfNl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTYuODExNyIgeTE9IjExLjUwNDUiIHgyPSIxMi4yODg2IiB5Mj0iMjAuNzMxNiI+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNDE4NzNGIi8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIwLjMyODgiIHN0eWxlPSJzdG9wLWNvbG9yOiM0MThCM0QiLz4KCQkJCTxzdG9wICBvZmZzZXQ9IjAuNjM1MiIgc3R5bGU9InN0b3AtY29sb3I6IzQxOTYzNyIvPgoJCQkJPHN0b3AgIG9mZnNldD0iMC45MzE5IiBzdHlsZT0ic3RvcC1jb2xvcjojM0ZBOTJEIi8+CgkJCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojM0ZBRTJBIi8+CgkJCTwvbGluZWFyR3JhZGllbnQ+CgkJCTxwYXRoIGNsYXNzPSJzdDEwIiBkPSJNMTUuMDUsMTYuNUwxMiwxOC4yNmMtMC4wNCwwLjAyLTAuMDksMC4wNC0wLjEzLDAuMDVsMC40LDAuMTFMMTYsMTYuNDV2LTAuMDVsLTAuNDMtMC4xNAoJCQkJQzE1LjU1LDE2LjM2LDE1LjE0LDE2LjQ1LDE1LjA1LDE2LjV6Ii8+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPg==",
+        "introduction": "**Node.js** is based on the V8 JavaScript engine and allows you to write server-side JavaScript applications. It provides an I/O model based on events and non-blocking operations that enables you to write efficient applications.\n- The Node.js runtime enables you to run Node.js applications and services on OpenShift while providing all the advantages and conveniences of the OpenShift platform such as:\n\n  - Rolling updates\n\n  - Continuous delivery pipelines\n  \n  - Service discovery\n\n  - Externalized configuration\n\n  - Load balancing\n\nOpenShift also makes it easier for your applications to implement common microservice patterns such as externalized configuration, health check, circuit breaker, and failover.",
+        "tasks": [
+          {
+            "description": "To create a Node application:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. Click the **Project** dropdown menu and select **Create Project** to create a project for your Node application.\n1. In the **Name** field, enter a name for your new project. Then click **Create**.\n1. On the **+Add page**, click **Import from Git** on the **Git Repository** tile. \n1. In the **Git Repo URL** field, add \n\n  ```\n    https://github.com/nodeshift-starters/nodejs-rest-http\n  ``` \n\n1. At the end of the form, click **Create**. ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "The application is represented by the light grey area with the white border.  The deployment is a white circle.  Verify that the application was successfully created:\n\n- Can you identify a **nodejs-rest-http-app** application?\n\n- Can you identify a **nodejs-rest-http** deployment?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Node application has been deployed onto OpenShift."
+            },
+            "title": "Create a Node application"
+          },
+          {
+            "description": "To view the build status of your Node application:\n1. To view build status in a tooltip, hover over the status icon on the bottom left quadrant of the **nodejs-rest-http** deployment.\n1. Click on the icon for quick access to the build log.  \n\n    - You should be able to see the log stream of the **nodejs-rest-http-1** build on the **Build Details** page.\n  \n    - The application and its dependencies will be built into a container image and pushed to the OpenShift container registry.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify the build is complete:\n- This build may take a few minutes. When it's finished, a **Complete** badge will surface on the page header beside build name **nodejsrest-http-redhat-1**. Did this badge appear?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your build is complete."
+            },
+            "title": "View the build status"
+          },
+          {
+            "description": "To view the associated code:\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n1. The icon on the bottom right quadrant of the **nodejs-rest-http** deployment either represents the Git repository of the associated code, OR if the appropriate operators are installed, it will bring up the associated code in your IDE.\n          \n1. If the icon shown is Bitbucket, GitHub, GitLab or generic Git, click it to navigate to the associate Git repository. Otherwise, if the icon shown is CodeReady Workspaces or Eclipse Che, click it to bring up the associated code in your IDE.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that you can see the code associated with your deployment:\n- Was a new browser tab opened either to your associated Git repository or to your IDE?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You viewed the code associated with the **nodejs-rest-http** deployment."
+            },
+            "title": "View the associated code"
+          },
+          {
+            "description": "To view the pod status:\n1. Hover over the pod donut to see the pod status in a tooltip.\n\n     - Notice that the **nodejs-rest-http** deployment has a pod donut imposed on the circle, representing the pod status (i.e. blue = running).\n\n      - The color of the donut indicates the pod status.  ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you see the pod status:\n\n- Do you see the number of associated pods and their statuses?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your deployment has one running pod."
+            },
+            "title": "View the pod status"
+          },
+          {
+            "description": "The external link icon on the top right quadrant of the **nodejs-rest-http** deployment represents the route URL.\n1. Click the external link icon to open the URL and run the application in a new browser tab.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify your Node application is running:\n\n- Is the new tab titled **API Level 0 Example - Node.js**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Node application is running."
+            },
+            "title": "Run the Node application"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:nextQuickStart": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "odf-install-tour",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22974",
+        "uid": "972e5917-b570-4fa5-8c19-d0d918009d1c"
+      },
+      "spec": {
+        "conclusion": "Congratulations! **OpenShift Data Foundation** is ready to use. \n\nTo learn how you can manage your storage space effectively, take the Getting Started with OpenShift Data Foundation Quick Start.",
+        "description": "Install the OpenShift Data Foundation (ODF) operator and create a storage system.",
+        "displayName": "Install OpenShift Data Foundation",
+        "durationMinutes": 5,
+        "icon": "data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHdpZHRoPSIxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTY2LjcgNTUuOGM2LjYgMCAxNi4xLTEuNCAxNi4xLTkuMiAwLS42IDAtMS4yLS4yLTEuOGwtMy45LTE3Yy0uOS0zLjctMS43LTUuNC04LjMtOC43LTUuMS0yLjYtMTYuMi02LjktMTkuNS02LjktMy4xIDAtNCA0LTcuNiA0LTMuNSAwLTYuMS0yLjktOS40LTIuOS0zLjIgMC01LjIgMi4xLTYuOCA2LjYgMCAwLTQuNCAxMi41LTUgMTQuMy0uMS4zLS4xLjctLjEgMSAuMSA0LjcgMTkuMiAyMC42IDQ0LjcgMjAuNm0xNy4xLTZjLjkgNC4zLjkgNC44LjkgNS4zIDAgNy40LTguMyAxMS40LTE5LjEgMTEuNC0yNC42IDAtNDYuMS0xNC40LTQ2LjEtMjMuOSAwLTEuMy4zLTIuNi44LTMuOS04LjkuNS0yMC4zIDIuMS0yMC4zIDEyLjIgMCAxNi41IDM5LjIgMzYuOSA3MC4yIDM2LjkgMjMuOCAwIDI5LjgtMTAuNyAyOS44LTE5LjIgMC02LjctNS44LTE0LjMtMTYuMi0xOC44IiBmaWxsPSIjZWQxYzI0Ii8+PHBhdGggZD0ibTgzLjggNDkuOGMuOSA0LjMuOSA0LjguOSA1LjMgMCA3LjQtOC4zIDExLjQtMTkuMSAxMS40LTI0LjYgMC00Ni4xLTE0LjQtNDYuMS0yMy45IDAtMS4zLjMtMi42LjgtMy45bDEuOS00LjhjLS4xLjMtLjEuNy0uMSAxIDAgNC44IDE5LjEgMjAuNyA0NC43IDIwLjcgNi42IDAgMTYuMS0xLjQgMTYuMS05LjIgMC0uNiAwLTEuMi0uMi0xLjh6IiBmaWxsPSIjMDEwMTAxIi8+PC9zdmc+",
+        "introduction": "**Red Hat OpenShift® Data Foundation** is persistent software-defined storage integrated with and optimized for Red Hat OpenShift Container Platform. \n\n  Dynamic, stateful, and highly available container-native storage can be provisioned and de-provisioned on demand as an integral part of the OpenShift administrator console.",
+        "nextQuickStart": [
+          "getting-started-odf"
+        ],
+        "tasks": [
+          {
+            "description": "The OperatorHub is where you can find a catalog of available Operators to install on your cluster.\n\nTo install OpenShift Data Foundation, follow these steps:\n\n1. Enter the administrator perspective: In the main navigation, select the dropdown menu and select **Administrator**.\n\n1. In the main navigation menu, select [Operators]{{highlight qs-nav-operators}} and select **OperatorHub**\n\n1. In the **Filter by keyword** field, type `OpenShift Data Foundation`\n\n1. Select **OpenShift Data Foundation** tile to initiate the operator installation on your cluster.\n\n1. In the panel that appears, select **Install.** \n\n1. On the operator installation page, fill out the Operator Subscription form. \n\n1. Select **Install.**",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "####  Verify that the OpenShift Data Foundation operator is installed:\n\nIn the navigation menu, select **Operators \u003e Installed Operators**. \n\nDoes the **Status** column for **OpenShift Data Foundation** show **Succeeded**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Great work! You installed the OpenShift Data Foundation operator."
+            },
+            "title": "Install OpenShift Data Foundation"
+          },
+          {
+            "description": "A **StorageSystem** includes a CephCluster, Multicloud Object Gateway, and required storage resources.\n\nTo create a StorageSystem:\n\n1. Select [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Administrator.**\n\n2. In the main navigation menu, select [Operators]{{highlight qs-nav-operators}} and select **Installed Operators.**\n\n3. From your list of installed operators, select **OpenShift Data Foundation.**\n\n4. On the StorageSystem tile, select **Create Instance.**\n\n5. Select your **Backing Storage**\n    - **Use an existing StorageClass.**\n        \n    - **Create a new StorageClass using local storage devices:** Use on any platform with devices attached to nodes using the Local Storage Operator (LSO).\n    \n    - **Connect an external storage platform:** Use on bare-metal infrastructures where nodes have access to an external storage array, such as Fibre Channel or iSCSI.) For this backing storage option, a third-party CSI driver leveraging the external storage array (such as IBM Block CSI Driver) provides the StorageClass infrastructure.\n\n6. Follow the on-screen instructions to create the StorageSystem.\n\n7. Once your StorageSystem reaches a **Ready** status, you’re ready to start using storage resources like StorageCluster and BucketClass, and allow ODF to manage your storage.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### Verify that the StorageSystem is created:\n\nOn the StorageSystem details page, is the state of the system **Ready** ?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Great work! You installed the OpenShift Data Foundation operator."
+            },
+            "title": "Create a StorageSystem"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "quarkus-with-helm",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22980",
+        "uid": "b21a3fe8-2af2-49cb-8052-60dbe326b50f"
+      },
+      "spec": {
+        "conclusion": "Your Quarkus application is deployed and ready.",
+        "description": "Deploy a Quarkus application using a Helm Chart.",
+        "displayName": "Get started with Quarkus using a Helm Chart",
+        "durationMinutes": 10,
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNDY5NWViO30uY2xzLTJ7ZmlsbDojZmYwMDRhO30uY2xzLTN7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+cXVhcmt1c19pY29uX3JnYl8xMDI0cHhfcmV2ZXJzZTwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY2OS4zNCAxODAuNTcgNTEyIDI3MS40MSA2NjkuMzQgMzYyLjI1IDY2OS4zNCAxODAuNTciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMzU0LjY2IDE4MC41NyAzNTQuNjYgMzYyLjI1IDUxMiAyNzEuNDEgMzU0LjY2IDE4MC41NyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSI2NjkuMzQgMzYyLjI1IDUxMiAyNzEuNDEgMzU0LjY2IDM2Mi4yNSA1MTIgNDUzLjA5IDY2OS4zNCAzNjIuMjUiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTg4Ljc2IDQ2Ny45MyAzNDYuMSA1NTguNzYgMzQ2LjEgMzc3LjA5IDE4OC43NiA0NjcuOTMiLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMzQ2LjEgNzQwLjQ0IDUwMy40MyA2NDkuNiAzNDYuMSA1NTguNzYgMzQ2LjEgNzQwLjQ0Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0zIiBwb2ludHM9IjM0Ni4xIDM3Ny4wOSAzNDYuMSA1NTguNzYgNTAzLjQzIDY0OS42IDUwMy40MyA0NjcuOTMgMzQ2LjEgMzc3LjA5Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY3Ny45IDc0MC40NCA2NzcuOSA1NTguNzYgNTIwLjU3IDY0OS42IDY3Ny45IDc0MC40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSI4MzUuMjQgNDY3LjkzIDY3Ny45IDM3Ny4wOSA2NzcuOSA1NTguNzYgODM1LjI0IDQ2Ny45MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSI1MjAuNTcgNjQ5LjYgNjc3LjkgNTU4Ljc2IDY3Ny45IDM3Ny4wOSA1MjAuNTcgNDY3LjkzIDUyMC41NyA2NDkuNiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTg1My40NywxSDE3MC41M0M3Ny4yOSwxLDEsNzcuMjksMSwxNzAuNTNWODUzLjQ3QzEsOTQ2LjcxLDc3LjI5LDEwMjMsMTcwLjUzLDEwMjNoNDY3LjdMNTEyLDcxNi4zOSw0MjAuNDIsOTEwSDE3MC41M0MxMzkuOSw5MTAsMTE0LDg4NC4xLDExNCw4NTMuNDdWMTcwLjUzQzExNCwxMzkuOSwxMzkuOSwxMTQsMTcwLjUzLDExNEg4NTMuNDdDODg0LjEsMTE0LDkxMCwxMzkuOSw5MTAsMTcwLjUzVjg1My40N0M5MTAsODg0LjEsODg0LjEsOTEwLDg1My40Nyw5MTBINzA1LjI4bDQ2LjUyLDExM0g4NTMuNDdjOTMuMjQsMCwxNjkuNTMtNzYuMjksMTY5LjUzLTE2OS41M1YxNzAuNTNDMTAyMyw3Ny4yOSw5NDYuNzEsMSw4NTMuNDcsMVoiLz48L3N2Zz4K",
+        "introduction": "**Quarkus** is a Cloud Native, (Linux) Container First framework for writing Java applications.\n- **Container First**: Minimal footprint Java applications that are optimal for running in containers.\n- **Cloud Native**: Embraces 12 factor architecture in environments like Kubernetes.\n- **Unify imperative and reactive**: Brings under one programming model non-blocking and imperative styles of development.\n- **Standards-based**: Based on the standards and frameworks you love and use: RESTEasy and JAX-RS, Hibernate ORM and JPA, Netty, Eclipse Vert.x, Eclipse MicroProfile, Apache Camel.\n- **A great choice for microservices and serverless**: Brings lightning fast startup time and code turnaround to Java apps.\n- **Developer Joy**: Development centric experience bringing your amazing apps to life in no time.",
+        "tasks": [
+          {
+            "description": "To create a Quarkus application:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n        \n1. Click the **Project** dropdown menu and select **Create Project** to create a project for your Quarkus application.\n1. In the **Name** field, enter a name for your new project. Then click **Create**.\n1. On the **+Add** page, click **Helm Chart**. \n1. In the Helm Chart catalog, click the **Quarkus** tile.\n\n    - The side panel displays information about the Quarkus chart\n\n1. Click **Install Helm Chart**\n\n    - Some form sections are collapsed by default. No changes to these sections are needed to proceed. Click the accordion above a collapsed section to expand and view its content.\n\n1. At the bottom of the form, click **Install** to create the Quarkus application using the Helm Chart.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "The Helm Release is represented by the light grey shape with a darker grey dashed border.  The deployment is a white circle containing the Quarkus logo.  Verify the application was successfully created:\n\n- Do you see a **quarkus** Helm Release?\n\n- Do you see a **quarkus** deployment?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Quarkus application has been deployed onto OpenShift."
+            },
+            "title": "Create a Quarkus application from a Helm Chart"
+          },
+          {
+            "description": "To view the build status of the Quarkus application:\n1. Hover over the icon on the bottom left quadrant of the **quarkus** deployment to see the build status in a tooltip.\n1. Click on the icon for quick access to the build log.  \n\n    - The log stream of the **quarkus-1** build is shown on the **Build Details** page.\n\n    - The application and its dependencies will be built into a container image and pushed to the OpenShift container registry.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify the build is complete:\n- This build may take a few minutes. When it's finished, a **Complete** badge will surface on the page header beside build name **quarkus-1**. Did this badge appear?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your build is complete."
+            },
+            "title": "View the build status"
+          },
+          {
+            "description": "To view the pod status:\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n1. Hover over the pod donut to see the pod status in a tooltip.\n\n      - Notice that the **quarkus** deployment has a pod donut imposed on the circle, representing the pod status (i.e. blue = running).  \n\n      - The color of the donut indicates the pod status.  ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you see the pod status:\n\n- Do you see the number of associated pods and their statuses?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your deployment has one running pod."
+            },
+            "title": "View the pod status"
+          },
+          {
+            "description": "\nThe external link icon on the top right quadrant of the **quarkus** deployment represents the route URL.  \n1. Click on the external link icon to open the URL and run the application in a new browser tab.\n1. Learn more about deploying Quarkus applications on OpenShift at\n [quarkus.io](https://quarkus.io).",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify your Quarkus application is running:\n- Is the new tab titled **Your new Cloud-Native application is ready!**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Quarkus application is running."
+            },
+            "title": "Run the Quarkus application"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "quarkus-with-s2i",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22981",
+        "uid": "35f0e230-8864-4cee-bd9c-e54bce25c9c8"
+      },
+      "spec": {
+        "conclusion": "Your Quarkus application is deployed and ready!",
+        "description": "Import a Quarkus Application from git, build, and deploy it onto OpenShift.",
+        "displayName": "Get started with Quarkus using s2i",
+        "durationMinutes": 10,
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNDY5NWViO30uY2xzLTJ7ZmlsbDojZmYwMDRhO30uY2xzLTN7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+cXVhcmt1c19pY29uX3JnYl8xMDI0cHhfcmV2ZXJzZTwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY2OS4zNCAxODAuNTcgNTEyIDI3MS40MSA2NjkuMzQgMzYyLjI1IDY2OS4zNCAxODAuNTciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMzU0LjY2IDE4MC41NyAzNTQuNjYgMzYyLjI1IDUxMiAyNzEuNDEgMzU0LjY2IDE4MC41NyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSI2NjkuMzQgMzYyLjI1IDUxMiAyNzEuNDEgMzU0LjY2IDM2Mi4yNSA1MTIgNDUzLjA5IDY2OS4zNCAzNjIuMjUiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTg4Ljc2IDQ2Ny45MyAzNDYuMSA1NTguNzYgMzQ2LjEgMzc3LjA5IDE4OC43NiA0NjcuOTMiLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMzQ2LjEgNzQwLjQ0IDUwMy40MyA2NDkuNiAzNDYuMSA1NTguNzYgMzQ2LjEgNzQwLjQ0Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0zIiBwb2ludHM9IjM0Ni4xIDM3Ny4wOSAzNDYuMSA1NTguNzYgNTAzLjQzIDY0OS42IDUwMy40MyA0NjcuOTMgMzQ2LjEgMzc3LjA5Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY3Ny45IDc0MC40NCA2NzcuOSA1NTguNzYgNTIwLjU3IDY0OS42IDY3Ny45IDc0MC40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSI4MzUuMjQgNDY3LjkzIDY3Ny45IDM3Ny4wOSA2NzcuOSA1NTguNzYgODM1LjI0IDQ2Ny45MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSI1MjAuNTcgNjQ5LjYgNjc3LjkgNTU4Ljc2IDY3Ny45IDM3Ny4wOSA1MjAuNTcgNDY3LjkzIDUyMC41NyA2NDkuNiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTg1My40NywxSDE3MC41M0M3Ny4yOSwxLDEsNzcuMjksMSwxNzAuNTNWODUzLjQ3QzEsOTQ2LjcxLDc3LjI5LDEwMjMsMTcwLjUzLDEwMjNoNDY3LjdMNTEyLDcxNi4zOSw0MjAuNDIsOTEwSDE3MC41M0MxMzkuOSw5MTAsMTE0LDg4NC4xLDExNCw4NTMuNDdWMTcwLjUzQzExNCwxMzkuOSwxMzkuOSwxMTQsMTcwLjUzLDExNEg4NTMuNDdDODg0LjEsMTE0LDkxMCwxMzkuOSw5MTAsMTcwLjUzVjg1My40N0M5MTAsODg0LjEsODg0LjEsOTEwLDg1My40Nyw5MTBINzA1LjI4bDQ2LjUyLDExM0g4NTMuNDdjOTMuMjQsMCwxNjkuNTMtNzYuMjksMTY5LjUzLTE2OS41M1YxNzAuNTNDMTAyMyw3Ny4yOSw5NDYuNzEsMSw4NTMuNDcsMVoiLz48L3N2Zz4K",
+        "introduction": "#### Quarkus is a Cloud Native, (Linux) Container First framework for writing Java applications.\n- **Container First:** Minimal footprint Java applications that are optimal for running in containers.\n- **Cloud Native:** Embraces 12 factor architecture in environments like Kubernetes.\n- **Unify imperative and reactive**: Brings under one programming model non-blocking and imperative styles of development.\n- **Standards-based**: Based on the standards and frameworks you love and use: RESTEasy and JAX-RS, Hibernate ORM and JPA, Netty, Eclipse Vert.x, Eclipse MicroProfile, Apache Camel.\n- **A great choice for microservices and serverless**: Brings lightning fast startup time and code turnaround to Java apps.\n- **Developer Joy**: Development centric experience bringing your amazing apps to life in no time.",
+        "tasks": [
+          {
+            "description": "To create a Quarkus application:  \n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. Click the **Project** dropdown menu and select **Create Project** to create a project for your Quarkus application.\n1. In the **Name** field, enter a name for your new project. Then click **Create**.\n1. On the **+Add page**, click **Import from Git** on the **Git Repository** tile. \n1. In the **Git Repo URL** field, add \n  \n  ```\n    https://github.com/quarkusio/quarkus-quickstarts\n  ``` \n  \n1. Click on **Show advanced Git options**, which will expose additional fields:\n1. Add \n``` getting-started ```\nto the **Context dir** field \n1. At the end of the form, click **Create**. ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "The application is represented by the light grey area with the white border.  The deployment is a white circle.  Verify that the application was successfully created:\n1. Do you see a **quarkus-quickstarts-app** application?\n1. Do you see a **quarkus-quickstarts** deployment?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Quarkus application has been deployed onto OpenShift."
+            },
+            "title": "Create a Quarkus application"
+          },
+          {
+            "description": "To view the build status of the Quarkus application:\n1. Hover over the icon on the bottom left quadrant of the **quarkus-quickstarts** deployment to see the build status in a tooltip.  \n1. Click the icon for quick access to the build log.  \n\n    - You should be able\nto see the log stream of the **quarkus-quickstarts-1** build on the **Build Details** page. \n\n    - The application and its dependencies will be\nbuilt into a container image and pushed to the OpenShift container registry.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify the build is complete:\n1. This build may take a few minutes. When it's finished, a **Complete** badge will surface on the page header beside build name **quarkus-quickstarts-1**. Did this badge appear?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your build is complete."
+            },
+            "title": "View the build status"
+          },
+          {
+            "description": "To view the associated code: \n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n1. The icon on the bottom right quadrant of the **quarkus-quickstarts** deployment either represents the Git repository of the associated code, OR if the appropriate operators are installed, it will bring up the associated code in your IDE.\n          \n1. If the icon shown is Bitbucket, GitHub, GitLab or generic Git, click it to navigate to the associate Git repository. Otherwise, if the icon shown is CodeReady Workspaces or Eclipse Che, click it to bring up the associated code in your IDE.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that you can see the code associated with your deployment:\n- Was a new browser tab opened either to your associated Git repository or to your IDE?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You viewed the code associated with the **quarkus-quickstarts** deployment."
+            },
+            "title": "View the associated code"
+          },
+          {
+            "description": "\nTo view the pod status:\n        \n1. Hover over the pod donut to see the pod status in a tooltip.\n\n      - Notice that the **quarkus-quickstarts** deployment has a pod donut imposed on the circle, representing the pod status (i.e. blue = running).  \n\n      - The color of the donut indicates the pod status.  ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you see the pod status:\n\nDo you see the number of associated pods and their statuses?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your deployment has one running pod."
+            },
+            "title": "View the pod status"
+          },
+          {
+            "description": "Since a Java builder image was used during the **Import from Git** flow, a Java icon is used by default in Topology view.  \n\n  - The displayed icon is determined by the\nvalue of the `app.openshift.io/runtime` label.\n\n  - You can change the icon associated with a deployment to indicate its application type. \n  \n  To associate a Quarkus icon with the **quarkus-quickstarts** deployment:\n\n\n1. Click on the **quarkus-quickstarts** deployment.\n1. In the side panel, click the **Actions** dropdown menu and select **Edit labels**.\n1. Click on the “x” next to the `app.openshift.io/runtime=java` label to remove it from the labels list.\n1. Add an additional label: \n  ```\n  app.openshift.io/runtime=quarkus\n  ```\n\n1. Click on **Save** to save the labels.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you have updated the icon :\n-  Do you now see the quarkus icon rather than a java icon in the **quarkus-quickstarts** deployment? "
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You changed the icon associated with your deployment."
+            },
+            "title": "Change the deployment icon to Quarkus"
+          },
+          {
+            "description": "The external link icon on the top right quadrant of the **quarkus-quickstarts** deployment represents the route URL.  \n1. Click on the external link icon to open the URL and run the application in a new browser tab.\n1. Learn more about deploying Quarkus applications on OpenShift at\n [quarkus.io](https://quarkus.io).",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify your Quarkus application is running:\n- Is the new tab titled **Your new Cloud-Native application is ready!**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Quarkus application is running."
+            },
+            "title": "Run the Quarkus application"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:introduction": {},
+                "f:nextQuickStart": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "sample-application",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22983",
+        "uid": "63c05614-dfb5-4c26-9bd7-23c8692bcbb3"
+      },
+      "spec": {
+        "conclusion": "Your sample application is deployed and ready! To add health checks to your sample app, take the **Adding health checks to your sample application** quick start.",
+        "description": "Is this the first time you’ve used OpenShift? Let's start with a simple sample app to learn the basics.",
+        "displayName": "Get started with a sample application",
+        "durationMinutes": 10,
+        "introduction": "### This Quick Start shows you how to deploy a sample application to OpenShift®.",
+        "nextQuickStart": [
+          "add-healthchecks"
+        ],
+        "tasks": [
+          {
+            "description": "To create a sample application:\n\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n\n1. Using the project drop-down list, select the project you would like to create the sample application in. You can also create a new one if you’d like.\n\n1. Click **Samples** to create an application from a code sample.\n\n1. Click on the **Basic NodeJS** card.\n\n1. Scroll down and click **Create**.\n\nThe **Topology** view will load with your new sample application. The application is represented by the light grey area with the white border. The deployment is a white circle.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify the application was successfully created:\n1. Do you see a **sample-app** application?\n2. Do you see a **nodejs-basic** deployment?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have created a sample application!"
+            },
+            "title": "Create a sample application"
+          },
+          {
+            "description": "### To view the build status of the sample application:\n1. Hover over the icon on the bottom left quadrant of the **nodejs-basic** deployment to see the build status in a tooltip.\n2. Click on the icon for quick access to the build log.\n\nYou should be able to see the log stream of the **nodejs-basic-1** build on the **Build Details** page.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify the build is complete:\nWait for the build to complete. It may take a few minutes.  Do you see a **Completed** badge on the page header?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your sample app is now built!"
+            },
+            "title": "View build status"
+          },
+          {
+            "description": "### To view the associated code:\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n\n1. The icon on the bottom right quadrant of the **nodejs-basic** deployment either represents the Git repository of the associated code, OR if the appropriate operators are installed, it will bring up the associated code in your IDE.\n\n1. If the icon shown is Bitbucket, GitHub, GitLab or generic Git, click it to navigate to the associate Git repository. Otherwise, if the icon shown is CodeReady Workspaces or Eclipse Che, click it to bring up the associated code in your IDE.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that you can see the code associated with the sample app:\n- Was a new browser tab opened either to your associated Git repository or to your IDE?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You viewed the code associated with the **nodejs-basic** deployment."
+            },
+            "title": "View the associated code"
+          },
+          {
+            "description": "### To view the pod status:\n1. Click on the browser tab with OpenShift.  Notice that the **nodejs-basic** deployment has a pod donut imposed on the circle, representing the pod status.\n2. Hover over the pod donut.\n\nYou should now see the pod status in a tooltip.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify you see the pod status:\nDo you see the number of associated pods and their statuses?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have viewed the pod status for your app!"
+            },
+            "title": "View the pod status"
+          },
+          {
+            "description": "### To run the sample application:\n1. The icon on the top right quadrant of the **nodejs-basic** deployment represents the route URL. Click on it to open the URL and run the application.\n\nThe application will be run in a new tab.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "#### To verify your sample application is running:\n1. Make sure you are in the new tab.\n2. Does the page have a **Hello from Node.js Starter Application!** title?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You have run your sample app!"
+            },
+            "title": "Run the sample application"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "console.openshift.io/v1",
+      "kind": "ConsoleQuickStart",
+      "metadata": {
+        "annotations": {
+          "include.release.openshift.io/ibm-cloud-managed": "true",
+          "include.release.openshift.io/self-managed-high-availability": "true",
+          "include.release.openshift.io/single-node-developer": "true"
+        },
+        "creationTimestamp": "2023-07-02T20:55:06Z",
+        "generation": 1,
+        "managedFields": [
+          {
+            "apiVersion": "console.openshift.io/v1",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:include.release.openshift.io/ibm-cloud-managed": {},
+                  "f:include.release.openshift.io/self-managed-high-availability": {},
+                  "f:include.release.openshift.io/single-node-developer": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"fa442c35-7c74-4af6-9f6f-33ba73aebf72\"}": {}
+                }
+              },
+              "f:spec": {
+                ".": {},
+                "f:conclusion": {},
+                "f:description": {},
+                "f:displayName": {},
+                "f:durationMinutes": {},
+                "f:icon": {},
+                "f:introduction": {},
+                "f:tasks": {}
+              }
+            },
+            "manager": "cluster-version-operator",
+            "operation": "Update",
+            "time": "2023-07-02T20:55:06Z"
+          }
+        ],
+        "name": "spring-with-s2i",
+        "ownerReferences": [
+          {
+            "apiVersion": "config.openshift.io/v1",
+            "kind": "ClusterVersion",
+            "name": "version",
+            "uid": "fa442c35-7c74-4af6-9f6f-33ba73aebf72"
+          }
+        ],
+        "resourceVersion": "22984",
+        "uid": "07df9da4-d016-4c4b-86ce-c5f77e289ddd"
+      },
+      "spec": {
+        "conclusion": "Your Spring application is deployed and ready. ",
+        "description": "Import a Spring Application from git, build, and deploy it onto OpenShift.",
+        "displayName": "Get started with Spring",
+        "durationMinutes": 10,
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTUzZDNjO30uY2xzLTJ7ZmlsbDojZDhkYTlkO30uY2xzLTN7ZmlsbDojNThjMGE4O30uY2xzLTR7ZmlsbDojZmZmO30uY2xzLTV7ZmlsbDojM2Q5MTkxO308L3N0eWxlPjwvZGVmcz48dGl0bGU+c25vd2Ryb3BfaWNvbl9yZ2JfZGVmYXVsdDwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAxMi42OSw1OTNjLTExLjEyLTM4LjA3LTMxLTczLTU5LjIxLTEwMy44LTkuNS0xMS4zLTIzLjIxLTI4LjI5LTM5LjA2LTQ3Ljk0QzgzMy41MywzNDEsNzQ1LjM3LDIzNC4xOCw2NzQsMTY4Ljk0Yy01LTUuMjYtMTAuMjYtMTAuMzEtMTUuNjUtMTUuMDdhMjQ2LjQ5LDI0Ni40OSwwLDAsMC0zNi41NS0yNi44LDE4Mi41LDE4Mi41LDAsMCwwLTIwLjMtMTEuNzcsMjAxLjUzLDIwMS41MywwLDAsMC00My4xOS0xNUExNTUuMjQsMTU1LjI0LDAsMCwwLDUyOCw5NS4yYy02Ljc2LS42OC0xMS43NC0uODEtMTQuMzktLjgxaDBsLTEuNjIsMC0xLjYyLDBhMTc3LjMsMTc3LjMsMCwwLDAtMzEuNzcsMy4zNSwyMDguMjMsMjA4LjIzLDAsMCwwLTU2LjEyLDE3LjU2LDE4MSwxODEsMCwwLDAtMjAuMjcsMTEuNzUsMjQ3LjQzLDI0Ny40MywwLDAsMC0zNi41NywyNi44MUMzNjAuMjUsMTU4LjYyLDM1NSwxNjMuNjgsMzUwLDE2OWMtNzEuMzUsNjUuMjUtMTU5LjUsMTcyLTI0MC4zOSwyNzIuMjhDOTMuNzMsNDYwLjg4LDgwLDQ3Ny44Nyw3MC41Miw0ODkuMTcsNDIuMzUsNTIwLDIyLjQzLDU1NC45LDExLjMxLDU5MywuNzIsNjI5LjIyLTEuNzMsNjY3LjY5LDQsNzA3LjMxLDE1LDc4Mi40OSw1NS43OCw4NTkuMTIsMTE4LjkzLDkyMy4wOWEyMiwyMiwwLDAsMCwxNS41OSw2LjUyaDEuODNsMS44Ny0uMzJjODEuMDYtMTMuOTEsMTEwLTc5LjU3LDE0My40OC0xNTUuNiwzLjkxLTguODgsNy45NS0xOC4wNSwxMi4yLTI3LjQzcTUuNDIsOC41NCwxMS4zOSwxNi4yM2MzMS44NSw0MC45MSw3NS4xMiw2NC42NywxMzIuMzIsNzIuNjNsMTguOCwyLjYyLDQuOTUtMTguMzNjMTMuMjYtNDkuMDcsMzUuMy05MC44NSw1MC42NC0xMTYuMTksMTUuMzQsMjUuMzQsMzcuMzgsNjcuMTIsNTAuNjQsMTE2LjE5bDUsMTguMzMsMTguOC0yLjYyYzU3LjItOCwxMDAuNDctMzEuNzIsMTMyLjMyLTcyLjYzcTYtNy42OCwxMS4zOS0xNi4yM2M0LjI1LDkuMzgsOC4yOSwxOC41NSwxMi4yLDI3LjQzLDMzLjQ5LDc2LDYyLjQyLDE0MS42OSwxNDMuNDgsMTU1LjZsMS44MS4zMWgxLjg5YTIyLDIyLDAsMCwwLDE1LjU5LTYuNTJjNjMuMTUtNjQsMTAzLjk1LTE0MC42LDExNC44OS0yMTUuNzhDMTAyNS43Myw2NjcuNjksMTAyMy4yOCw2MjkuMjIsMTAxMi42OSw1OTNaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzY0LjE1LDE4NS4yM2MxNy44OS0xNi40LDM0LjctMzAuMTUsNDkuNzctNDAuMTFhMjEyLDIxMiwwLDAsMSw2NS45My0yNS43M0ExOTgsMTk4LDAsMCwxLDUxMiwxMTYuMjdhMTk2LjExLDE5Ni4xMSwwLDAsMSwzMiwzLjFjNC41LjkxLDkuMzYsMi4wNiwxNC41MywzLjUyLDYwLjQxLDIwLjQ4LDg0LjkyLDkxLjA1LTQ3LjQ0LDI0OC4wNi0yOC43NSwzNC4xMi0xNDAuNywxOTQuODQtMTg0LjY2LDI2OC40MmE2MzAuODYsNjMwLjg2LDAsMCwwLTMzLjIyLDU4LjMyQzI3Niw2NTUuMzQsMjY1LjQsNTk4LDI2NS40LDUyMC4yOSwyNjUuNCwzNDAuNjEsMzExLjY5LDI0MC43NCwzNjQuMTUsMTg1LjIzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTUyNy41NCwzODQuODNjODQuMDYtOTkuNywxMTYuMDYtMTc3LjI4LDk1LjIyLTIzMC43NCwxMS42Miw4LjY5LDI0LDE5LjIsMzcuMDYsMzEuMTMsNTIuNDgsNTUuNSw5OC43OCwxNTUuMzgsOTguNzgsMzM1LjA3LDAsNzcuNzEtMTAuNiwxMzUuMDUtMjcuNzcsMTc3LjRhNjI4LjczLDYyOC43MywwLDAsMC0zMy4yMy01OC4zMmMtMzktNjUuMjYtMTMxLjQ1LTE5OS0xNzEuOTMtMjUyLjI3QzUyNi4zMywzODYuMjksNTI3LDM4NS41Miw1MjcuNTQsMzg0LjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTEzNC41OCw5MDguMDdoLS4wNmEuMzkuMzksMCwwLDEtLjI3LS4xMWMtMTE5LjUyLTEyMS4wNy0xNTUtMjg3LjQtNDcuNTQtNDA0LjU4LDM0LjYzLTQxLjE0LDEyMC0xNTEuNiwyMDIuNzUtMjQyLjE5LTMuMTMsNy02LjEyLDE0LjI1LTguOTIsMjEuNjktMjQuMzQsNjQuNDUtMzYuNjcsMTQ0LjMyLTM2LjY3LDIzNy40MSwwLDU2LjUzLDUuNTgsMTA2LDE2LjU5LDE0Ny4xNEEzMDcuNDksMzA3LjQ5LDAsMCwwLDI4MC45MSw3MjNDMjM3LDgxNi44OCwyMTYuOTMsODkzLjkzLDEzNC41OCw5MDguMDdaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNNTgzLjQzLDgxMy43OUM1NjAuMTgsNzI3LjcyLDUxMiw2NjQuMTUsNTEyLDY2NC4xNXMtNDguMTcsNjMuNTctNzEuNDMsMTQ5LjY0Yy00OC40NS02Ljc0LTEwMC45MS0yNy41Mi0xMzUuNjYtOTEuMThhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Ny03MS41NGwuMjEtLjMyLjE5LS4zM2MzOC02My42MywxMjYuNC0xOTEuMzcsMTY3LjEyLTI0NS42Niw0MC43MSw1NC4yOCwxMjkuMSwxODIsMTY3LjEyLDI0NS42NmwuMTkuMzMuMjEuMzJhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Nyw3MS41NEM2ODQuMzQsNzg2LjI3LDYzMS44OCw4MDcuMDUsNTgzLjQzLDgxMy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik04ODkuNzUsOTA4YS4zOS4zOSwwLDAsMS0uMjcuMTFoLS4wNkM4MDcuMDcsODkzLjkzLDc4Nyw4MTYuODgsNzQzLjA5LDcyM2EzMDcuNDksMzA3LjQ5LDAsMCwwLDIwLjQ1LTU1LjU0YzExLTQxLjExLDE2LjU5LTkwLjYxLDE2LjU5LTE0Ny4xNCwwLTkzLjA4LTEyLjMzLTE3My0zNi42Ni0yMzcuNHEtNC4yMi0xMS4xNi04LjkzLTIxLjdjODIuNzUsOTAuNTksMTY4LjEyLDIwMS4wNSwyMDIuNzUsMjQyLjE5QzEwNDQuNzksNjIwLjU2LDEwMDkuMjcsNzg2Ljg5LDg4OS43NSw5MDhaIi8+PC9zdmc+Cg==",
+        "introduction": "**Spring** is a Java framework for building applications based on a distributed microservices architecture. \n- Spring enables easy packaging and configuration of Spring applications into a self-contained executable application which can be easily deployed as a container to OpenShift.\n- Spring applications can integrate OpenShift capabilities to provide a natural \"Spring on OpenShift\" developer experience for both existing and net-new Spring applications. For example:\n- Externalized configuration using Kubernetes ConfigMaps and integration with Spring Cloud Kubernetes\n- Service discovery using Kubernetes Services\n- Load balancing with Replication Controllers\n- Kubernetes health probes and integration with Spring Actuator\n- Metrics: Prometheus, Grafana, and integration with Spring Cloud Sleuth\n- Distributed tracing with Istio \u0026 Jaeger tracing\n- Developer tooling through Red Hat OpenShift and Red Hat CodeReady developer tooling to quickly scaffold new Spring projects, gain access to familiar Spring APIs in your favorite IDE, and deploy to Red Hat OpenShift",
+        "tasks": [
+          {
+            "description": "To create a Spring application:\n1. Click on the [perspective switcher]{{highlight qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. Click the **Project** dropdown menu and select **Create Project** to create a project for your Spring application.\n1. In the **Name** field, enter a name for your new project. Then click **Create**.\n1. On the **+Add page**, click **Import from Git** on the **Git Repository** tile. \n1. In the **Git Repo URL** field, add \n  \n  ```\n    https://github.com/snowdrop/rest-http-example\n  ``` \n\n1. Click **Show advanced Git options** to expose additional form fields.\n1. Add \n\n  ```\n  2.3.4-2-redhat\n  ``` \nto the **Git reference** field.\n1. At the end of the form, click **Create**. ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "The application is represented by the light grey area with the white border.  The deployment is a white circle.  Verify that the application was successfully created:\n1. Do you see a **rest-http-example-app** application?\n1. Do you see a **rest-http-example** deployment?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Spring application has been deployed onto OpenShift."
+            },
+            "title": "Create a Spring application"
+          },
+          {
+            "description": "To view the build status of the Spring application:\n1. Hover over the icon on the bottom left quadrant of the **rest-http-example** deployment to see the build status in a tooltip.\n1. Click on the icon for quick access to the build log.  \n\n    - You should be able to see the log stream of the **rest-http-example-1** build on the **Build Details** page.\n    \n    - The application and its dependencies will be built into a container image and pushed to the OpenShift container registry.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify the build is complete:\n\n- This build may take a few minutes. When it's finished, a **Complete** badge will surface on the page header beside build name **rest-http-example**. Did this badge appear?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your build is complete."
+            },
+            "title": "View the build status"
+          },
+          {
+            "description": "To view the associated code:\n1. In the navigation menu, click [Topology]{{highlight qs-nav-topology}}.\n1. The icon on the bottom right quadrant of the **rest-http-example** deployment either represents the Git repository of the associated code, OR if the appropriate operators are installed, it will bring up the associated code in your IDE.\n          \n1. If the icon shown is Bitbucket, GitHub, GitLab or generic Git, click it to navigate to the associate Git repository. Otherwise, if the icon shown is CodeReady Workspaces or Eclipse Che, click it to bring up the associated code in your IDE.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify that you can see the code associated with your deployment:\n- Was a new browser tab opened either to your associated Git repository or to your IDE?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You viewed the code associated with **rest-http-example** deployment."
+            },
+            "title": "View the associated code"
+          },
+          {
+            "description": "To view the pod status:\n1. To view pod status in a tooltip, hover over the pod donut.\n\n      - Notice that the **rest-http-example** deployment has a pod donut imposed on the circle, representing the pod status (i.e. blue = running).  \n      \n      - The color of the donut indicates the pod status.  ",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you see the pod status:\n\n- Do you see the number of associated pods and their statuses?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your deployment has one running pod."
+            },
+            "title": "View the pod status"
+          },
+          {
+            "description": "Since a Java builder image was used during the **Import from Git** flow, a Java icon is used by default in topology.  \n\n  - This icon is determined by the value of the `app.openshift.io/runtime` label.\n\n  - Let’s change the icon associated with the **rest-http-example** deployment to indicate that it is a Spring application.\n\n1. Click on the **rest-http-example** deployment.\n1. In the side panel, click on the Actions drop-down and click the **Edit labels** menu item.\n1. Click on the “x” next to the `app.openshift.io/runtime=java` label to remove the entry\n1. Add an additional label: \n\n  ```\n  app.openshift.io/runtime=rh-spring-boot\n  ```\n\n1. Click on **Save** to save the labels.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify you have updated the icon:\n\n- Has the Spring icon replaced the Java icon in the **rest-http-example** deployment? "
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "You changed the icon associated with your deployment."
+            },
+            "title": "Change the deployment icon to Spring"
+          },
+          {
+            "description": "The external link icon on the top right quadrant of the **rest-http-example** deployment represents the route URL.  \n1. Click on the external link icon to open the URL and run the application in a new browser tab.",
+            "review": {
+              "failedTaskHelp": "This task isn’t verified yet. Try the task again.",
+              "instructions": "Verify your Spring application is running:\n\n- Is the new tab titled **HTTP Example**?"
+            },
+            "summary": {
+              "failed": "Try the steps again.",
+              "success": "Your Spring application is running."
+            },
+            "title": "Run the Spring application"
+          }
+        ]
+      }
+    }
+  ],
+  "kind": "ConsoleQuickStartList",
+  "metadata": {
+    "continue": "",
+    "resourceVersion": "1154981"
+  }
+}�}j��"      gE��gE��G�3�       �    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4-mng.example.com/api/kubernetes/apis/console.openshift.io/v1/consolequickstarts?limit=250&cluster=local-cluster necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 03a88219-7c35-451f-911e-72b6ec8ea9cb
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 11:14:47 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 95868a76-9a78-4613-83e3-797c71f709d7
+x-kubernetes-pf-prioritylevel-uid: 741adc1e-ec14-47ca-8138-79d5dfb82639
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 03a88219-7c35-451f-911e-72b6ec8ea9cb
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 11:14:47 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 95868a76-9a78-4613-83e3-797c71f709d7
+x-kubernetes-pf-prioritylevel-uid: 741adc1e-ec14-47ca-8138-79d5dfb82639
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1 net-response-time-onstart 47 net-response-time-onstop 48  �

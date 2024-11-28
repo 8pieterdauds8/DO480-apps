@@ -1,0 +1,456 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "prod-mysql-557b6c84bc-mghlq",
+    "generateName": "prod-mysql-557b6c84bc-",
+    "namespace": "mysql",
+    "uid": "1dff61d9-0170-4c55-8c54-abca43cdc7f1",
+    "resourceVersion": "1155572",
+    "creationTimestamp": "2024-11-26T11:02:06Z",
+    "labels": {
+      "app": "todonodejs",
+      "name": "mysql",
+      "pod-template-hash": "557b6c84bc"
+    },
+    "annotations": {
+      "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.139\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "k8s.v1.cni.cncf.io/networks-status": "[{\n    \"name\": \"openshift-sdn\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.128.0.139\"\n    ],\n    \"default\": true,\n    \"dns\": {}\n}]",
+      "openshift.io/scc": "restricted"
+    },
+    "ownerReferences": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "prod-mysql-557b6c84bc",
+        "uid": "3b495387-be0b-4298-8b77-f3ac6388b3d7",
+        "controller": true,
+        "blockOwnerDeletion": true
+      }
+    ],
+    "managedFields": [
+      {
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-11-26T11:02:06Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:generateName": {},
+            "f:labels": {
+              ".": {},
+              "f:app": {},
+              "f:name": {},
+              "f:pod-template-hash": {}
+            },
+            "f:ownerReferences": {
+              ".": {},
+              "k:{\"uid\":\"3b495387-be0b-4298-8b77-f3ac6388b3d7\"}": {}
+            }
+          },
+          "f:spec": {
+            "f:containers": {
+              "k:{\"name\":\"mysql\"}": {
+                ".": {},
+                "f:env": {
+                  ".": {},
+                  "k:{\"name\":\"MYSQL_DATABASE\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"MYSQL_PASSWORD\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"MYSQL_ROOT_PASSWORD\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"MYSQL_USER\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  }
+                },
+                "f:image": {},
+                "f:imagePullPolicy": {},
+                "f:name": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"containerPort\":3306,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:containerPort": {},
+                    "f:name": {},
+                    "f:protocol": {}
+                  }
+                },
+                "f:resources": {},
+                "f:terminationMessagePath": {},
+                "f:terminationMessagePolicy": {},
+                "f:volumeMounts": {
+                  ".": {},
+                  "k:{\"mountPath\":\"/var/lib/mysql\"}": {
+                    ".": {},
+                    "f:mountPath": {},
+                    "f:name": {}
+                  }
+                }
+              }
+            },
+            "f:dnsPolicy": {},
+            "f:enableServiceLinks": {},
+            "f:restartPolicy": {},
+            "f:schedulerName": {},
+            "f:securityContext": {},
+            "f:terminationGracePeriodSeconds": {},
+            "f:volumes": {
+              ".": {},
+              "k:{\"name\":\"db-init\"}": {
+                ".": {},
+                "f:emptyDir": {},
+                "f:name": {}
+              },
+              "k:{\"name\":\"db-volume\"}": {
+                ".": {},
+                "f:name": {},
+                "f:persistentVolumeClaim": {
+                  ".": {},
+                  "f:claimName": {}
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "manager": "kube-scheduler",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-11-26T11:02:07Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              ".": {},
+              "k:{\"type\":\"PodScheduled\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            }
+          }
+        },
+        "subresource": "status"
+      },
+      {
+        "manager": "multus",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-11-26T11:15:40Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              "f:k8s.v1.cni.cncf.io/network-status": {},
+              "f:k8s.v1.cni.cncf.io/networks-status": {}
+            }
+          }
+        },
+        "subresource": "status"
+      },
+      {
+        "manager": "Go-http-client",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-11-26T11:15:42Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              "k:{\"type\":\"ContainersReady\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Initialized\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Ready\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            },
+            "f:containerStatuses": {},
+            "f:hostIP": {},
+            "f:phase": {},
+            "f:podIP": {},
+            "f:podIPs": {
+              ".": {},
+              "k:{\"ip\":\"10.128.0.139\"}": {
+                ".": {},
+                "f:ip": {}
+              }
+            },
+            "f:startTime": {}
+          }
+        },
+        "subresource": "status"
+      }
+    ]
+  },
+  "spec": {
+    "volumes": [
+      {
+        "name": "db-volume",
+        "persistentVolumeClaim": {
+          "claimName": "mysql-pv-claim"
+        }
+      },
+      {
+        "name": "db-init",
+        "emptyDir": {}
+      },
+      {
+        "name": "kube-api-access-mrbxr",
+        "projected": {
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "name": "kube-root-ca.crt",
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ]
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "path": "namespace",
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "configMap": {
+                "name": "openshift-service-ca.crt",
+                "items": [
+                  {
+                    "key": "service-ca.crt",
+                    "path": "service-ca.crt"
+                  }
+                ]
+              }
+            }
+          ],
+          "defaultMode": 420
+        }
+      }
+    ],
+    "containers": [
+      {
+        "name": "mysql",
+        "image": "registry.redhat.io/rhel8/mysql-80:1-152",
+        "ports": [
+          {
+            "name": "mysql",
+            "containerPort": 3306,
+            "protocol": "TCP"
+          }
+        ],
+        "env": [
+          {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "value": "r00tpa55"
+          },
+          {
+            "name": "MYSQL_USER",
+            "value": "user1"
+          },
+          {
+            "name": "MYSQL_PASSWORD",
+            "value": "mypa55"
+          },
+          {
+            "name": "MYSQL_DATABASE",
+            "value": "items"
+          }
+        ],
+        "resources": {},
+        "volumeMounts": [
+          {
+            "name": "db-volume",
+            "mountPath": "/var/lib/mysql"
+          },
+          {
+            "name": "kube-api-access-mrbxr",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "IfNotPresent",
+        "securityContext": {
+          "capabilities": {
+            "drop": [
+              "KILL",
+              "MKNOD",
+              "SETGID",
+              "SETUID"
+            ]
+          },
+          "runAsUser": 1000660000
+        }
+      }
+    ],
+    "restartPolicy": "Always",
+    "terminationGracePeriodSeconds": 30,
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccountName": "default",
+    "serviceAccount": "default",
+    "nodeName": "master202",
+    "securityContext": {
+      "seLinuxOptions": {
+        "level": "s0:c26,c5"
+      },
+      "fsGroup": 1000660000
+    },
+    "imagePullSecrets": [
+      {
+        "name": "default-dockercfg-657jg"
+      }
+    ],
+    "schedulerName": "default-scheduler",
+    "tolerations": [
+      {
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      },
+      {
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      }
+    ],
+    "priority": 0,
+    "enableServiceLinks": true,
+    "preemptionPolicy": "PreemptLowerPriority"
+  },
+  "status": {
+    "phase": "Running",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-11-26T11:15:38Z"
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-11-26T11:15:42Z"
+      },
+      {
+        "type": "ContainersReady",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-11-26T11:15:42Z"
+      },
+      {
+        "type": "PodScheduled",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-11-26T11:15:38Z"
+      }
+    ],
+    "hostIP": "192.168.51.11",
+    "podIP": "10.128.0.139",
+    "podIPs": [
+      {
+        "ip": "10.128.0.139"
+      }
+    ],
+    "startTime": "2024-11-26T11:15:38Z",
+    "containerStatuses": [
+      {
+        "name": "mysql",
+        "state": {
+          "running": {
+            "startedAt": "2024-11-26T11:15:41Z"
+          }
+        },
+        "lastState": {},
+        "ready": true,
+        "restartCount": 0,
+        "image": "registry.redhat.io/rhel8/mysql-80:1-152",
+        "imageID": "registry.redhat.io/rhel8/mysql-80@sha256:05a395a42379c56261ee0694975c5643e301d36f2d77d9241d9a1fe89899f341",
+        "containerID": "cri-o://429eecab21339c9dc18a5ad98172394d4f840e29a04d6c7d132206ad764d0906",
+        "started": true
+      }
+    ],
+    "qosClass": "BestEffort"
+  }
+}oñ^à™”           gE­éG•3ð       ­    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4-mng.example.com/api/kubernetes/api/v1/namespaces/mysql/pods/prod-mysql-557b6c84bc-mghlq strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 00f17302-dd1f-402b-ad0b-c8ac8f8d6854
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 11:15:53 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 95868a76-9a78-4613-83e3-797c71f709d7
+x-kubernetes-pf-prioritylevel-uid: 741adc1e-ec14-47ca-8138-79d5dfb82639
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 00f17302-dd1f-402b-ad0b-c8ac8f8d6854
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 11:15:53 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 95868a76-9a78-4613-83e3-797c71f709d7
+x-kubernetes-pf-prioritylevel-uid: 741adc1e-ec14-47ca-8138-79d5dfb82639
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1   .©

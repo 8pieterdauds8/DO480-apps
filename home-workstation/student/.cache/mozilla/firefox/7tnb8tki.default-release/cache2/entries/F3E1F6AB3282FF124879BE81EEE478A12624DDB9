@@ -1,0 +1,3039 @@
+{
+  "kind": "DeploymentList",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "resourceVersion": "3066957"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "observability-grafana",
+        "namespace": "open-cluster-management-observability",
+        "uid": "511f8900-7ddc-40d9-aa45-5646647c35e5",
+        "resourceVersion": "2931085",
+        "generation": 1,
+        "creationTimestamp": "2024-11-26T06:10:39Z",
+        "labels": {
+          "app": "multicluster-observability-grafana",
+          "observability.open-cluster-management.io/name": "observability"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "observability.open-cluster-management.io/v1beta2",
+            "kind": "MultiClusterObservability",
+            "name": "observability",
+            "uid": "a457110a-6e91-4332-9921-7f9b00e657f8",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "mco-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:10:39Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:observability.open-cluster-management.io/name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"a457110a-6e91-4332-9921-7f9b00e657f8\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:observability.open-cluster-management.io/name": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"grafana\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":3001,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/etc/grafana\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/etc/grafana/provisioning/datasources\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/var/lib/grafana\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      },
+                      "k:{\"name\":\"grafana-dashboard-loader\"}": {
+                        ".": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"POD_NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"grafana-config\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"grafana-datasources\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"grafana-storage\"}": {
+                        ".": {},
+                        "f:emptyDir": {},
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app": "multicluster-observability-grafana",
+            "observability.open-cluster-management.io/name": "observability"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "multicluster-observability-grafana",
+              "observability.open-cluster-management.io/name": "observability"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "grafana-storage",
+                "emptyDir": {}
+              },
+              {
+                "name": "grafana-datasources",
+                "secret": {
+                  "secretName": "grafana-datasources",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "grafana-config",
+                "secret": {
+                  "secretName": "grafana-config",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "grafana",
+                "image": "registry.redhat.io/rhacm2/acm-grafana-rhel8@sha256:ddd190e8cd6cfb5a929e1ce6dd95482307975ff0a4216a519d300357622cd0c9",
+                "args": [
+                  "-config=/etc/grafana/grafana.ini"
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 3001,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "500m",
+                    "memory": "1Gi"
+                  },
+                  "requests": {
+                    "cpu": "4m",
+                    "memory": "100Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "grafana-storage",
+                    "mountPath": "/var/lib/grafana"
+                  },
+                  {
+                    "name": "grafana-datasources",
+                    "mountPath": "/etc/grafana/provisioning/datasources"
+                  },
+                  {
+                    "name": "grafana-config",
+                    "mountPath": "/etc/grafana"
+                  }
+                ],
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              },
+              {
+                "name": "grafana-dashboard-loader",
+                "image": "registry.redhat.io/rhacm2/grafana-dashboard-loader-rhel8@sha256:9eda8791963c7cb4180c0474c4aaf62117ec207a76f79174bdaed7c3cf5810b8",
+                "env": [
+                  {
+                    "name": "POD_NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "4m",
+                    "memory": "50Mi"
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "grafana",
+            "serviceAccount": "grafana",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app",
+                            "operator": "In",
+                            "values": [
+                              "multicluster-observability-grafana"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  },
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app",
+                            "operator": "In",
+                            "values": [
+                              "multicluster-observability-grafana"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 2,
+        "updatedReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:11:24Z",
+            "lastTransitionTime": "2024-11-26T06:10:39Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-grafana-7855cfb5d9\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:24Z",
+            "lastTransitionTime": "2024-11-26T06:20:24Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-observatorium-api",
+        "namespace": "open-cluster-management-observability",
+        "uid": "0ec8d840-06a3-4915-b1e1-042a603377ac",
+        "resourceVersion": "3005382",
+        "generation": 2,
+        "creationTimestamp": "2024-11-26T06:11:02Z",
+        "labels": {
+          "app.kubernetes.io/component": "api",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "observatorium-api",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "master-2020-11-02-v0.1.1-192-ge324057"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "2"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "core.observatorium.io/v1alpha1",
+            "kind": "Observatorium",
+            "name": "observability",
+            "uid": "efbe1097-18a3-4471-84fa-a181e1bdbca4",
+            "controller": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "locutus",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:11:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"efbe1097-18a3-4471-84fa-a181e1bdbca4\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/component": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:app.kubernetes.io/part-of": {},
+                      "f:app.kubernetes.io/version": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"observatorium-api\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":8081,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/etc/observatorium/rbac.yaml\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/etc/observatorium/tenants.yaml\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/var/run/mtls/default/tls.crt\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/var/run/tls/ca.crt\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/var/run/tls/tls.crt\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          },
+                          "k:{\"mountPath\":\"/var/run/tls/tls.key\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {},
+                            "f:subPath": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"default-mtls-secret\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"rbac\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      },
+                      "k:{\"name\":\"tenants\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"tls-secret\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {}
+              },
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "mco-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T07:01:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:spec": {
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      "f:cert/time-restarted": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T07:01:20Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  "k:{\"type\":\"Progressing\"}": {
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/component": "api",
+            "app.kubernetes.io/instance": "observability",
+            "app.kubernetes.io/name": "observatorium-api",
+            "app.kubernetes.io/part-of": "observatorium"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/component": "api",
+              "app.kubernetes.io/instance": "observability",
+              "app.kubernetes.io/name": "observatorium-api",
+              "app.kubernetes.io/part-of": "observatorium",
+              "app.kubernetes.io/version": "master-2020-11-02-v0.1.1-192-ge324057",
+              "cert/time-restarted": "2024-11-26.0701"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "rbac",
+                "configMap": {
+                  "name": "observability-observatorium-api",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "tenants",
+                "secret": {
+                  "secretName": "observability-observatorium-api",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "default-mtls-secret",
+                "secret": {
+                  "secretName": "observability-client-ca-certs",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "tls-secret",
+                "secret": {
+                  "secretName": "observability-server-certs",
+                  "defaultMode": 420
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "observatorium-api",
+                "image": "registry.redhat.io/rhacm2/observatorium-rhel8@sha256:3632356824d12a573dd01964f5637348cf3645da4e4072d0faf11e342196bb69",
+                "args": [
+                  "--web.listen=0.0.0.0:8080",
+                  "--web.internal.listen=0.0.0.0:8081",
+                  "--metrics.read.endpoint=http://observability-thanos-query-frontend.open-cluster-management-observability.svc.cluster.local:9090",
+                  "--metrics.write.endpoint=http://observability-thanos-receive.open-cluster-management-observability.svc.cluster.local:19291",
+                  "--log.level=warn",
+                  "--rbac.config=/etc/observatorium/rbac.yaml",
+                  "--tenants.config=/etc/observatorium/tenants.yaml",
+                  "--web.healthchecks.url=https://127.0.0.1:8080",
+                  "--tls.server.cert-file=/var/run/tls/tls.crt",
+                  "--tls.server.key-file=/var/run/tls/tls.key",
+                  "--tls.healthchecks.server-ca-file=/var/run/tls/ca.crt",
+                  "--tls.healthchecks.server-name=observability-server-certificate"
+                ],
+                "ports": [
+                  {
+                    "name": "internal",
+                    "containerPort": 8081,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "public",
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "20m",
+                    "memory": "128Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "rbac",
+                    "readOnly": true,
+                    "mountPath": "/etc/observatorium/rbac.yaml",
+                    "subPath": "rbac.yaml"
+                  },
+                  {
+                    "name": "tenants",
+                    "readOnly": true,
+                    "mountPath": "/etc/observatorium/tenants.yaml",
+                    "subPath": "tenants.yaml"
+                  },
+                  {
+                    "name": "default-mtls-secret",
+                    "readOnly": true,
+                    "mountPath": "/var/run/mtls/default/tls.crt",
+                    "subPath": "tls.crt"
+                  },
+                  {
+                    "name": "tls-secret",
+                    "readOnly": true,
+                    "mountPath": "/var/run/tls/tls.crt",
+                    "subPath": "tls.crt"
+                  },
+                  {
+                    "name": "tls-secret",
+                    "readOnly": true,
+                    "mountPath": "/var/run/tls/tls.key",
+                    "subPath": "tls.key"
+                  },
+                  {
+                    "name": "tls-secret",
+                    "readOnly": true,
+                    "mountPath": "/var/run/tls/ca.crt",
+                    "subPath": "ca.crt"
+                  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/live",
+                    "port": 8081,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 30,
+                  "successThreshold": 1,
+                  "failureThreshold": 10
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/ready",
+                    "port": 8081,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 5,
+                  "successThreshold": 1,
+                  "failureThreshold": 12
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "observability-observatorium-api",
+            "serviceAccount": "observability-observatorium-api",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "observatorium-api"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  },
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "observatorium-api"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": 1,
+            "maxSurge": 0
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 2,
+        "replicas": 2,
+        "updatedReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:02Z",
+            "lastTransitionTime": "2024-11-26T06:20:02Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          },
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T07:01:20Z",
+            "lastTransitionTime": "2024-11-26T06:11:02Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-observatorium-api-ddd68c678\" has successfully progressed."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-observatorium-operator",
+        "namespace": "open-cluster-management-observability",
+        "uid": "59083ff7-6884-4a9a-aeb2-07b20f432631",
+        "resourceVersion": "2930846",
+        "generation": 1,
+        "creationTimestamp": "2024-11-26T06:10:38Z",
+        "labels": {
+          "app.kubernetes.io/component": "observatorium-operator",
+          "app.kubernetes.io/name": "observatorium-operator",
+          "app.kubernetes.io/part-of": "observatorium",
+          "control-plane": "observatorium-operator",
+          "observability.open-cluster-management.io/name": "observability"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "observability.open-cluster-management.io/v1beta2",
+            "kind": "MultiClusterObservability",
+            "name": "observability",
+            "uid": "a457110a-6e91-4332-9921-7f9b00e657f8",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "mco-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:10:38Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:control-plane": {},
+                  "f:observability.open-cluster-management.io/name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"a457110a-6e91-4332-9921-7f9b00e657f8\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:control-plane": {},
+                      "f:observability.open-cluster-management.io/name": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"observatorium-operator\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:resources": {
+                          ".": {},
+                          "f:limits": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          },
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:18Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "control-plane": "observatorium-operator",
+            "observability.open-cluster-management.io/name": "observability"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "control-plane": "observatorium-operator",
+              "observability.open-cluster-management.io/name": "observability"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "observatorium-operator",
+                "image": "registry.redhat.io/rhacm2/observatorium-rhel8-operator@sha256:005f9dbeea7e9ef219660183383843aa7a31ba3f717560de1c56da8dce0de114",
+                "args": [
+                  "--log-level=info"
+                ],
+                "resources": {
+                  "limits": {
+                    "cpu": "100m",
+                    "memory": "600Mi"
+                  },
+                  "requests": {
+                    "cpu": "10m",
+                    "memory": "50Mi"
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "observatorium",
+            "serviceAccount": "observatorium",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "observatorium-operator"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  },
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "observatorium-operator"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:10:51Z",
+            "lastTransitionTime": "2024-11-26T06:10:38Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-observatorium-operator-78b49598dc\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:18Z",
+            "lastTransitionTime": "2024-11-26T06:20:18Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-rbac-query-proxy",
+        "namespace": "open-cluster-management-observability",
+        "uid": "3dcf2dd1-9e0a-436d-b97b-8e4e37246253",
+        "resourceVersion": "3006064",
+        "generation": 2,
+        "creationTimestamp": "2024-11-26T06:10:41Z",
+        "labels": {
+          "app": "rbac-query-proxy",
+          "observability.open-cluster-management.io/name": "observability"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "2"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "observability.open-cluster-management.io/v1beta2",
+            "kind": "MultiClusterObservability",
+            "name": "observability",
+            "uid": "a457110a-6e91-4332-9921-7f9b00e657f8",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:28Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {}
+              },
+              "f:status": {
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "mco-operator",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T07:01:03Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:observability.open-cluster-management.io/name": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"a457110a-6e91-4332-9921-7f9b00e657f8\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app": {},
+                      "f:cert/time-restarted": {},
+                      "f:observability.open-cluster-management.io/name": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"oauth-proxy\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/etc/proxy/secrets\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/etc/tls/private\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {},
+                            "f:readOnly": {}
+                          }
+                        }
+                      },
+                      "k:{\"name\":\"rbac-query-proxy\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:exec": {
+                            ".": {},
+                            "f:command": {}
+                          },
+                          "f:failureThreshold": {},
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {},
+                        "f:volumeMounts": {
+                          ".": {},
+                          "k:{\"mountPath\":\"/etc/probe\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/var/rbac_proxy/ca\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          },
+                          "k:{\"mountPath\":\"/var/rbac_proxy/certs\"}": {
+                            ".": {},
+                            "f:mountPath": {},
+                            "f:name": {}
+                          }
+                        }
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {},
+                    "f:volumes": {
+                      ".": {},
+                      "k:{\"name\":\"ca-certs\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"certs\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"client-certs\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"cookie-secret\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:secret": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:secretName": {}
+                        }
+                      },
+                      "k:{\"name\":\"probe-command\"}": {
+                        ".": {},
+                        "f:configMap": {
+                          ".": {},
+                          "f:defaultMode": {},
+                          "f:name": {}
+                        },
+                        "f:name": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T07:01:41Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  "k:{\"type\":\"Progressing\"}": {
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app": "rbac-query-proxy",
+            "observability.open-cluster-management.io/name": "observability"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app": "rbac-query-proxy",
+              "cert/time-restarted": "2024-11-26.0701",
+              "observability.open-cluster-management.io/name": "observability"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "certs",
+                "secret": {
+                  "secretName": "rbac-proxy-certs",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "cookie-secret",
+                "secret": {
+                  "secretName": "rbac-proxy-cookie-secret",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "ca-certs",
+                "secret": {
+                  "secretName": "observability-server-certs",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "client-certs",
+                "secret": {
+                  "secretName": "observability-grafana-certs",
+                  "defaultMode": 420
+                }
+              },
+              {
+                "name": "probe-command",
+                "configMap": {
+                  "name": "rbac-query-proxy-probe",
+                  "defaultMode": 511
+                }
+              }
+            ],
+            "containers": [
+              {
+                "name": "rbac-query-proxy",
+                "image": "registry.redhat.io/rhacm2/rbac-query-proxy-rhel8@sha256:e1eda90d053510f0da339d825a189511cfa8b94133c4f89c2a9f8a6b3efcc044",
+                "args": [
+                  "--listen-address=0.0.0.0:8080",
+                  "--metrics-server=https://observability-observatorium-api.open-cluster-management-observability.svc.cluster.local:8080/api/metrics/v1/default"
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "20m",
+                    "memory": "100Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "ca-certs",
+                    "mountPath": "/var/rbac_proxy/ca"
+                  },
+                  {
+                    "name": "client-certs",
+                    "mountPath": "/var/rbac_proxy/certs"
+                  },
+                  {
+                    "name": "probe-command",
+                    "mountPath": "/etc/probe"
+                  }
+                ],
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "/bin/sh",
+                      "-c",
+                      "/etc/probe/check.sh"
+                    ]
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 60,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              },
+              {
+                "name": "oauth-proxy",
+                "image": "registry.redhat.io/openshift4/ose-oauth-proxy@sha256:2fe11e0fabd878f53a2627ebbed273400e063cffd80d8817565163dcbdaabcf7",
+                "args": [
+                  "--provider=openshift",
+                  "--https-address=:8443",
+                  "--http-address=",
+                  "--upstream=http://localhost:8080",
+                  "--client-id=open-cluster-management-observability",
+                  "--client-secret-file=/var/run/secrets/kubernetes.io/serviceaccount/token",
+                  "--pass-user-bearer-token=true",
+                  "--pass-access-token=true",
+                  "--openshift-sar={\"resource\":\"namespaces\",\"verb\":\"get\"}",
+                  "--openshift-delegate-urls={\"/\":{\"resource\":\"namespaces\",\"verb\":\"get\"}}",
+                  "--tls-cert=/etc/tls/private/tls.crt",
+                  "--tls-key=/etc/tls/private/tls.key",
+                  "--openshift-service-account=rbac-query-proxy",
+                  "--cookie-secret-file=/etc/proxy/secrets/session_secret",
+                  "--skip-provider-button=true",
+                  "--openshift-ca=/etc/pki/tls/cert.pem",
+                  "--openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
+                ],
+                "ports": [
+                  {
+                    "name": "oauth-proxy",
+                    "containerPort": 8443,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "1m",
+                    "memory": "20Mi"
+                  }
+                },
+                "volumeMounts": [
+                  {
+                    "name": "certs",
+                    "readOnly": true,
+                    "mountPath": "/etc/tls/private"
+                  },
+                  {
+                    "name": "cookie-secret",
+                    "mountPath": "/etc/proxy/secrets"
+                  }
+                ],
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/oauth/healthz",
+                    "port": 8443,
+                    "scheme": "HTTPS"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 10,
+                  "successThreshold": 1,
+                  "failureThreshold": 3
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "Always"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "rbac-query-proxy",
+            "serviceAccount": "rbac-query-proxy",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app",
+                            "operator": "In",
+                            "values": [
+                              "rbac-query-proxy"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  },
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app",
+                            "operator": "In",
+                            "values": [
+                              "rbac-query-proxy"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 2,
+        "replicas": 2,
+        "updatedReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:28Z",
+            "lastTransitionTime": "2024-11-26T06:20:28Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          },
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T07:01:41Z",
+            "lastTransitionTime": "2024-11-26T06:10:41Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-rbac-query-proxy-6b96bc7645\" has successfully progressed."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-thanos-query",
+        "namespace": "open-cluster-management-observability",
+        "uid": "374f9304-194b-40ca-818d-2cd33e5d7ce9",
+        "resourceVersion": "2930945",
+        "generation": 1,
+        "creationTimestamp": "2024-11-26T06:11:02Z",
+        "labels": {
+          "app.kubernetes.io/component": "query-layer",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-query",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "v0.17.1"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "core.observatorium.io/v1alpha1",
+            "kind": "Observatorium",
+            "name": "observability",
+            "uid": "efbe1097-18a3-4471-84fa-a181e1bdbca4",
+            "controller": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "locutus",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:11:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"efbe1097-18a3-4471-84fa-a181e1bdbca4\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/component": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:app.kubernetes.io/part-of": {},
+                      "f:app.kubernetes.io/version": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"thanos-query\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":9090,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          },
+                          "k:{\"containerPort\":10901,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:20Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/component": "query-layer",
+            "app.kubernetes.io/instance": "observability",
+            "app.kubernetes.io/name": "thanos-query",
+            "app.kubernetes.io/part-of": "observatorium"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/component": "query-layer",
+              "app.kubernetes.io/instance": "observability",
+              "app.kubernetes.io/name": "thanos-query",
+              "app.kubernetes.io/part-of": "observatorium",
+              "app.kubernetes.io/version": "v0.17.1"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "thanos-query",
+                "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+                "args": [
+                  "query",
+                  "--grpc-address=0.0.0.0:10901",
+                  "--http-address=0.0.0.0:9090",
+                  "--log.level=info",
+                  "--log.format=logfmt",
+                  "--query.replica-label=prometheus_replica",
+                  "--query.replica-label=rule_replica",
+                  "--query.replica-label=replica",
+                  "--store=dnssrv+_grpc._tcp.observability-thanos-rule.open-cluster-management-observability.svc.cluster.local",
+                  "--store=dnssrv+_grpc._tcp.observability-thanos-store-shard-0.open-cluster-management-observability.svc.cluster.local",
+                  "--store=dnssrv+_grpc._tcp.observability-thanos-store-shard-1.open-cluster-management-observability.svc.cluster.local",
+                  "--store=dnssrv+_grpc._tcp.observability-thanos-store-shard-2.open-cluster-management-observability.svc.cluster.local",
+                  "--store=dnssrv+_grpc._tcp.observability-thanos-receive-default.open-cluster-management-observability.svc.cluster.local",
+                  "--query.timeout=15m",
+                  "--query.auto-downsampling"
+                ],
+                "ports": [
+                  {
+                    "name": "grpc",
+                    "containerPort": 10901,
+                    "protocol": "TCP"
+                  },
+                  {
+                    "name": "http",
+                    "containerPort": 9090,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "300m",
+                    "memory": "1Gi"
+                  }
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/-/healthy",
+                    "port": 9090,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 30,
+                  "successThreshold": 1,
+                  "failureThreshold": 4
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 9090,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 5,
+                  "successThreshold": 1,
+                  "failureThreshold": 20
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "FallbackToLogsOnError",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 120,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "observability-thanos-query",
+            "serviceAccount": "observability-thanos-query",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-query"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  },
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-query"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 2,
+        "updatedReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:11:34Z",
+            "lastTransitionTime": "2024-11-26T06:11:03Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-thanos-query-768679f974\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:20Z",
+            "lastTransitionTime": "2024-11-26T06:20:20Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-thanos-query-frontend",
+        "namespace": "open-cluster-management-observability",
+        "uid": "dbab6b86-2557-4788-998d-c14a244f45b6",
+        "resourceVersion": "2931045",
+        "generation": 1,
+        "creationTimestamp": "2024-11-26T06:11:02Z",
+        "labels": {
+          "app.kubernetes.io/component": "query-cache",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-query-frontend",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "v0.17.1"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "core.observatorium.io/v1alpha1",
+            "kind": "Observatorium",
+            "name": "observability",
+            "uid": "efbe1097-18a3-4471-84fa-a181e1bdbca4",
+            "controller": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "locutus",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:11:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"efbe1097-18a3-4471-84fa-a181e1bdbca4\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/component": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:app.kubernetes.io/part-of": {},
+                      "f:app.kubernetes.io/version": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"thanos-query-frontend\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:livenessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":9090,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:readinessProbe": {
+                          ".": {},
+                          "f:failureThreshold": {},
+                          "f:httpGet": {
+                            ".": {},
+                            "f:path": {},
+                            "f:port": {},
+                            "f:scheme": {}
+                          },
+                          "f:periodSeconds": {},
+                          "f:successThreshold": {},
+                          "f:timeoutSeconds": {}
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:24Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 2,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/component": "query-cache",
+            "app.kubernetes.io/instance": "observability",
+            "app.kubernetes.io/name": "thanos-query-frontend",
+            "app.kubernetes.io/part-of": "observatorium"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/component": "query-cache",
+              "app.kubernetes.io/instance": "observability",
+              "app.kubernetes.io/name": "thanos-query-frontend",
+              "app.kubernetes.io/part-of": "observatorium",
+              "app.kubernetes.io/version": "v0.17.1"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "thanos-query-frontend",
+                "image": "registry.redhat.io/rhacm2/thanos-rhel8@sha256:66f68036df67547292fc0445304c84c10cb858249af1e1749b3008f4d32f42bc",
+                "args": [
+                  "query-frontend",
+                  "--log.level=info",
+                  "--log.format=logfmt",
+                  "--query-frontend.compress-responses",
+                  "--http-address=0.0.0.0:9090",
+                  "--query-frontend.downstream-url=http://observability-thanos-query.open-cluster-management-observability.svc.cluster.local.:9090",
+                  "--query-range.split-interval=24h",
+                  "--labels.split-interval=24h",
+                  "--query-range.max-retries-per-request=0",
+                  "--labels.max-retries-per-request=0",
+                  "--query-frontend.log-queries-longer-than=5s",
+                  "--query-range.response-cache-config=\"config\":\n  \"addresses\":\n  - \"dnssrv+_client._tcp.observability-thanos-query-frontend-memcached.open-cluster-management-observability.svc\"\n  \"dns_provider_update_interval\": \"10s\"\n  \"max_async_buffer_size\": 10000\n  \"max_async_concurrency\": 20\n  \"max_get_multi_batch_size\": 0\n  \"max_get_multi_concurrency\": 100\n  \"max_idle_connections\": 100\n  \"timeout\": \"500ms\"\n\"type\": \"memcached\"",
+                  "--labels.response-cache-config=\"config\":\n  \"addresses\":\n  - \"dnssrv+_client._tcp.observability-thanos-query-frontend-memcached.open-cluster-management-observability.svc\"\n  \"dns_provider_update_interval\": \"10s\"\n  \"max_async_buffer_size\": 10000\n  \"max_async_concurrency\": 20\n  \"max_get_multi_batch_size\": 0\n  \"max_get_multi_concurrency\": 100\n  \"max_idle_connections\": 100\n  \"timeout\": \"500ms\"\n\"type\": \"memcached\""
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 9090,
+                    "protocol": "TCP"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "256Mi"
+                  }
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/-/healthy",
+                    "port": 9090,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 30,
+                  "successThreshold": 1,
+                  "failureThreshold": 4
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 9090,
+                    "scheme": "HTTP"
+                  },
+                  "timeoutSeconds": 1,
+                  "periodSeconds": 5,
+                  "successThreshold": 1,
+                  "failureThreshold": 20
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "FallbackToLogsOnError",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 120,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "observability-thanos-query-frontend",
+            "serviceAccount": "observability-thanos-query-frontend",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-query-frontend"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  },
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-query-frontend"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 2,
+        "updatedReplicas": 2,
+        "readyReplicas": 2,
+        "availableReplicas": 2,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:11:35Z",
+            "lastTransitionTime": "2024-11-26T06:11:03Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-thanos-query-frontend-749864469d\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:24Z",
+            "lastTransitionTime": "2024-11-26T06:20:24Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "observability-thanos-receive-controller",
+        "namespace": "open-cluster-management-observability",
+        "uid": "539ec46e-57ce-4e6b-b8dc-9ad134d02bc0",
+        "resourceVersion": "2930732",
+        "generation": 1,
+        "creationTimestamp": "2024-11-26T06:11:02Z",
+        "labels": {
+          "app.kubernetes.io/component": "kubernetes-controller",
+          "app.kubernetes.io/instance": "observability",
+          "app.kubernetes.io/name": "thanos-receive-controller",
+          "app.kubernetes.io/part-of": "observatorium",
+          "app.kubernetes.io/version": "master-2021-04-28-ee165b6"
+        },
+        "annotations": {
+          "deployment.kubernetes.io/revision": "1"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "core.observatorium.io/v1alpha1",
+            "kind": "Observatorium",
+            "name": "observability",
+            "uid": "efbe1097-18a3-4471-84fa-a181e1bdbca4",
+            "controller": true
+          }
+        ],
+        "managedFields": [
+          {
+            "manager": "locutus",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:11:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:labels": {
+                  ".": {},
+                  "f:app.kubernetes.io/component": {},
+                  "f:app.kubernetes.io/instance": {},
+                  "f:app.kubernetes.io/name": {},
+                  "f:app.kubernetes.io/part-of": {},
+                  "f:app.kubernetes.io/version": {}
+                },
+                "f:ownerReferences": {
+                  ".": {},
+                  "k:{\"uid\":\"efbe1097-18a3-4471-84fa-a181e1bdbca4\"}": {}
+                }
+              },
+              "f:spec": {
+                "f:progressDeadlineSeconds": {},
+                "f:replicas": {},
+                "f:revisionHistoryLimit": {},
+                "f:selector": {},
+                "f:strategy": {
+                  "f:rollingUpdate": {
+                    ".": {},
+                    "f:maxSurge": {},
+                    "f:maxUnavailable": {}
+                  },
+                  "f:type": {}
+                },
+                "f:template": {
+                  "f:metadata": {
+                    "f:labels": {
+                      ".": {},
+                      "f:app.kubernetes.io/component": {},
+                      "f:app.kubernetes.io/instance": {},
+                      "f:app.kubernetes.io/name": {},
+                      "f:app.kubernetes.io/part-of": {},
+                      "f:app.kubernetes.io/version": {}
+                    }
+                  },
+                  "f:spec": {
+                    "f:affinity": {
+                      ".": {},
+                      "f:podAntiAffinity": {
+                        ".": {},
+                        "f:preferredDuringSchedulingIgnoredDuringExecution": {}
+                      }
+                    },
+                    "f:containers": {
+                      "k:{\"name\":\"thanos-receive-controller\"}": {
+                        ".": {},
+                        "f:args": {},
+                        "f:env": {
+                          ".": {},
+                          "k:{\"name\":\"NAMESPACE\"}": {
+                            ".": {},
+                            "f:name": {},
+                            "f:valueFrom": {
+                              ".": {},
+                              "f:fieldRef": {}
+                            }
+                          }
+                        },
+                        "f:image": {},
+                        "f:imagePullPolicy": {},
+                        "f:name": {},
+                        "f:ports": {
+                          ".": {},
+                          "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}": {
+                            ".": {},
+                            "f:containerPort": {},
+                            "f:name": {},
+                            "f:protocol": {}
+                          }
+                        },
+                        "f:resources": {
+                          ".": {},
+                          "f:requests": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                          }
+                        },
+                        "f:terminationMessagePath": {},
+                        "f:terminationMessagePolicy": {}
+                      }
+                    },
+                    "f:dnsPolicy": {},
+                    "f:imagePullSecrets": {
+                      ".": {},
+                      "k:{\"name\":\"multiclusterhub-operator-pull-secret\"}": {}
+                    },
+                    "f:restartPolicy": {},
+                    "f:schedulerName": {},
+                    "f:securityContext": {},
+                    "f:serviceAccount": {},
+                    "f:serviceAccountName": {},
+                    "f:terminationGracePeriodSeconds": {}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "manager": "kube-controller-manager",
+            "operation": "Update",
+            "apiVersion": "apps/v1",
+            "time": "2024-11-26T06:20:15Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:deployment.kubernetes.io/revision": {}
+                }
+              },
+              "f:status": {
+                "f:availableReplicas": {},
+                "f:conditions": {
+                  ".": {},
+                  "k:{\"type\":\"Available\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  },
+                  "k:{\"type\":\"Progressing\"}": {
+                    ".": {},
+                    "f:lastTransitionTime": {},
+                    "f:lastUpdateTime": {},
+                    "f:message": {},
+                    "f:reason": {},
+                    "f:status": {},
+                    "f:type": {}
+                  }
+                },
+                "f:observedGeneration": {},
+                "f:readyReplicas": {},
+                "f:replicas": {},
+                "f:updatedReplicas": {}
+              }
+            },
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app.kubernetes.io/component": "kubernetes-controller",
+            "app.kubernetes.io/instance": "observability",
+            "app.kubernetes.io/name": "thanos-receive-controller",
+            "app.kubernetes.io/part-of": "observatorium"
+          }
+        },
+        "template": {
+          "metadata": {
+            "creationTimestamp": null,
+            "labels": {
+              "app.kubernetes.io/component": "kubernetes-controller",
+              "app.kubernetes.io/instance": "observability",
+              "app.kubernetes.io/name": "thanos-receive-controller",
+              "app.kubernetes.io/part-of": "observatorium",
+              "app.kubernetes.io/version": "master-2021-04-28-ee165b6"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "thanos-receive-controller",
+                "image": "registry.redhat.io/rhacm2/thanos-receive-controller-rhel8@sha256:2858990232985999da589c565bc6deb5572dc8caf289e609652467fc40aad564",
+                "args": [
+                  "--configmap-name=observability-thanos-receive-controller-tenants",
+                  "--configmap-generated-name=observability-thanos-receive-controller-tenants-generated",
+                  "--file-name=hashrings.json",
+                  "--namespace=$(NAMESPACE)"
+                ],
+                "ports": [
+                  {
+                    "name": "http",
+                    "containerPort": 8080,
+                    "protocol": "TCP"
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "NAMESPACE",
+                    "valueFrom": {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "4m",
+                    "memory": "32Mi"
+                  }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "imagePullPolicy": "IfNotPresent"
+              }
+            ],
+            "restartPolicy": "Always",
+            "terminationGracePeriodSeconds": 30,
+            "dnsPolicy": "ClusterFirst",
+            "serviceAccountName": "observability-thanos-receive-controller",
+            "serviceAccount": "observability-thanos-receive-controller",
+            "securityContext": {},
+            "imagePullSecrets": [
+              {
+                "name": "multiclusterhub-operator-pull-secret"
+              }
+            ],
+            "affinity": {
+              "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                  {
+                    "weight": 30,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-receive-controller"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "kubernetes.io/hostname"
+                    }
+                  },
+                  {
+                    "weight": 70,
+                    "podAffinityTerm": {
+                      "labelSelector": {
+                        "matchExpressions": [
+                          {
+                            "key": "app.kubernetes.io/name",
+                            "operator": "In",
+                            "values": [
+                              "thanos-receive-controller"
+                            ]
+                          },
+                          {
+                            "key": "app.kubernetes.io/instance",
+                            "operator": "In",
+                            "values": [
+                              "observability"
+                            ]
+                          }
+                        ]
+                      },
+                      "topologyKey": "topology.kubernetes.io/zone"
+                    }
+                  }
+                ]
+              }
+            },
+            "schedulerName": "default-scheduler"
+          }
+        },
+        "strategy": {
+          "type": "RollingUpdate",
+          "rollingUpdate": {
+            "maxUnavailable": "25%",
+            "maxSurge": "25%"
+          }
+        },
+        "revisionHistoryLimit": 10,
+        "progressDeadlineSeconds": 600
+      },
+      "status": {
+        "observedGeneration": 1,
+        "replicas": 1,
+        "updatedReplicas": 1,
+        "readyReplicas": 1,
+        "availableReplicas": 1,
+        "conditions": [
+          {
+            "type": "Progressing",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:11:19Z",
+            "lastTransitionTime": "2024-11-26T06:11:03Z",
+            "reason": "NewReplicaSetAvailable",
+            "message": "ReplicaSet \"observability-thanos-receive-controller-5b5d8bd59d\" has successfully progressed."
+          },
+          {
+            "type": "Available",
+            "status": "True",
+            "lastUpdateTime": "2024-11-26T06:20:15Z",
+            "lastTransitionTime": "2024-11-26T06:20:15Z",
+            "reason": "MinimumReplicasAvailable",
+            "message": "Deployment has minimum availability."
+          }
+        ]
+      }
+    }
+  ]
+}öì1üÍ           gEzG•
+       Ú    O^partitionKey=%28https%2Cexample.com%29,:https://console-openshift-console.apps.ocp4.example.com/api/kubernetes/apis/apps/v1/namespaces/open-cluster-management-observability/deployments?limit=250&cluster=local-cluster strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+audit-id: 784f4d4a-1504-45e8-9ad7-30dc76888079
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 07:34:54 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+ original-response-headers audit-id: 784f4d4a-1504-45e8-9ad7-30dc76888079
+cache-control: no-cache, private
+content-security-policy: sandbox;
+content-type: application/json
+date: Tue, 26 Nov 2024 07:34:54 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-security-policy: sandbox;
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-frame-options: DENY
+x-kubernetes-pf-flowschema-uid: 0dd5e50b-e5d6-4b2d-9823-5e813aa63ebc
+x-kubernetes-pf-prioritylevel-uid: 2b5bf27e-d952-4de9-9894-1abcf160ed7b
+x-xss-protection: 1; mode=block
+transfer-encoding: chunked
+ ctid 1  ± 
